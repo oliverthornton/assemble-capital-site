@@ -4,7 +4,8 @@
 Footer columns: brand + social · Navigate (mirrors header) · Strategies · Insights,
 followed by a principals strip, legal text, and legal links.
 """
-import os, re, glob
+import os, re, glob, json
+from datetime import datetime
 
 SITE = os.path.dirname(os.path.abspath(__file__))
 
@@ -35,14 +36,33 @@ def social(base):
                    '          ' + btn("facebook", "FACEBOOK_URL", "Facebook").strip() + ' -->')
     return "\n".join(out)
 
-# --- blog ------------------------------------------------------------------
-BLOG_BASE = "https://assemble.capital/assemble-capital-blogs"
-POSTS = [
- ("Building Trust Through Transparency and Execution", "building-trust-through-transparency-and-execution"),
- ("Why Conservative Assumptions Win Long-Term", "why-conservative-assumptions-win-long-term"),
- ("Timing vs. Time-in-Market for Private Real Estate", "timing-vs-time-in-market-for-private-real-estate"),
- ("How Operators Adjust Strategy in Uncertain Markets", "how-operators-adjust-strategy-in-uncertain-markets"),
-]
+# --- blog -------------------------------------------------------------------
+# The blog now lives in-repo (see blog/README.md) rather than on the old,
+# now-dead Squarespace domain. BLOG_BASE is an internal path, matching the
+# leading-slash-free convention every other internal link in this footer
+# already uses (e.g. "{b}strategies.html").
+BLOG_BASE = "blog"
+POSTS_PER_FOOTER = 4  # how many latest published posts to surface here
+
+def latest_posts(limit=POSTS_PER_FOOTER):
+    """Read blog/posts.json, filter to status == 'published', sort by date
+    descending, and return up to `limit` as (title, slug) tuples. Returns []
+    if the file is missing, malformed, or has no published posts yet — the
+    Insights column just renders empty rather than crashing the footer build."""
+    path = os.path.join(SITE, "blog", "posts.json")
+    try:
+        with open(path) as fh:
+            data = json.load(fh)
+    except (OSError, json.JSONDecodeError):
+        return []
+    published = [p for p in data if p.get("status") == "published"]
+    def _key(p):
+        try:
+            return datetime.strptime(p["date"], "%B %d, %Y")
+        except (KeyError, TypeError, ValueError):
+            return datetime.min
+    published.sort(key=_key, reverse=True)
+    return [(p["title"], p["slug"]) for p in published[:limit]]
 
 MONO = ('<svg viewBox="0 0 64 64" fill="none" aria-hidden="true">\n'
  '            <circle cx="32" cy="32" r="30" stroke="currentColor" stroke-width="1.5"/>\n'
@@ -64,8 +84,8 @@ def build(base):
     """base is '' for root pages, '../' for pages one directory deep."""
     b = base
     posts = "\n".join(
-        f'          <a href="{BLOG_BASE}/{slug}" target="_blank" rel="noopener">{title}</a>'
-        for title, slug in POSTS)
+        f'          <a href="{b}{BLOG_BASE}/{slug}.html">{title}</a>'
+        for title, slug in latest_posts())
     return f'''<footer class="site-foot">
   <img class="watermark" src="{b}assets/img/logo/emblem-white-v2.png" alt="" aria-hidden="true">
   <div class="wrap">
@@ -92,7 +112,7 @@ def build(base):
           <a href="{b}strategies.html">Strategies</a>
           <a href="{b}portfolio.html">Current Projects</a>
           <a href="{b}track-record.html">Track Record</a>
-          <a href="{BLOG_BASE}" target="_blank" rel="noopener">Blogs &#8599;</a>
+          <a href="{b}{BLOG_BASE}/index.html">Blogs</a>
           <a href="{b}contact.html">Contact</a>
           <a href="https://assemblecapital.cashflowportal.com" target="_blank" rel="noopener">Investor Portal &#8599;</a>
         </div>
@@ -111,7 +131,7 @@ def build(base):
         <div class="foot-posts">
 {posts}
         </div>
-        <p class="foot-more"><a href="{BLOG_BASE}" target="_blank" rel="noopener">All insights &#8599;</a></p>
+        <p class="foot-more"><a href="{b}{BLOG_BASE}/index.html">All insights</a></p>
       </div>
     </div>
     <div class="foot-principals">

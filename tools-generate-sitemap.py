@@ -22,6 +22,7 @@ PRIORITY = {
     "track-record.html": "0.9",
     "contact.html": "0.6",
     "disclosures.html": "0.3",
+    "blog/index.html": "0.9",
 }
 
 urls = []
@@ -33,7 +34,17 @@ for root, dirs, files in os.walk(SITE):
             continue
         rel = f if rel_dir == "." else f"{rel_dir}/{f}"
         loc = f"{BASE}/" if rel == "index.html" else f"{BASE}/{rel}"
-        priority = PRIORITY.get(rel, "0.9" if rel_dir in ("properties", "strategies") else "0.5")
+        if rel in PRIORITY:
+            priority = PRIORITY[rel]
+        elif rel_dir in ("properties", "strategies"):
+            priority = "0.9"
+        elif rel_dir == "blog":
+            # individual posts rank below the properties/strategies detail
+            # pages (0.9) but above the site's generic default (0.5) —
+            # timely content, not core deal/strategy collateral.
+            priority = "0.6"
+        else:
+            priority = "0.5"
         urls.append((loc, priority))
 
 urls.sort()
