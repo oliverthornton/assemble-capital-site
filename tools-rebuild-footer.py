@@ -31,9 +31,12 @@ def social(base):
     out = [btn("linkedin", LINKEDIN, "LinkedIn"), btn("instagram", INSTAGRAM, "Instagram")]
     if FACEBOOK:
         out.append(btn("facebook", FACEBOOK, "Facebook"))
-    else:
-        out.append('          <!-- Facebook: add the page URL to FACEBOOK in tools-rebuild-footer.py and re-run to enable.\n'
-                   '          ' + btn("facebook", "FACEBOOK_URL", "Facebook").strip() + ' -->')
+    # else: no Facebook page is live yet — omit the button entirely. Previously
+    # this emitted a commented-out <a href="FACEBOOK_URL" ...> placeholder,
+    # which some crawlers (Semrush's site audit included) still parsed as a
+    # real, dead link because it's naive-regex-visible in the raw HTML even
+    # though a spec-compliant browser DOM would never expose it. Genuinely
+    # not emitting the element is the only fix that can't be miscrawled.
     return "\n".join(out)
 
 # --- blog -------------------------------------------------------------------
