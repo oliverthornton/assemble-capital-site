@@ -23,6 +23,7 @@ required.
 | `body_html`        | yes      | Raw HTML string for the post body. Inserted as-is into the post template — write real HTML (`<p>`, `<h2>`, etc.), not Markdown. |
 | `status`           | yes      | `"draft"` or `"published"`. Only `"published"` posts get a generated page, appear on the blog index, and appear in the footer's latest-posts list. Drafts are skipped entirely (no output, not a 404 stub). |
 | `source_keyword`   | no       | Traceability only (e.g. the SEO keyword or content brief this post was written from). Never rendered on the site. |
+| `_migration_source`| no       | Traceability only — the original Squarespace URL this post was recovered from (e.g. `"https://assemblecapital.squarespace.com/assemble-capital-blogs/<old-slug>"`), present on posts recovered from the old blog. `null` for posts authored directly in this repo. Never rendered on the site, but this is the field the `/assemble-capital-blogs/:slug` → `/blog/:slug.html` redirect in `vercel.json` relies on for confidence that old slugs match new slugs 1:1 — don't remove it from a post without checking that redirect still makes sense. |
 
 ## Example
 

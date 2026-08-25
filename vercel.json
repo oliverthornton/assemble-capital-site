@@ -1,0 +1,19 @@
+{
+  "redirects": [
+    {
+      "source": "/assemble-capital-blogs",
+      "destination": "/blog/index.html",
+      "permanent": true
+    },
+    {
+      "source": "/assemble-capital-blogs/",
+      "destination": "/blog/index.html",
+      "permanent": true
+    },
+    {
+      "source": "/assemble-capital-blogs/:slug",
+      "destination": "/blog/:slug.html",
+      "permanent": true
+    }
+  ]
+}
