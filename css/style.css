@@ -173,7 +173,8 @@ section.tight { padding: clamp(2.5rem, 5vw, 4rem) 0; }
   font-family: var(--serif);
   font-size: 1.28rem;
   line-height: 1.06;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .site-nav { display: flex; align-items: center; gap: clamp(1rem, 2.2vw, 2rem); }

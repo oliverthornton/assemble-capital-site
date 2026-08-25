@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Stage a clean, review-safe copy of the site for uploading to a static host.
+"""Stage a clean, deployable copy of the site for uploading to a static host.
 
-Excludes build tooling and notes, and adds a blanket robots.txt so a shared
-review link is not crawled or indexed while the content is still in draft.
+Excludes build tooling and notes, and ships a robots.txt that allows indexing
+plus a sitemap reference now that this is the live production site.
 
     python3 tools-build-preview.py
 
@@ -20,9 +20,10 @@ EXCLUDE_PREFIX = ("tools-",)
 EXCLUDE_SUFFIX = (".py", ".md")
 EXCLUDE_DIRS = {".git", "__pycache__", "node_modules"}
 
-ROBOTS = """# Private review build — not for indexing.
-User-agent: *
-Disallow: /
+ROBOTS = """User-agent: *
+Allow: /
+
+Sitemap: https://assemble.capital/sitemap.xml
 """
 
 def keep(name):

@@ -9,8 +9,10 @@ import os, re, glob
 SITE = os.path.dirname(os.path.abspath(__file__))
 
 # --- social ----------------------------------------------------------------
-# Facebook has no published page as of Jul 2026 — the button stays commented out
-# below. Paste the URL into FACEBOOK and uncomment the block to switch it on.
+# Only LinkedIn + Instagram are live (confirmed w/ Oliver, Aug 2026). No
+# Twitter/X or YouTube profiles exist. Facebook page is not live — the button
+# stays commented out below; paste the URL into FACEBOOK and uncomment to
+# switch it on once/if the page goes live.
 LINKEDIN = "https://www.linkedin.com/company/assemble-capital-real-estate"
 INSTAGRAM = "https://www.instagram.com/assemble.capital"
 FACEBOOK = ""   # e.g. https://www.facebook.com/assemblecapital
@@ -65,16 +67,19 @@ def build(base):
         f'          <a href="{BLOG_BASE}/{slug}" target="_blank" rel="noopener">{title}</a>'
         for title, slug in POSTS)
     return f'''<footer class="site-foot">
-  <img class="watermark" src="{b}assets/img/logo/emblem-white.png" alt="" aria-hidden="true">
+  <img class="watermark" src="{b}assets/img/logo/emblem-white-v2.png" alt="" aria-hidden="true">
   <div class="wrap">
     <div class="foot-grid">
       <div>
         <a class="lockup" href="{b}index.html" style="color:var(--paper);margin-bottom:1.2rem">
-          <img class="emblem" src="{b}assets/img/logo/emblem-white.png" alt="" aria-hidden="true">
+          <img class="emblem" src="{b}assets/img/logo/emblem-white-v2.png" alt="" aria-hidden="true">
           <span class="word">Assemble<br>Capital</span>
         </a>
         <p style="font-size:.85rem;color:rgba(248,248,248,.7);max-width:22rem;margin-top:1.2rem">A Los Angeles residential investment manager.<br>9000 Sunset Blvd #3, Los Angeles, CA 90069</p>
         <p style="font-size:.85rem"><a href="mailto:info@assemble.capital" style="text-decoration:none">info@assemble.capital</a><br><a href="tel:+13107041794" style="text-decoration:none">(310) 704-1794</a></p>
+        <div style="display:flex;align-items:center;gap:.7rem;font-family:var(--type);font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(248,248,248,.5);margin:1.7rem 0 .7rem">
+          <span style="width:1.6rem;height:1px;background:var(--bronze)"></span>Follow
+        </div>
         <div class="social">
 {social(b)}
         </div>

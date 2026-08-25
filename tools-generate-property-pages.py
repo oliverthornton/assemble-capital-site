@@ -485,8 +485,8 @@ FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">\n'
  '<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&'
  'family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Special+Elite&'
  'display=swap" rel="stylesheet">')
-FAVICON = '<link rel="icon" href="../assets/img/logo/favicon.png">'
-MONO = '<img class="emblem" src="../assets/img/logo/emblem-white.png" alt="" aria-hidden="true">'
+FAVICON = '<link rel="icon" href="../assets/img/logo/favicon-v2.png">'
+MONO = '<img class="emblem" src="../assets/img/logo/emblem-white-v2.png" alt="" aria-hidden="true">'
 
 def header(base=".."):
     return f'''<header class="site-head">
@@ -719,8 +719,18 @@ def build(p, prev, nxt):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{name} &mdash; {p["addr"]} | Assemble Capital</title>
 <meta name="description" content="{name} at {p['addr']}, {p['sub']} — investment background, gallery, returns, and investment cycle.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Assemble Capital">
+<meta property="og:url" content="https://assemble.capital/properties/{p['slug']}.html">
+<meta property="og:title" content="{name} &mdash; {p["addr"]} | Assemble Capital">
+<meta property="og:description" content="{name} at {p['addr']}, {p['sub']} — investment background, gallery, returns, and investment cycle.">
+<meta property="og:image" content="https://assemble.capital/assets/img/{p['hero']}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{name} &mdash; {p["addr"]} | Assemble Capital">
+<meta name="twitter:description" content="{name} at {p['addr']}, {p['sub']} — investment background, gallery, returns, and investment cycle.">
+<meta name="twitter:image" content="https://assemble.capital/assets/img/{p['hero']}">
 {FONTS}
-<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/style.css?v=3">
 {FAVICON}
 </head>
 <body>
