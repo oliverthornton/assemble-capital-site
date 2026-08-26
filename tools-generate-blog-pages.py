@@ -182,6 +182,7 @@ def build_post(p):
 <section>
   <div class="wrap" style="max-width:46rem">
 {p["body_html"]}
+    <p class="footnote" style="margin-top:2.4rem;padding-top:1.6rem;border-top:1px solid var(--line)">This article is for general informational and educational purposes only. It is not, and should not be relied upon as, investment, legal, tax, or accounting advice, and it is not a recommendation or endorsement of any strategy or investment. Consult your own financial, tax, and legal advisors before making any investment decision. See our full <a href="../disclosures.html">Risk Disclosures</a> for additional information.</p>
   </div>
 </section>
 
