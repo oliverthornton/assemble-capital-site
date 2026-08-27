@@ -246,6 +246,29 @@ def build_meta_block(canonical, title, desc, og_image_abs, og_alt, og_type, robo
 <meta name="twitter:image" content="{og_image_abs}">
 <meta name="twitter:image:alt" content="{og_alt}">'''
 
+
+# ---------------------------------------------------------------- LCP preload
+def hero_preload(relpath, head):
+    """Preload the hero background image.
+
+    Heroes are CSS background-image, so the browser cannot discover them until
+    the stylesheet has parsed - which pushes out Largest Contentful Paint. An
+    explicit preload lets the fetch start with the HTML.
+    """
+    src = open(os.path.join(SITE, relpath), encoding="utf-8").read()
+    body = src.split("</head>", 1)[-1]
+    m = re.search(r"background-image:\s*url\(['\"]?([^)'\"]+)", body)
+    head = re.sub(r'[ \t]*<link rel="preload"[^>]*data-seo="auto"[^>]*>\s*\n?', "", head, flags=re.I)
+    if not m:
+        return head
+    href = m.group(1)
+    tag = (f'<link rel="preload" as="image" href="{href}" '
+           f'fetchpriority="high" data-seo="auto">')
+    css = re.search(r'(<link rel="stylesheet"[^>]*>)', head, re.I)
+    if css:
+        return head[:css.start()] + tag + "\n" + head[css.start():]
+    return head.rstrip() + "\n" + tag + "\n"
+
 def apply(relpath, title, desc, og_image_abs, og_alt, og_type="website",
           robots="index, follow, max-image-preview:large", extra_jsonld=None):
     path = os.path.join(SITE, relpath)
@@ -286,6 +309,7 @@ def apply(relpath, title, desc, og_image_abs, og_alt, og_type="website",
             + json.dumps(o, indent=2) + "\n</script>" for o in extra_jsonld)
         head = head.rstrip() + "\n" + payload + "\n"
 
+    head = hero_preload(relpath, head)
     out = src[:m.start(2)] + head + src[m.end(2):]
     if out != src:
         open(path, "w", encoding="utf-8").write(out)
