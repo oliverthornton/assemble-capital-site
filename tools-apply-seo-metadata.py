@@ -21,7 +21,7 @@ OG_W, OG_H = "1200", "630"
 # (title, description, og_image_rel, og_alt)
 CORE = {
  "index.html": (
-   "Los Angeles Residential Development Firm | Assemble Capital",
+   "Los Angeles Real Estate Development Company | Assemble Capital",
    "Assemble Capital is a Los Angeles residential development firm focused on luxury homes, "
    "multifamily, fee-simple subdivisions, and tenancy-in-common housing.",
    "assets/img/social/home-1200x630.jpg",
