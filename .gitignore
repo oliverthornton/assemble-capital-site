@@ -2,3 +2,15 @@
 *.log
 .env
 .env.local
+
+# Syncthing conflict copies — never commit these
+*.sync-conflict-*
+
+# Vercel CLI local link state — machine-specific, never commit
+.vercel/
+
+# Machine-local, swept in by an over-broad `git add -A` — keep on disk, out of git
+.stignore
+.stfolder/
+.review-drafts/
+.claude/

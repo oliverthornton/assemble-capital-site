@@ -2,7 +2,7 @@
 """Generate individual property pages for the Assemble Capital site."""
 import os, json
 
-SITE = "/Users/oliverthornton/Desktop/Claude Cowork/assemble-capital-site"
+SITE = os.path.dirname(os.path.abspath(__file__))
 IMGDIR = os.path.join(SITE, "assets", "img", "properties")
 
 # ---------------------------------------------------------------- data
@@ -13,7 +13,7 @@ P = [
    strategy="Studs-out remodel + FAR expansion", status="Sold",
    cost="$5.55M", exit="$8.65M", profit="$3.10M", poc="55.9%",
    eq=dict(inv="$1,274,516", ret="$4,093,460", prof="$2,818,944", hold="47", mom="3.21x", irr="~37%"),
-   stats=[("$8.65M","Sale price &mdash; neighborhood record"),("3.21x","Equity multiple"),
+   stats=[("$8.65M","Sale price &mdash; neighborhood record at closing"),("3.21x","Equity multiple"),
           ("~37%","Deal-level IRR"),("47 mo","Hold period")],
    lede="The highest-multiple exit in the portfolio &mdash; and a lesson in what patience buys.",
    bg=["Acquired in 2019 as an under-improved hillside home on a street the principals had "
@@ -37,7 +37,7 @@ P = [
    strategy="Studs-out rebuild", status="Sold",
    cost="$3.60M", exit="$6.75M", profit="$3.15M", poc="87.6%",
    eq=dict(inv="$1,500,000", ret="$3,805,728", prof="$2,305,728", hold="24", mom="2.54x", irr="~57%"),
-   stats=[("$6.75M","Sale price &mdash; record sale"),("2.54x","Equity multiple"),
+   stats=[("$6.75M","Sale price &mdash; street record at closing"),("2.54x","Equity multiple"),
           ("~57%","Deal-level IRR"),("87.6%","Gross profit on cost")],
    lede="The clearest demonstration in the portfolio that speed is a return driver.",
    bg=["Celebrity Row is one of the most recognizable addresses in the Hollywood Hills, and one "
@@ -473,7 +473,7 @@ P = [
           ("Build","2023&ndash;2025","Three units constructed to for-sale finish standards, not rental spec."),
           ("Structure","2025","TIC legal structuring, partial-release terms, and buyer-financing availability arranged."),
           ("Sell out","Nov 2025 &ndash; Feb 2026","Three fee-simple units closed individually, totaling $2.91M."),
-          ("Result","2026","Equity returned 1.41x / ~17% XIRR over 26 months; template proven for AC IV.")],
+          ("Result","2026","Equity returned 1.41x / ~17% XIRR over 26 months.")],
    lesson="A TIC sellout trades speed for price. The premium over bulk value is real, but so is the absorption timeline &mdash; and the bulk-sale fallback has to be underwritten before you start."),
 ]
 
@@ -491,7 +491,7 @@ MONO = '<img class="emblem" src="../assets/img/logo/emblem-white-v2.png" alt="" 
 def header(base=".."):
     return f'''<header class="site-head">
   <div class="bar">
-    <a class="lockup" href="{base}/index.html" aria-label="Assemble Capital home">
+    <a class="lockup" href="/" aria-label="Assemble Capital home">
       {MONO}
       <span class="word">Assemble<br>Capital</span>
     </a>
@@ -796,7 +796,7 @@ def build(p, prev, nxt):
   <div class="wrap reveal">
     <p class="eyebrow">Invest With Us</p>
     <h2 class="h-lg">Interested in projects like this one?</h2>
-    <p class="muted" style="max-width:40rem;margin:1.4rem auto 0">We syndicate Los Angeles residential projects with accredited investors &mdash; an 8% preferred return paid first, Class&nbsp;A participation in the profits, and our own capital in every deal. Join the network to see the next offering.</p>
+    <p class="muted" style="max-width:40rem;margin:1.4rem auto 0">We syndicate Los Angeles residential projects with accredited investors &mdash; an 8% preferred return paid first, Class&nbsp;A participation in the profits, and our own capital in every deal. Terms shown are typical of prior offerings and are not an offer; the final terms of any investment are governed solely by that project's private placement memorandum and operating agreement. Join the network to see the next offering.</p>
     <div class="actions">
       <a class="btn" style="border-color:var(--line-strong)" href="../contact.html">Join the investment network</a>
       <a class="btn" style="border-color:var(--line-strong)" href="../strategies.html">See how the model works</a>
@@ -834,3 +834,10 @@ for i, p in enumerate(P):
 with open("/tmp/slugmap.json", "w") as f:
     json.dump({p["addr"]: p["slug"] for p in P}, f, indent=1)
 print("TOTAL", len(P))
+
+
+# --- keep SEO/506(b) metadata authoritative -------------------------------
+# This generator emits a baseline <head>. tools-apply-seo-metadata.py owns the
+# canonical/robots/OG/Twitter/JSON-LD block, so re-apply it after every build.
+import subprocess as _sp
+_sp.run(["python3", os.path.join(SITE, "tools-apply-seo-metadata.py")], check=True)

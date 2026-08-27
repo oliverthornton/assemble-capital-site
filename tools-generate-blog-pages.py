@@ -14,7 +14,7 @@ tools-add-analytics.py's one-directory-deep glob still reaches them.
 
 Output: blog/index.html, blog/<slug>.html for each published post.
 """
-import os, json
+import os, re, json
 from datetime import datetime
 
 SITE = os.path.dirname(os.path.abspath(__file__))
@@ -50,7 +50,7 @@ GA4 = ('<!-- Google tag (gtag.js) -->\n'
 def header(base=".."):
     return f'''<header class="site-head">
   <div class="bar">
-    <a class="lockup" href="{base}/index.html" aria-label="Assemble Capital home">
+    <a class="lockup" href="/" aria-label="Assemble Capital home">
       {MONO}
       <span class="word">Assemble<br>Capital</span>
     </a>
@@ -93,12 +93,93 @@ def parse_date(date_str):
     date in posts.json should fail loudly rather than silently mis-sort."""
     return datetime.strptime(date_str, "%B %d, %Y")
 
+
+# --- compliance screen -------------------------------------------------------
+# Several drafts were written before the Rule 506(b) posture was settled and
+# still name active deals or promise returns. Publishing is one status flip
+# away, so the screen runs at build time rather than relying on review.
+ACTIVE_DEALS = ["Gonzaga", "Berryman", "Culver VI", "3850 Westwood", "SAMO IV",
+                "1925 19th", "Kentwood", "6450 W 85th", "Harter", "Helms"]
+
+SCREEN = [
+    ("names an active 506(b) deal",
+     lambda t: [d for d in ACTIVE_DEALS if re.search(re.escape(d), t, re.I)]),
+    ("states active-deal count or terms",
+     lambda t: re.findall(r"seven active|all seven|seven of the platform|current offering|now raising", t, re.I)),
+    ("performance promise",
+     lambda t: re.findall(r"asymmetric\w*|upside far exceeds|amplif\w+ return|protect\w* investor capital|guaranteed return", t, re.I)),
+    ("unverifiable audit or verification claim",
+     lambda t: re.findall(r"audited by|third[- ]party audit|independently verified|certified by", t, re.I)),
+]
+
+
+def screen(post):
+    """Return a list of compliance problems, empty when the post is clean."""
+    t = re.sub(r"<[^>]+>", " ", post.get("body_html") or "")
+    t = re.sub(r"\s+", " ", t)
+    out = []
+    for label, test in SCREEN:
+        hits = test(t)
+        if hits:
+            uniq = sorted({str(h).lower() for h in hits})[:4]
+            out.append(f"{label}: {', '.join(uniq)}")
+    return out
+
+
 def published_sorted(posts):
-    pub = [p for p in posts if p.get("status") == "published"]
+    pub = []
+    for p in posts:
+        if p.get("status") != "published":
+            continue
+        problems = screen(p)
+        if problems:
+            print(f"  BLOCKED {p['slug']}")
+            for pr in problems:
+                print(f"          {pr}")
+            continue
+        pub.append(p)
     pub.sort(key=lambda p: parse_date(p["date"]), reverse=True)
     return pub
 
 # ---------------------------------------------------------------- JSON-LD
+
+
+# Posts that cite project-level results carry the same adjacent attribution the
+# property pages use. The global legal footer alone leaves a reader to connect
+# figures on an Assemble Capital domain to Assemble Capital offerings.
+PROJECT_ATTRIBUTION = (
+    '<p class="footnote" style="margin-top:2rem">Project results referenced in this article were '
+    'achieved by the principals through Thornton Development Group and affiliated entities. '
+    'Thornton Development Group is an independent company operated by the same principals who '
+    'manage Assemble Capital; the two are separate companies. These projects were not Assemble '
+    'Capital offerings and did not involve '
+    'Assemble Capital investors. Figures are sponsor-level, unaudited, and drawn from internal '
+    'records. Past performance is not indicative of future results.</p>'
+)
+
+
+def attribution_for(p):
+    return PROJECT_ATTRIBUTION if p.get("project_attribution") else ""
+
+
+def faq_jsonld(p):
+    """FAQPage markup from the post's `faq` list, or "" when it has none."""
+    items = p.get("faq") or []
+    if not items:
+        return ""
+    obj = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": it["q"],
+             "acceptedAnswer": {"@type": "Answer", "text": it["a"]}}
+            for it in items
+        ],
+    }
+    return ('\n<script type="application/ld+json">\n'
+            + json.dumps(obj, indent=2) + "\n</script>")
+
+
 def jsonld_for(p, canonical_url, abs_image_url, abs_logo_url, iso_date):
     data = {
         "@context": "https://schema.org",
@@ -133,6 +214,8 @@ def build_post(p):
     abs_image_url = f"{BASE_URL}/{hero}"
     abs_logo_url = f"{BASE_URL}/{LOGO_PATH}"
     jsonld_str = jsonld_for(p, canonical_url, abs_image_url, abs_logo_url, iso_date)
+    faq_str = faq_jsonld(p)
+    attribution_str = attribution_for(p)
 
     category = p.get("category")
     eyebrow = category if category else "Insights"
@@ -145,22 +228,28 @@ def build_post(p):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title} &mdash; Assemble Capital</title>
 <meta name="description" content="{desc}">
+<link rel="canonical" href="{canonical_url}">
+<meta name="robots" content="index, follow, max-image-preview:large">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Assemble Capital">
 <meta property="og:url" content="{canonical_url}">
 <meta property="og:title" content="{title} &mdash; Assemble Capital">
 <meta property="og:description" content="{desc}">
 <meta property="og:image" content="{abs_image_url}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Los Angeles residential development project photograph accompanying &ldquo;{title}&rdquo;">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{title} &mdash; Assemble Capital">
 <meta name="twitter:description" content="{desc}">
 <meta name="twitter:image" content="{abs_image_url}">
+<meta name="twitter:image:alt" content="Los Angeles residential development project photograph accompanying &ldquo;{title}&rdquo;">
 {FONTS}
 <link rel="stylesheet" href="../css/style.css?v=3">
 {FAVICON}
 <script type="application/ld+json">
 {jsonld_str}
-</script>
+</script>{faq_str}
 {GA4}
 </head>
 <body>
@@ -182,6 +271,7 @@ def build_post(p):
 <section>
   <div class="wrap" style="max-width:46rem">
 {p["body_html"]}
+{attribution_str}
     <p class="footnote" style="margin-top:2.4rem;padding-top:1.6rem;border-top:1px solid var(--line)">This article is for general informational and educational purposes only. It is not, and should not be relied upon as, investment, legal, tax, or accounting advice, and it is not a recommendation or endorsement of any strategy or investment. Consult your own financial, tax, and legal advisors before making any investment decision. See our full <a href="../disclosures.html">Risk Disclosures</a> for additional information.</p>
   </div>
 </section>

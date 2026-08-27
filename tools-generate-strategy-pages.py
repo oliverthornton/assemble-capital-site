@@ -2,7 +2,7 @@
 """Generate the four strategy detail pages."""
 import os
 
-SITE = "/Users/oliverthornton/Desktop/Claude Cowork/assemble-capital-site"
+SITE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(SITE, "strategies")
 
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">\n'
@@ -25,7 +25,7 @@ LEGAL = ("Not an offer or solicitation. Any offering is made only through defini
 def header():
     return f'''<header class="site-head">
   <div class="bar">
-    <a class="lockup" href="../index.html" aria-label="Assemble Capital home">
+    <a class="lockup" href="/" aria-label="Assemble Capital home">
       {MONO}
       <span class="word">Assemble<br>Capital</span>
     </a>
@@ -141,7 +141,7 @@ dict(slug="luxury-redevelopment", eyebrow="Strategy 01 &middot; SFR&ndash;Redev"
          "severe-downside case testing the equity outcome &mdash; not just the project margin "
          "&mdash; is required at investment committee."],
   ent=[],
-  con=[card("85th.jpg","&ldquo;The Kentwood Farmhouse&rdquo;","6450 W 85th St &middot; Westchester &middot; AC V LLC","In Construction &middot; ~20%", "../portfolio.html",
+  con=[card("85th.jpg","&ldquo;The Kentwood Farmhouse&rdquo;","6450 W 85th St &middot; Westchester &middot; AC V LLC","In Construction", "../portfolio.html",
             [("Q1 2027","Target sale"),("Dual","Product")])],
   done=[card("gonzaga.webp","&ldquo;The Gonzaga Residence&rdquo;","8404 Gonzaga Ave &middot; Assemble Capital LLC","Completed","../properties/gonzaga-residence.html"),
         card("berryman-home.jpg","&ldquo;The Berryman Residence&rdquo;","4432 Berryman Ave &middot; AC II LLC","Completed","../properties/berryman-residence.html"),
@@ -436,7 +436,7 @@ def build(s):
   <div class="wrap reveal">
     <p class="eyebrow">Future Opportunities</p>
     <h2 class="h-lg">Want to invest in the next one?</h2>
-    <p class="muted" style="max-width:42rem;margin:1.4rem auto 0">Future projects in this strategy are capitalized through new project-specific offerings &mdash; an 8% preferred return paid before the sponsor participates, Class&nbsp;A participation in the profits, and our own capital in every deal. Get in touch and we'll walk you through the model, the pipeline, and what a specific offering looks like.</p>
+    <p class="muted" style="max-width:42rem;margin:1.4rem auto 0">Future projects in this strategy are capitalized through new project-specific offerings &mdash; an 8% preferred return paid before the sponsor participates, Class&nbsp;A participation in the profits, and our own capital in every deal. Terms shown are typical of prior offerings and are not an offer; the final terms of any investment are governed solely by that project's private placement memorandum and operating agreement. Get in touch and we'll walk you through the model, the pipeline, and what a specific offering looks like.</p>
     <div class="actions">
       <a class="btn" style="border-color:var(--line-strong)" href="../contact.html">Contact us about investing</a>
       <a class="btn" style="border-color:var(--line-strong)" href="../strategies.html#model">See how the structure works</a>
@@ -485,3 +485,10 @@ for s in S:
         f.write(build(s))
     print("wrote strategies/" + s["slug"] + ".html")
 print("TOTAL", len(S))
+
+
+# --- keep SEO/506(b) metadata authoritative -------------------------------
+# This generator emits a baseline <head>. tools-apply-seo-metadata.py owns the
+# canonical/robots/OG/Twitter/JSON-LD block, so re-apply it after every build.
+import subprocess as _sp
+_sp.run(["python3", os.path.join(SITE, "tools-apply-seo-metadata.py")], check=True)
