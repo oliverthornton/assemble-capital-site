@@ -25,7 +25,7 @@ LEGAL = ("Not an offer or solicitation. Any offering is made only through defini
 def header():
     return f'''<header class="site-head">
   <div class="bar">
-    <a class="lockup" href="../index.html" aria-label="Assemble Capital home">
+    <a class="lockup" href="/" aria-label="Assemble Capital home">
       {MONO}
       <span class="word">Assemble<br>Capital</span>
     </a>

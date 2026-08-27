@@ -50,7 +50,7 @@ GA4 = ('<!-- Google tag (gtag.js) -->\n'
 def header(base=".."):
     return f'''<header class="site-head">
   <div class="bar">
-    <a class="lockup" href="{base}/index.html" aria-label="Assemble Capital home">
+    <a class="lockup" href="/" aria-label="Assemble Capital home">
       {MONO}
       <span class="word">Assemble<br>Capital</span>
     </a>
@@ -99,6 +99,25 @@ def published_sorted(posts):
     return pub
 
 # ---------------------------------------------------------------- JSON-LD
+
+def faq_jsonld(p):
+    """FAQPage markup from the post's `faq` list, or "" when it has none."""
+    items = p.get("faq") or []
+    if not items:
+        return ""
+    obj = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {"@type": "Question", "name": it["q"],
+             "acceptedAnswer": {"@type": "Answer", "text": it["a"]}}
+            for it in items
+        ],
+    }
+    return ('\n<script type="application/ld+json">\n'
+            + json.dumps(obj, indent=2) + "\n</script>")
+
+
 def jsonld_for(p, canonical_url, abs_image_url, abs_logo_url, iso_date):
     data = {
         "@context": "https://schema.org",
@@ -133,6 +152,7 @@ def build_post(p):
     abs_image_url = f"{BASE_URL}/{hero}"
     abs_logo_url = f"{BASE_URL}/{LOGO_PATH}"
     jsonld_str = jsonld_for(p, canonical_url, abs_image_url, abs_logo_url, iso_date)
+    faq_str = faq_jsonld(p)
 
     category = p.get("category")
     eyebrow = category if category else "Insights"
@@ -166,7 +186,7 @@ def build_post(p):
 {FAVICON}
 <script type="application/ld+json">
 {jsonld_str}
-</script>
+</script>{faq_str}
 {GA4}
 </head>
 <body>

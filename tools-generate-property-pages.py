@@ -491,7 +491,7 @@ MONO = '<img class="emblem" src="../assets/img/logo/emblem-white-v2.png" alt="" 
 def header(base=".."):
     return f'''<header class="site-head">
   <div class="bar">
-    <a class="lockup" href="{base}/index.html" aria-label="Assemble Capital home">
+    <a class="lockup" href="/" aria-label="Assemble Capital home">
       {MONO}
       <span class="word">Assemble<br>Capital</span>
     </a>

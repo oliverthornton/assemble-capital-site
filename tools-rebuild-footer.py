@@ -102,7 +102,7 @@ def build(base):
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <a class="lockup" href="{b}index.html" style="color:var(--paper);margin-bottom:1.2rem">
+        <a class="lockup" href="/" style="color:var(--paper);margin-bottom:1.2rem">
           <img class="emblem" src="{b}assets/img/logo/emblem-white-v2.png" alt="" aria-hidden="true">
           <span class="word">Assemble<br>Capital</span>
         </a>
@@ -118,7 +118,7 @@ def build(base):
       <div>
         <h4>Navigate</h4>
         <div class="foot-nav">
-          <a href="{b}index.html">Home</a>
+          <a href="/">Home</a>
           <a href="{b}about.html">About</a>
           <a href="{b}strategies.html">Strategies</a>
           <a href="{b}portfolio.html">Current Projects</a>
