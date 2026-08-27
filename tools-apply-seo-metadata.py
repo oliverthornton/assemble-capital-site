@@ -213,7 +213,9 @@ ORG_JSONLD = {
   "areaServed": {"@type": "City", "name": "Los Angeles"},
   "sameAs": [
     "https://www.linkedin.com/company/assemble-capital-real-estate/",
-    "https://www.instagram.com/assemble.capital/"
+    "https://www.instagram.com/assemble.capital/",
+    "https://www.facebook.com/profile.php?id=61565401305284",
+    "https://www.tiktok.com/@assemble.capital"
   ]
 }
 
