@@ -23,6 +23,14 @@ change makes the site more discoverable (raising exposure if left as-is). **All 
 | `/` og:title + twitter:title | **"Generating Asymmetrical Returns Through Real Estate Syndication"** | Los Angeles Residential Development Firm \| Assemble Capital |
 | 19 property pages | "...gallery, **returns**, and investment cycle." | neutral, project-specific development summaries |
 
+### A4. Late catch — "asymmetric returns" on `/about.html`
+
+`about.html` described the firm as "focused on **generating asymmetric returns**". An earlier sweep
+searched for "asymmetric*al*" and missed the shorter stem. Replaced with "Assemble Capital is a Los
+Angeles residential development firm working across single-family redevelopment, ground-up
+multifamily, fee-simple subdivisions, and TIC housing." A stem-based sweep now confirms no
+non-blog page carries this or any equivalent performance promise.
+
 ### A3. Social-preview alt text — misattribution corrected
 
 An initial pass of this work described TDG projects as Assemble Capital projects in
@@ -143,6 +151,44 @@ and descriptions 187–267 chars, both of which truncate in search results. Fixi
 rewriting the same sensitive copy, so it was **deliberately deferred to this review** rather than
 done unilaterally. All core, strategy, and property pages are within limits.
 
+### B5. `strategies.html` — "How You Invest" section (**recommend moving behind the portal**)
+
+Lines 186–227 are a 41-line public module titled **"How You Invest / The investment model, step
+by step"**, containing:
+
+- Steps 1–4 walking a visitor through investing as a **Class A member**
+- "investors receive a **preferred return (historically 8%)** and their capital back before the
+  sponsor takes a dollar of profit"
+- "split between Class A (investors) and Class B (sponsor) **through the waterfall**"
+- a worked example: **"A $100,000 Investment"** → `You invest (Class A) $100,000` ·
+  `Preferred return paid first 8% — $8,000` · `Your capital returned $100,000`
+
+This is the **most solicitation-like artifact remaining on the public site**. It publishes
+preferred return, waterfall mechanics, Class A/B structure, and an investment-size example — four
+items on the plan's do-not-publish list — and the plan states a disclaimer does not cure language
+that may itself be viewed as solicitation.
+
+**Left in place deliberately.** Unlike the one-line CTAs and sentences already replaced, this is an
+entire named page section; removing it changes what the page is, and relocating it behind the
+investor portal is a migration decision, not an edit. **Recommendation: move it to the portal.**
+
+### B6. Related-party construction (Harter, Helms, and current AC projects)
+
+Confirmed by Oliver: **Harter (AC VI) and Helms (AC VII) are owned by Assemble Capital but built
+by Thornton Development Group.** Ownership attribution on the site is unaffected and correct.
+
+The disclosure question is different: `index.html` markets the firm as **"Vertically integrated —
+acquisition, entitlement, architecture coordination, construction management, and disposition
+handled in-house"**, and `about.html` says "Every aspect of the development process is coordinated
+in-house." In substance that is accurate (common principals), but the builder is an **affiliated
+entity under common control**, which makes it a **related-party arrangement** — an affiliate earning
+construction fees on AC-owned projects.
+
+Counsel should confirm (a) the arrangement is disclosed in the offering documents as a conflict of
+interest and related-party transaction, and (b) whether "in-house" is the right public
+characterisation of an affiliate relationship. `disclosures.html` already contemplates sponsor
+compensation and conflicts generally; this specific relationship is not named publicly.
+
 ### B4. Investor Portal link
 
 `https://assemblecapital.cashflowportal.com` is linked from the public header on every page.
@@ -160,3 +206,5 @@ Do not publish until counsel has approved:
 - [x] Part B2 — predecessor/affiliate attribution COMPLETE and verified (no action)
 - [ ] Part B3 — disposition of the blog (13 highest-exposure posts listed; all 15 warrant a pass)
 - [ ] Part B4 — investor-portal qualification workflow
+- [ ] Part B5 — `strategies.html` "How You Invest" module (**recommend moving behind the portal**)
+- [ ] Part B6 — related-party construction disclosure (TDG builds AC-owned Harter/Helms)
