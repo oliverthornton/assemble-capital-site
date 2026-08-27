@@ -155,12 +155,12 @@ def build_post(p):
 <meta property="og:image" content="{abs_image_url}">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Assemble Capital residential development project photograph accompanying &ldquo;{title}&rdquo;">
+<meta property="og:image:alt" content="Los Angeles residential development project photograph accompanying &ldquo;{title}&rdquo;">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{title} &mdash; Assemble Capital">
 <meta name="twitter:description" content="{desc}">
 <meta name="twitter:image" content="{abs_image_url}">
-<meta name="twitter:image:alt" content="Assemble Capital residential development project photograph accompanying &ldquo;{title}&rdquo;">
+<meta name="twitter:image:alt" content="Los Angeles residential development project photograph accompanying &ldquo;{title}&rdquo;">
 {FONTS}
 <link rel="stylesheet" href="../css/style.css?v=3">
 {FAVICON}

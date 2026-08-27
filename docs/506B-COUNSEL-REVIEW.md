@@ -23,6 +23,16 @@ change makes the site more discoverable (raising exposure if left as-is). **All 
 | `/` og:title + twitter:title | **"Generating Asymmetrical Returns Through Real Estate Syndication"** | Los Angeles Residential Development Firm \| Assemble Capital |
 | 19 property pages | "...gallery, **returns**, and investment cycle." | neutral, project-specific development summaries |
 
+### A3. Social-preview alt text — misattribution corrected
+
+An initial pass of this work described TDG projects as Assemble Capital projects in
+`og:image:alt` / `twitter:image:alt` (the homepage's Hideaway HH image, the insights index's
+David III image, and 12 blog posts using TDG project photos). Corrected: images of TDG projects
+are now either described neutrally ("a Los Angeles residential development project") or credited
+to "the Assemble Capital principals", matching the framing already used elsewhere on the site.
+Only Gonzaga, Berryman, Culver VI, SAMO IV, and Kentwood images are described as Assemble Capital
+projects.
+
 **Verified:** no page's `<head>` outside `/blog/` now contains `accredited`, `asymmetrical`,
 `open to`, `now raising`, `current offering`, `invest now`, `preferred return`, `equity multiple`,
 `target return`, or `join the network`.
@@ -54,33 +64,56 @@ carry their own complete disclosures).
 
 These were left intact because changing them is a business/legal judgment, not an SEO fix.
 
-### B1. Public performance statistics — **highest residual exposure**
+### B0. Entity map (confirmed by Oliver Thornton, 2026-08-26)
 
-Still displayed publicly:
+| Entity | Project | Status |
+|---|---|---|
+| AC I | The Gonzaga Residence — 8404 Gonzaga Ave | construction complete, **in escrow** |
+| AC II | The Berryman Residence — 4432 Berryman Ave | construction complete, **on market** |
+| AC III | Culver VI — 3850 Westwood | in progress |
+| AC IV | The SAMO IV — 1925 19th St | in progress |
+| AC V | Kentwood — 85th St | in progress |
+| AC VI | Harter | in progress |
+| AC VII | Helms | in progress |
+| **TDG / affiliates** | **all 17 other property pages** and the entire realized track record | completed |
 
-- **Homepage stat band:** `21 completed projects` · `$86.0M dispositions & carried value` ·
-  `2.13x blended realized equity multiple — 7 documented exits` · `~38% avg. deal-level IRR on realized exits`
-- **`/track-record.html`:** full realized-performance tables, including `equity multiple`
-- **19 property pages:** per-deal `Equity invested / returned / profit`, `equity multiple`, `IRR`,
-  `gross profit on cost`
+Assemble Capital has **seven** deals and **zero realized exits**. Every realized return figure on
+the site was earned by Thornton Development Group or an affiliated predecessor.
 
-These are *realized* results, not projections — a materially different risk posture than target
-returns. The plan still requires counsel to approve **attribution, calculation methodology, and
-whether they appear publicly at all**, including in search and social previews.
+### B1. Public performance statistics — attribution verified, prominence is the open question
 
-**Decision needed:** keep public / move behind the investor portal / keep with added methodology
-and attribution disclosure.
+**Correction to an earlier draft of this checklist:** attribution is *not* missing. It is present,
+accurate, and in four places:
 
-### B2. Predecessor / affiliate attribution
+- `track-record.html` — a dedicated note naming Thornton Development Group explicitly and stating
+  the results "show how the operators have performed, not what any Assemble Capital offering has
+  returned"
+- `index.html` — three separate footnotes attributing results to principals and predecessor companies
+- the `class="legal"` disclosure block, present on **every** page
+- **all 17 TDG property pages** carry a page-level sentence: "This project was completed by the
+  principals through Thornton Development Group or an affiliated predecessor entity. It was not an
+  Assemble Capital offering and did not involve Assemble Capital investors."
 
-The plan requires a visible attribution wherever a project was **not** an Assemble Capital
-offering:
+Independently verified: Gonzaga and Berryman correctly **omit** that sentence, and both publish
+**no economics whatsoever** — no equity multiple, IRR, or projected return. No active Assemble
+Capital offering economics appear anywhere on the public site.
 
-> Completed by the principals through a predecessor or affiliated entity. This project was not an
-> Assemble Capital offering and did not involve Assemble Capital investors.
+**What remains for counsel** is therefore prominence and framing, not absence:
 
-**Not yet added** — Assemble cannot determine from the codebase which of the 19 projects this
-applies to. **Oliver must supply the per-project ownership history**, then this can be applied.
+1. The homepage stat band (`21` · `$86.0M` · `2.13x` · `~38% IRR`) renders **above the fold**,
+   while its attributing footnote sits further down the page. A visitor can see the numbers
+   without the attribution.
+2. `track-record.html` H1 reads "Every number, on the record" over TDG results on an Assemble
+   Capital domain.
+3. Whether sponsor-level, unaudited figures belong on an unrestricted public page at all.
+
+**Decision needed:** keep as-is / move attribution adjacent to the stat band / move figures behind
+the investor portal.
+
+### B2. Predecessor / affiliate attribution — COMPLETE, no action required
+
+Already implemented correctly across all 19 property pages and verified against the entity map in
+B0. An earlier draft of this checklist listed this as outstanding; that was wrong.
 
 ### B3. Blog content — investor-acquisition oriented
 
@@ -123,7 +156,7 @@ and that a self-attested accreditation checkbox is not the sole qualification ba
 Do not publish until counsel has approved:
 
 - [ ] Part A replacement wording
-- [ ] Part B1 — public performance statistics (highest exposure)
-- [ ] Part B2 — predecessor/affiliate attribution supplied and applied
+- [ ] Part B1 — prominence of public performance statistics (attribution already correct)
+- [x] Part B2 — predecessor/affiliate attribution COMPLETE and verified (no action)
 - [ ] Part B3 — disposition of the blog (13 highest-exposure posts listed; all 15 warrant a pass)
 - [ ] Part B4 — investor-portal qualification workflow

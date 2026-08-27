@@ -25,7 +25,7 @@ CORE = {
    "Assemble Capital is a Los Angeles residential development firm focused on luxury homes, "
    "multifamily, fee-simple subdivisions, and tenancy-in-common housing.",
    "assets/img/social/home-1200x630.jpg",
-   "The Hideaway HH, a completed Assemble Capital luxury residence in the Hollywood Hills"),
+   "The Hideaway HH, a Hollywood Hills luxury residence completed by the Assemble Capital principals"),
 
  "about.html": (
    "About Our Los Angeles Development Firm | Assemble Capital",
@@ -88,7 +88,7 @@ CORE = {
    "Practical insights on Los Angeles development, SB 684 and SB 1123, multifamily projects, "
    "tenancy-in-common housing, construction, and entitlements.",
    "assets/img/social/insights-1200x630.jpg",
-   "The David III, a completed Assemble Capital residential development near Culver City"),
+   "The David III, a residential development near Culver City completed by the Assemble Capital principals"),
 
  "contact.html": (
    "Contact Assemble Capital | Los Angeles Development Firm",
