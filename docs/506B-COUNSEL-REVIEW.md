@@ -127,7 +127,7 @@ Asymmetrical Returns Through Multi Family Real Estate Syndication."* That is pub
 property, indexed, and will be linked from `sameAs` structured data on all 49 pages after
 deployment. It cannot be changed from the website.
 
-### 3.4 Blog content — 13 investor-acquisition posts
+### 3.4 Blog content — **CLOSED**
 
 Unchanged from the live site. Highest exposure first:
 
@@ -176,7 +176,7 @@ related-party transaction and conflict of interest, and (b) whether "in-house" i
 characterisation of an affiliate relationship. `/disclosures.html` addresses sponsor compensation
 and conflicts generally; this specific relationship is not named publicly.
 
-### 3.7 Realized results associated with an active offering
+### 3.7 Realized results associated with an active offering — **CLOSED**
 
 `/properties/david-iii.html` presents David III's realized `1.41x` and `~17% IRR` — a completed TDG
 project — then states it is *"the proof-of-concept for the tenancy-in-common exit — **now the model
@@ -215,10 +215,10 @@ Do not publish until counsel has approved:
 - [ ] **3.1** Public performance statistics — prominence and appropriateness
 - [ ] **3.2** Investment-structure content — preferred return, waterfall, worked example, CTAs
 - [ ] **3.3** The tagline, on-site and in the Facebook page bio
-- [ ] **3.4** Disposition of the 13 investor-acquisition blog posts
+- [x] **3.4** Blog — screened clean; build-time guard added
 - [ ] **3.5** Investor-portal qualification workflow
 - [ ] **3.6** Related-party construction disclosure
-- [ ] **3.7** David III / SAMO IV association
+- [x] **3.7** David III / SAMO IV association — removed
 - [x] Predecessor attribution — verified complete, no action
 - [x] No active-offering economics published — verified
 - [x] Public metadata free of offering language — verified
