@@ -473,7 +473,7 @@ P = [
           ("Build","2023&ndash;2025","Three units constructed to for-sale finish standards, not rental spec."),
           ("Structure","2025","TIC legal structuring, partial-release terms, and buyer-financing availability arranged."),
           ("Sell out","Nov 2025 &ndash; Feb 2026","Three fee-simple units closed individually, totaling $2.91M."),
-          ("Result","2026","Equity returned 1.41x / ~17% XIRR over 26 months; template proven for AC IV.")],
+          ("Result","2026","Equity returned 1.41x / ~17% XIRR over 26 months.")],
    lesson="A TIC sellout trades speed for price. The premium over bulk value is real, but so is the absorption timeline &mdash; and the bulk-sale fallback has to be underwritten before you start."),
 ]
 
