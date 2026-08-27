@@ -5,3 +5,6 @@
 
 # Syncthing conflict copies — never commit these
 *.sync-conflict-*
+
+# Vercel CLI local link state — machine-specific, never commit
+.vercel/
