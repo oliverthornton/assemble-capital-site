@@ -14,7 +14,7 @@ Applied because the implementation plan prescribed the replacement wording, and 
 change makes the site more discoverable (raising exposure if left as-is). **All are reversible:**
 `git diff main..seo-metadata-506b`.
 
-### A1. Public metadata — solicitation language removed sitewide
+### A1. Public metadata — solicitation language removed sitewide (**retained**)
 
 | Page | Before | After |
 |---|---|---|
@@ -22,6 +22,46 @@ change makes the site more discoverable (raising exposure if left as-is). **All 
 | `/` description | "...vertically integrated, **open to accredited investors**." | "...luxury homes, multifamily, fee-simple subdivisions, and TIC housing." |
 | `/` og:title + twitter:title | **"Generating Asymmetrical Returns Through Real Estate Syndication"** | Los Angeles Residential Development Firm \| Assemble Capital |
 | 19 property pages | "...gallery, **returns**, and investment cycle." | neutral, project-specific development summaries |
+
+No page's `<head>` outside `/blog/` contains `accredited`, `asymmetric`, `8% preferred`,
+`next offering`, or `join the network`. **This layer is unaffected by the restore below** — search
+and social previews stay neutral while the page body carries the full structural detail.
+
+### A2. Visible page copy — **RESTORED to original wording (owner decision, 2026-08-26)**
+
+The initial pass replaced offering-structure copy on 25 pages under a stricter reading. Owner
+decision is that this information is fair game, so it has been **restored verbatim from `main`**:
+
+| Location | Restored |
+|---|---|
+| 19 property pages | "We syndicate Los Angeles residential projects with accredited investors — an 8% preferred return paid first, Class A participation in the profits, and our own capital in every deal. Join the network to see the next offering." |
+| 4 strategy pages | "Future projects in this strategy are capitalized through new project-specific offerings — an 8% preferred return paid before the sponsor participates, Class A participation in the profits..." |
+| `/` alignment band | "Our offerings have typically paid investors an 8% preferred return before the sponsor shares in any profit..." |
+| `/` subhead | "...in partnership with accredited investors who share in the profits." |
+| `/about` Economics card | "Class A / Class B structure with an 8% preferred return and project-specific splits..." |
+| `/about` CTA heading | "Get to know the platform before the next offering opens." |
+| `/portfolio` heading + body | "Future acquisitions are capitalized through new project-specific offerings." / "...Join the network to see the next offering." |
+| `/contact` eyebrow | "Join the Investment Network" |
+| **23 CTA buttons** | "Join the investment network" |
+
+Verified: `contact.html`, all 4 strategy pages and all 19 property pages are now byte-identical to
+`main` in body copy.
+
+### A2b. Performance-promise language — **still replaced** (counsel decision open)
+
+Three items were **not** restored, because they are claims about *outcomes* rather than
+descriptions of deal structure — a separate prohibition in the plan ("statements that a project
+will generate attractive, exceptional, superior, protected, or asymmetrical returns"):
+
+| Location | Original | Current |
+|---|---|---|
+| `/` H1 | "Generating **asymmetrical returns** through real estate syndication." | "Residential development, assembled with discipline." |
+| `/` eyebrow | "Los Angeles · Real Estate Syndication" | "Los Angeles · Residential Development" |
+| `/about` intro | "...focused on **generating asymmetric returns** through single-family redevelopment..." | "Assemble Capital is a Los Angeles residential development firm working across..." |
+
+These are the only three body-copy differences from `main` besides the Kentwood status change.
+Restoring them is a one-line change if counsel is comfortable. The current H1 also aligns with the
+validated keyword strategy, so there is an SEO argument for keeping it independent of the legal one.
 
 ### A4. Late catch — "asymmetric returns" on `/about.html`
 
@@ -210,7 +250,7 @@ and that a self-attested accreditation checkbox is not the sole qualification ba
 
 Do not publish until counsel has approved:
 
-- [ ] Part A replacement wording
+- [ ] Part A2b — the three performance-promise replacements (all other copy restored)
 - [ ] Part B1 — prominence of public performance statistics (attribution already correct)
 - [x] Part B2 — predecessor/affiliate attribution COMPLETE and verified (no action)
 - [ ] Part B3 — disposition of the blog (13 highest-exposure posts listed; all 15 warrant a pass)
