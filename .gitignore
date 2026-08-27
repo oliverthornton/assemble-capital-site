@@ -2,3 +2,6 @@
 *.log
 .env
 .env.local
+
+# Syncthing conflict copies — never commit these
+*.sync-conflict-*

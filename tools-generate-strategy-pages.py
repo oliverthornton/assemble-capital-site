@@ -141,7 +141,7 @@ dict(slug="luxury-redevelopment", eyebrow="Strategy 01 &middot; SFR&ndash;Redev"
          "severe-downside case testing the equity outcome &mdash; not just the project margin "
          "&mdash; is required at investment committee."],
   ent=[],
-  con=[card("85th.jpg","&ldquo;The Kentwood Farmhouse&rdquo;","6450 W 85th St &middot; Westchester &middot; AC V LLC","In Construction &middot; ~20%", "../portfolio.html",
+  con=[card("85th.jpg","&ldquo;The Kentwood Farmhouse&rdquo;","6450 W 85th St &middot; Westchester &middot; AC V LLC","In Construction", "../portfolio.html",
             [("Q1 2027","Target sale"),("Dual","Product")])],
   done=[card("gonzaga.webp","&ldquo;The Gonzaga Residence&rdquo;","8404 Gonzaga Ave &middot; Assemble Capital LLC","Completed","../properties/gonzaga-residence.html"),
         card("berryman-home.jpg","&ldquo;The Berryman Residence&rdquo;","4432 Berryman Ave &middot; AC II LLC","Completed","../properties/berryman-residence.html"),
