@@ -145,16 +145,22 @@ def build_post(p):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{title} &mdash; Assemble Capital</title>
 <meta name="description" content="{desc}">
+<link rel="canonical" href="{canonical_url}">
+<meta name="robots" content="index, follow, max-image-preview:large">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Assemble Capital">
 <meta property="og:url" content="{canonical_url}">
 <meta property="og:title" content="{title} &mdash; Assemble Capital">
 <meta property="og:description" content="{desc}">
 <meta property="og:image" content="{abs_image_url}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Assemble Capital residential development project photograph accompanying &ldquo;{title}&rdquo;">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{title} &mdash; Assemble Capital">
 <meta name="twitter:description" content="{desc}">
 <meta name="twitter:image" content="{abs_image_url}">
+<meta name="twitter:image:alt" content="Assemble Capital residential development project photograph accompanying &ldquo;{title}&rdquo;">
 {FONTS}
 <link rel="stylesheet" href="../css/style.css?v=3">
 {FAVICON}

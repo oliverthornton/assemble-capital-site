@@ -2,7 +2,7 @@
 """Generate individual property pages for the Assemble Capital site."""
 import os, json
 
-SITE = "/Users/oliverthornton/Desktop/Claude Cowork/assemble-capital-site"
+SITE = os.path.dirname(os.path.abspath(__file__))
 IMGDIR = os.path.join(SITE, "assets", "img", "properties")
 
 # ---------------------------------------------------------------- data
@@ -834,3 +834,10 @@ for i, p in enumerate(P):
 with open("/tmp/slugmap.json", "w") as f:
     json.dump({p["addr"]: p["slug"] for p in P}, f, indent=1)
 print("TOTAL", len(P))
+
+
+# --- keep SEO/506(b) metadata authoritative -------------------------------
+# This generator emits a baseline <head>. tools-apply-seo-metadata.py owns the
+# canonical/robots/OG/Twitter/JSON-LD block, so re-apply it after every build.
+import subprocess as _sp
+_sp.run(["python3", os.path.join(SITE, "tools-apply-seo-metadata.py")], check=True)

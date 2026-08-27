@@ -2,7 +2,7 @@
 """Generate the four strategy detail pages."""
 import os
 
-SITE = "/Users/oliverthornton/Desktop/Claude Cowork/assemble-capital-site"
+SITE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(SITE, "strategies")
 
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">\n'
@@ -485,3 +485,10 @@ for s in S:
         f.write(build(s))
     print("wrote strategies/" + s["slug"] + ".html")
 print("TOTAL", len(S))
+
+
+# --- keep SEO/506(b) metadata authoritative -------------------------------
+# This generator emits a baseline <head>. tools-apply-seo-metadata.py owns the
+# canonical/robots/OG/Twitter/JSON-LD block, so re-apply it after every build.
+import subprocess as _sp
+_sp.run(["python3", os.path.join(SITE, "tools-apply-seo-metadata.py")], check=True)

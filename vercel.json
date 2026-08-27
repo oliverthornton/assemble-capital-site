@@ -1,6 +1,71 @@
 {
   "redirects": [
     {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/blog-post-title-one-6648y.html",
+      "destination": "/blog/real-estate-syndication-for-accredited-investors-los-angeles.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/blog-post-title-one-6648y",
+      "destination": "/blog/real-estate-syndication-for-accredited-investors-los-angeles.html",
+      "permanent": true
+    },
+    {
+      "source": "/assemble-capital-blogs/blog-post-title-one-6648y",
+      "destination": "/blog/real-estate-syndication-for-accredited-investors-los-angeles.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/blog-post-title-two-bgnct.html",
+      "destination": "/blog/general-partner-vs-limited-partner-in-a-syndication.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/blog-post-title-two-bgnct",
+      "destination": "/blog/general-partner-vs-limited-partner-in-a-syndication.html",
+      "permanent": true
+    },
+    {
+      "source": "/assemble-capital-blogs/blog-post-title-two-bgnct",
+      "destination": "/blog/general-partner-vs-limited-partner-in-a-syndication.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/blog-post-title-three-w77ad.html",
+      "destination": "/blog/exit-strategies-sell-lease-or-reinvest.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/blog-post-title-three-w77ad",
+      "destination": "/blog/exit-strategies-sell-lease-or-reinvest.html",
+      "permanent": true
+    },
+    {
+      "source": "/assemble-capital-blogs/blog-post-title-three-w77ad",
+      "destination": "/blog/exit-strategies-sell-lease-or-reinvest.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/blog-post-title-four-y3jky.html",
+      "destination": "/blog/risk-vs-return-questions-to-ask-before-you-invest.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/blog-post-title-four-y3jky",
+      "destination": "/blog/risk-vs-return-questions-to-ask-before-you-invest.html",
+      "permanent": true
+    },
+    {
+      "source": "/assemble-capital-blogs/blog-post-title-four-y3jky",
+      "destination": "/blog/risk-vs-return-questions-to-ask-before-you-invest.html",
+      "permanent": true
+    },
+    {
       "source": "/assemble-capital-blogs",
       "destination": "/blog/index.html",
       "permanent": true
