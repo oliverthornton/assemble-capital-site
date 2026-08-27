@@ -150,8 +150,9 @@ def published_sorted(posts):
 PROJECT_ATTRIBUTION = (
     '<p class="footnote" style="margin-top:2rem">Project results referenced in this article were '
     'achieved by the principals through Thornton Development Group and affiliated entities. '
-    'Thornton Development Group is a separate company; Assemble Capital contracts with it for '
-    'development execution. These projects were not Assemble Capital offerings and did not involve '
+    'Thornton Development Group is an independent company operated by the same principals who '
+    'manage Assemble Capital; the two are separate companies. These projects were not Assemble '
+    'Capital offerings and did not involve '
     'Assemble Capital investors. Figures are sponsor-level, unaudited, and drawn from internal '
     'records. Past performance is not indicative of future results.</p>'
 )
