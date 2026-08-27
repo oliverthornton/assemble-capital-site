@@ -14,7 +14,7 @@ tools-add-analytics.py's one-directory-deep glob still reaches them.
 
 Output: blog/index.html, blog/<slug>.html for each published post.
 """
-import os, json
+import os, re, json
 from datetime import datetime
 
 SITE = os.path.dirname(os.path.abspath(__file__))
@@ -93,8 +93,51 @@ def parse_date(date_str):
     date in posts.json should fail loudly rather than silently mis-sort."""
     return datetime.strptime(date_str, "%B %d, %Y")
 
+
+# --- compliance screen -------------------------------------------------------
+# Several drafts were written before the Rule 506(b) posture was settled and
+# still name active deals or promise returns. Publishing is one status flip
+# away, so the screen runs at build time rather than relying on review.
+ACTIVE_DEALS = ["Gonzaga", "Berryman", "Culver VI", "3850 Westwood", "SAMO IV",
+                "1925 19th", "Kentwood", "6450 W 85th", "Harter", "Helms"]
+
+SCREEN = [
+    ("names an active 506(b) deal",
+     lambda t: [d for d in ACTIVE_DEALS if re.search(re.escape(d), t, re.I)]),
+    ("states active-deal count or terms",
+     lambda t: re.findall(r"seven active|all seven|seven of the platform|current offering|now raising", t, re.I)),
+    ("performance promise",
+     lambda t: re.findall(r"asymmetric\w*|upside far exceeds|amplif\w+ return|protect\w* investor capital|guaranteed return", t, re.I)),
+    ("unverifiable audit or verification claim",
+     lambda t: re.findall(r"audited by|third[- ]party audit|independently verified|certified by", t, re.I)),
+]
+
+
+def screen(post):
+    """Return a list of compliance problems, empty when the post is clean."""
+    t = re.sub(r"<[^>]+>", " ", post.get("body_html") or "")
+    t = re.sub(r"\s+", " ", t)
+    out = []
+    for label, test in SCREEN:
+        hits = test(t)
+        if hits:
+            uniq = sorted({str(h).lower() for h in hits})[:4]
+            out.append(f"{label}: {', '.join(uniq)}")
+    return out
+
+
 def published_sorted(posts):
-    pub = [p for p in posts if p.get("status") == "published"]
+    pub = []
+    for p in posts:
+        if p.get("status") != "published":
+            continue
+        problems = screen(p)
+        if problems:
+            print(f"  BLOCKED {p['slug']}")
+            for pr in problems:
+                print(f"          {pr}")
+            continue
+        pub.append(p)
     pub.sort(key=lambda p: parse_date(p["date"]), reverse=True)
     return pub
 
