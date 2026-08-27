@@ -151,26 +151,35 @@ and descriptions 187–267 chars, both of which truncate in search results. Fixi
 rewriting the same sensitive copy, so it was **deliberately deferred to this review** rather than
 done unilaterally. All core, strategy, and property pages are within limits.
 
-### B5. `strategies.html` — "How You Invest" section (**recommend moving behind the portal**)
+### B5. `strategies.html` "How You Invest" module — **CLOSED, retained by owner decision**
 
-Lines 186–227 are a 41-line public module titled **"How You Invest / The investment model, step
-by step"**, containing:
+Oliver's standard (2026-08-26): *"As long as specific deal information on financials for an active
+506(b) project isn't being provided, it's fair game to showcase this type of information."*
 
-- Steps 1–4 walking a visitor through investing as a **Class A member**
-- "investors receive a **preferred return (historically 8%)** and their capital back before the
-  sponsor takes a dollar of profit"
-- "split between Class A (investors) and Class B (sponsor) **through the waterfall**"
-- a worked example: **"A $100,000 Investment"** → `You invest (Class A) $100,000` ·
-  `Preferred return paid first 8% — $8,000` · `Your capital returned $100,000`
+On that basis the module stays public. It describes **generic structure and a hypothetical** —
+Class A/B mechanics, a historically-used 8% preferred return, and an illustrative $100,000 example
+— none of it tied to a named active offering.
 
-This is the **most solicitation-like artifact remaining on the public site**. It publishes
-preferred return, waterfall mechanics, Class A/B structure, and an investment-size example — four
-items on the plan's do-not-publish list — and the plan states a disclaimer does not cure language
-that may itself be viewed as solicitation.
+**Verification performed.** Every dollar figure, equity multiple, and IRR on the site was matched
+against the entity map to confirm none attaches to an active Assemble Capital deal:
 
-**Left in place deliberately.** Unlike the one-line CTAs and sentences already replaced, this is an
-entire named page section; removing it changes what the page is, and relocating it behind the
-investor portal is a migration decision, not an edit. **Recommendation: move it to the portal.**
+| Active deal | Financials published? |
+|---|---|
+| Gonzaga (AC I) | none — status only |
+| Berryman (AC II) | none — status only |
+| Culver VI / 3850 Westwood (AC III) | none — stage only |
+| SAMO IV / 1925 19th St (AC IV) | none — stage only |
+| Kentwood / 6450 W 85th St (AC V) | `~20%` = **construction percent complete**, not a return |
+| Harter (AC VI) | none — rendering and stage only |
+| Helms (AC VII) | none — rendering and stage only |
+
+Every `$`, `x` multiple and IRR figure on the site belongs to a **completed TDG project**. The
+site satisfies the stated standard.
+
+**One borderline item for counsel** (not changed): `properties/david-iii.html` presents David III's
+realized `1.41x` and `~17% IRR`, then says it is "the proof-of-concept for the tenancy-in-common
+exit — **now the model at 1925 19th St**." That links a completed deal's realized results to an
+active AC IV offering by inference. No SAMO IV financials are stated; the association is the issue.
 
 ### B6. Related-party construction (Harter, Helms, and current AC projects)
 
@@ -206,5 +215,5 @@ Do not publish until counsel has approved:
 - [x] Part B2 — predecessor/affiliate attribution COMPLETE and verified (no action)
 - [ ] Part B3 — disposition of the blog (13 highest-exposure posts listed; all 15 warrant a pass)
 - [ ] Part B4 — investor-portal qualification workflow
-- [ ] Part B5 — `strategies.html` "How You Invest" module (**recommend moving behind the portal**)
+- [x] Part B5 — CLOSED: retained by owner decision; verified no active-deal financials are public
 - [ ] Part B6 — related-party construction disclosure (TDG builds AC-owned Harter/Helms)
