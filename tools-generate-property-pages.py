@@ -13,7 +13,7 @@ P = [
    strategy="Studs-out remodel + FAR expansion", status="Sold",
    cost="$5.55M", exit="$8.65M", profit="$3.10M", poc="55.9%",
    eq=dict(inv="$1,274,516", ret="$4,093,460", prof="$2,818,944", hold="47", mom="3.21x", irr="~37%"),
-   stats=[("$8.65M","Sale price &mdash; neighborhood record"),("3.21x","Equity multiple"),
+   stats=[("$8.65M","Sale price &mdash; neighborhood record at closing"),("3.21x","Equity multiple"),
           ("~37%","Deal-level IRR"),("47 mo","Hold period")],
    lede="The highest-multiple exit in the portfolio &mdash; and a lesson in what patience buys.",
    bg=["Acquired in 2019 as an under-improved hillside home on a street the principals had "
@@ -37,7 +37,7 @@ P = [
    strategy="Studs-out rebuild", status="Sold",
    cost="$3.60M", exit="$6.75M", profit="$3.15M", poc="87.6%",
    eq=dict(inv="$1,500,000", ret="$3,805,728", prof="$2,305,728", hold="24", mom="2.54x", irr="~57%"),
-   stats=[("$6.75M","Sale price &mdash; record sale"),("2.54x","Equity multiple"),
+   stats=[("$6.75M","Sale price &mdash; street record at closing"),("2.54x","Equity multiple"),
           ("~57%","Deal-level IRR"),("87.6%","Gross profit on cost")],
    lede="The clearest demonstration in the portfolio that speed is a return driver.",
    bg=["Celebrity Row is one of the most recognizable addresses in the Hollywood Hills, and one "
