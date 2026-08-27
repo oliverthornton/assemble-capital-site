@@ -212,8 +212,8 @@ ORG_JSONLD = {
   "email": "info@assemble.capital",
   "areaServed": {"@type": "City", "name": "Los Angeles"},
   "sameAs": [
-    "https://www.linkedin.com/company/assemble-capital-real-estate",
-    "https://www.instagram.com/assemble.capital"
+    "https://www.linkedin.com/company/assemble-capital-real-estate/",
+    "https://www.instagram.com/assemble.capital/"
   ]
 }
 
