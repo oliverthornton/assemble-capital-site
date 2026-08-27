@@ -1,5 +1,0 @@
-# This directory is a Syncthing folder marker.
-# Do not delete.
-
-folderID: assemble-capital-site
-created: 2026-08-27T09:43:08-07:00
