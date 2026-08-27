@@ -100,6 +100,24 @@ def published_sorted(posts):
 
 # ---------------------------------------------------------------- JSON-LD
 
+
+# Posts that cite project-level results carry the same adjacent attribution the
+# property pages use. The global legal footer alone leaves a reader to connect
+# figures on an Assemble Capital domain to Assemble Capital offerings.
+PROJECT_ATTRIBUTION = (
+    '<p class="footnote" style="margin-top:2rem">Project results referenced in this article were '
+    'achieved by the principals through Thornton Development Group and affiliated entities. '
+    'Thornton Development Group is a separate company; Assemble Capital contracts with it for '
+    'development execution. These projects were not Assemble Capital offerings and did not involve '
+    'Assemble Capital investors. Figures are sponsor-level, unaudited, and drawn from internal '
+    'records. Past performance is not indicative of future results.</p>'
+)
+
+
+def attribution_for(p):
+    return PROJECT_ATTRIBUTION if p.get("project_attribution") else ""
+
+
 def faq_jsonld(p):
     """FAQPage markup from the post's `faq` list, or "" when it has none."""
     items = p.get("faq") or []
@@ -153,6 +171,7 @@ def build_post(p):
     abs_logo_url = f"{BASE_URL}/{LOGO_PATH}"
     jsonld_str = jsonld_for(p, canonical_url, abs_image_url, abs_logo_url, iso_date)
     faq_str = faq_jsonld(p)
+    attribution_str = attribution_for(p)
 
     category = p.get("category")
     eyebrow = category if category else "Insights"
@@ -208,6 +227,7 @@ def build_post(p):
 <section>
   <div class="wrap" style="max-width:46rem">
 {p["body_html"]}
+{attribution_str}
     <p class="footnote" style="margin-top:2.4rem;padding-top:1.6rem;border-top:1px solid var(--line)">This article is for general informational and educational purposes only. It is not, and should not be relied upon as, investment, legal, tax, or accounting advice, and it is not a recommendation or endorsement of any strategy or investment. Consult your own financial, tax, and legal advisors before making any investment decision. See our full <a href="../disclosures.html">Risk Disclosures</a> for additional information.</p>
   </div>
 </section>
