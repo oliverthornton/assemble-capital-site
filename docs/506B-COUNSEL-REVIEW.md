@@ -2,8 +2,10 @@
 
 **Prepared for:** securities counsel
 **Site:** https://assemble.capital · **Branch:** `seo-metadata-506b` (15 commits)
-**Status:** **NOT DEPLOYED.** Nothing in this document is live. Production still serves the
-pre-existing site. Going live requires a deliberate deploy that has not been made.
+**Status:** **DEPLOYED to production 2026-08-27** at the owner's direction, after working through
+items 3.1-3.7 below. Six of seven were resolved or closed in that process. The one open item, 3.5,
+concerns accredited-investor verification for future 506(c) raises and is an operational process
+rather than a website change. Securities counsel had not issued a written sign-off at deploy time.
 **Date:** 2026-08-27
 
 > Implementation record prepared by the site's engineer, not legal advice. Rule 506(b) compliance
