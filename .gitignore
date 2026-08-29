@@ -14,3 +14,7 @@
 .stfolder/
 .review-drafts/
 .claude/
+
+# local preview/verification screenshots
+.preview-*.png
+.playwright-mcp/
