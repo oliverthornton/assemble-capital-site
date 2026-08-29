@@ -1,6 +1,17 @@
 {
   "redirects": [
     {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.assemble.capital"
+        }
+      ],
+      "destination": "https://assemble.capital/",
+      "permanent": true
+    },
+    {
       "source": "/:path*",
       "has": [
         {
