@@ -101,6 +101,271 @@
       "source": "/assemble-capital-blogs/:slug",
       "destination": "/blog/:slug.html",
       "permanent": true
+    },
+    {
+      "source": "/home",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/single-family-projects-in-development",
+      "destination": "/portfolio.html",
+      "permanent": true
+    },
+    {
+      "source": "/single-family-projects-in-development/the-berryman-residence",
+      "destination": "/properties/berryman-residence.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog",
+      "destination": "/blog/index.html",
+      "permanent": true
+    },
+    {
+      "source": "/about",
+      "destination": "/about.html",
+      "permanent": true
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact.html",
+      "permanent": true
+    },
+    {
+      "source": "/disclosures",
+      "destination": "/disclosures.html",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio",
+      "destination": "/portfolio.html",
+      "permanent": true
+    },
+    {
+      "source": "/privacy",
+      "destination": "/privacy.html",
+      "permanent": true
+    },
+    {
+      "source": "/strategies",
+      "destination": "/strategies.html",
+      "permanent": true
+    },
+    {
+      "source": "/terms",
+      "destination": "/terms.html",
+      "permanent": true
+    },
+    {
+      "source": "/track-record",
+      "destination": "/track-record.html",
+      "permanent": true
+    },
+    {
+      "source": "/strategies/boutique-multifamily",
+      "destination": "/strategies/boutique-multifamily.html",
+      "permanent": true
+    },
+    {
+      "source": "/strategies/infill-subdivisions",
+      "destination": "/strategies/infill-subdivisions.html",
+      "permanent": true
+    },
+    {
+      "source": "/strategies/luxury-redevelopment",
+      "destination": "/strategies/luxury-redevelopment.html",
+      "permanent": true
+    },
+    {
+      "source": "/strategies/tic-housing",
+      "destination": "/strategies/tic-housing.html",
+      "permanent": true
+    },
+    {
+      "source": "/properties/apex-hh",
+      "destination": "/properties/apex-hh.html",
+      "permanent": true
+    },
+    {
+      "source": "/properties/berryman-residence",
+      "destination": "/properties/berryman-residence.html",
+      "permanent": true
+    },
+    {
+      "source": "/properties/calvert-xiv",
+      "destination": "/properties/calvert-xiv.html",
+      "permanent": true
+    },
+    {
+      "source": "/properties/case-v",
+      "destination": "/properties/case-v.html",
+      "permanent": true
+    },
+    {
+      "source": "/properties/david-iii",
+      "destination": "/properties/david-iii.html",
+      "permanent": true
+    },
+    {
+      "source": "/properties/gonzaga-residence",
+      "destination": "/properties/gonzaga-residence.html",
+      "permanent": true
+    },
+    {
+      "source": "/properties/hideaway-hh",
+      "destination": "/properties/hideaway-hh.html",
+      "permanent": true
+    },
+    {
+      "source": "/properties/hollywood-marvel",
+      "destination": "/properties/hollywood-marvel.html",
+      "permanent": true
+    },
+    {
+      "source": "/properties/hortense-vi",
+      "destination": "/properties/hortense-vi.html",
+      "permanent": true
+    },
+    {
+      "source": "/properties/hutton-marvel",
+      "destination": "/properties/hutton-marvel.html",
+      "permanent": true
+    },
+    {
+      "source": "/properties/june-iv",
+      "destination": "/properties/june-iv.html",
+      "permanent": true
+    },
+    {
+      "source": "/properties/macapa-oasis",
+      "destination": "/properties/macapa-oasis.html",
+      "permanent": true
+    },
+    {
+      "source": "/properties/martha-mcm",
+      "destination": "/properties/martha-mcm.html",
+      "permanent": true
+    },
+    {
+      "source": "/properties/modern-orange",
+      "destination": "/properties/modern-orange.html",
+      "permanent": true
+    },
+    {
+      "source": "/properties/paseo-moderna",
+      "destination": "/properties/paseo-moderna.html",
+      "permanent": true
+    },
+    {
+      "source": "/properties/rising-glen-mcm",
+      "destination": "/properties/rising-glen-mcm.html",
+      "permanent": true
+    },
+    {
+      "source": "/properties/treehouse-hh",
+      "destination": "/properties/treehouse-hh.html",
+      "permanent": true
+    },
+    {
+      "source": "/properties/villa-de-edinburgh",
+      "destination": "/properties/villa-de-edinburgh.html",
+      "permanent": true
+    },
+    {
+      "source": "/properties/villa-de-vistas",
+      "destination": "/properties/villa-de-vistas.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/10-red-flags-in-real-estate-offering-documents",
+      "destination": "/blog/10-red-flags-in-real-estate-offering-documents.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/accredited-investor-requirements",
+      "destination": "/blog/accredited-investor-requirements.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/exit-strategies-sell-lease-or-reinvest",
+      "destination": "/blog/exit-strategies-sell-lease-or-reinvest.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/general-partner-vs-limited-partner-in-a-syndication",
+      "destination": "/blog/general-partner-vs-limited-partner-in-a-syndication.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/how-to-read-a-real-estate-offering-memorandum",
+      "destination": "/blog/how-to-read-a-real-estate-offering-memorandum.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/multifamily-vs-single-family-which-offers-better-returns",
+      "destination": "/blog/multifamily-vs-single-family-which-offers-better-returns.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/passive-real-estate-investing-explained",
+      "destination": "/blog/passive-real-estate-investing-explained.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/real-estate-syndication-for-accredited-investors-los-angeles",
+      "destination": "/blog/real-estate-syndication-for-accredited-investors-los-angeles.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/risk-vs-return-questions-to-ask-before-you-invest",
+      "destination": "/blog/risk-vs-return-questions-to-ask-before-you-invest.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/sb-684-sb-1123-california-lot-split-guide",
+      "destination": "/blog/sb-684-sb-1123-california-lot-split-guide.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/tenancy-in-common-los-angeles-explained",
+      "destination": "/blog/tenancy-in-common-los-angeles-explained.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/timing-vs-time-in-market-for-private-real-estate",
+      "destination": "/blog/timing-vs-time-in-market-for-private-real-estate.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/understanding-downside-protection-in-private-deals",
+      "destination": "/blog/understanding-downside-protection-in-private-deals.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/what-makes-a-sponsor-worth-trusting",
+      "destination": "/blog/what-makes-a-sponsor-worth-trusting.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/what-to-know-before-investing-in-a-private-placement",
+      "destination": "/blog/what-to-know-before-investing-in-a-private-placement.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/why-experience-matters-more-than-project-size",
+      "destination": "/blog/why-experience-matters-more-than-project-size.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/why-projected-returns-matter-less-than-structure",
+      "destination": "/blog/why-projected-returns-matter-less-than-structure.html",
+      "permanent": true
+    },
+    {
+      "source": "/blog/why-vertical-integration-matters-in-development",
+      "destination": "/blog/why-vertical-integration-matters-in-development.html",
+      "permanent": true
     }
   ]
 }
