@@ -366,6 +366,11 @@
       "source": "/blog/why-vertical-integration-matters-in-development",
       "destination": "/blog/why-vertical-integration-matters-in-development.html",
       "permanent": true
+    },
+    {
+      "source": "/glossary",
+      "destination": "/glossary.html",
+      "permanent": true
     }
   ]
 }
