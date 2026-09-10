@@ -371,6 +371,56 @@
       "source": "/glossary",
       "destination": "/glossary.html",
       "permanent": true
+    },
+    {
+      "source": "/completed-single-family-projects/rising-glen-mcm",
+      "destination": "/properties/rising-glen-mcm.html",
+      "permanent": true
+    },
+    {
+      "source": "/completed-multi-family-projects-1/the-calvert-xiv",
+      "destination": "/properties/calvert-xiv.html",
+      "permanent": true
+    },
+    {
+      "source": "/completed-single-family-projects/the-hideaway-hh",
+      "destination": "/properties/hideaway-hh.html",
+      "permanent": true
+    },
+    {
+      "source": "/completed-multi-family-projects-1/the-hortense-vi",
+      "destination": "/properties/hortense-vi.html",
+      "permanent": true
+    },
+    {
+      "source": "/resources",
+      "destination": "/blog/index.html",
+      "permanent": true
+    },
+    {
+      "source": "/completed-single-family-projects",
+      "destination": "/track-record.html",
+      "permanent": true
+    },
+    {
+      "source": "/completed-multi-family-projects-1",
+      "destination": "/track-record.html",
+      "permanent": true
+    },
+    {
+      "source": "/completed-single-family-projects/:slug*",
+      "destination": "/track-record.html",
+      "permanent": true
+    },
+    {
+      "source": "/completed-multi-family-projects-1/:slug*",
+      "destination": "/track-record.html",
+      "permanent": true
+    },
+    {
+      "source": "/single-family-projects-in-development/:slug*",
+      "destination": "/portfolio.html",
+      "permanent": true
     }
   ]
 }
