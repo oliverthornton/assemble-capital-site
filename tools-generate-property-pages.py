@@ -140,29 +140,29 @@ P = [
              "Preference shifted toward ministerial and flatland product (SB&nbsp;684, infill multifamily) at greater scale"]),
 
  dict(slug="gonzaga-residence", name="The Gonzaga Residence", addr="8404 Gonzaga Ave", sub="Westchester",
-   cat="sf", hero="gonzaga.webp", badge="For Sale", years="2024 &ndash; present",
-   strategy="Full remodel", status="Complete &mdash; on market",
-   cost="$1.85M", exit="$2.80M", profit="$0.95M", poc="51.1%",
-   ac=True, zillow="https://www.zillow.com/homedetails/8404-Gonzaga-Ave-Los-Angeles-CA-90045/20384430_zpid/",
+   cat="sf", hero="gonzaga.webp", badge="Sold &middot; $2.70M", years="2024 &ndash; 2026",
+   strategy="Full remodel", status="Sold &mdash; $2.70M",
+   cost="", exit="$2.70M", profit="", poc="",
+   ac=True, sold=True,
    stats=[("5 / 5","Bedrooms / bathrooms"),("2,780","Square feet"),
-          ("Westchester","Submarket"),("Complete","Construction status")],
-   lede="An Assemble Capital project, complete and on the market in Westchester.",
-   bg=["8404 Gonzaga is held in Assemble Capital LLC &mdash; one of the seven active projects on "
-       "the current portfolio, and the first of them to reach completion.",
+          ("Westchester","Submarket"),("$2.70M","Sale price")],
+   lede="Assemble Capital&rsquo;s first completed project &mdash; remodeled, brought to market, and sold in Westchester.",
+   bg=["8404 Gonzaga was held in Assemble Capital LLC &mdash; the first project on the Assemble "
+       "Capital portfolio to reach completion, and the first to sell.",
        "Westchester sits in the path of steady owner-user demand: proximity to the Westside and LAX "
        "employment, a deep buyer pool at the upper end of the local market, and a housing stock old "
        "enough that a well-executed full remodel stands clearly apart from its comparable set. "
        "The scope was a comprehensive remodel delivering five bedrooms and five bathrooms across "
        "2,780 square feet.",
-       "The home is complete and listed on the open market. It was underwritten to today's closed "
-       "comparables before acquisition rather than to future appreciation &mdash; the discipline "
-       "that carries across every project. Deal-level economics for this active offering are shared "
-       "privately with prospective investors."],
+       "The home was completed, listed on the open market, and sold in 2026 for $2,700,000. It was "
+       "underwritten to closed comparables before acquisition rather than to future appreciation "
+       "&mdash; the discipline that carries across every project. Investor-level returns are "
+       "reported privately to the project&rsquo;s investors."],
    cycle=[("Acquire","2024","Acquired into Assemble Capital LLC with investor participation."),
           ("Design &amp; permit","2024","Full remodel scope permitted &mdash; no entitlement pathway required."),
           ("Build","2024&ndash;2026","Comprehensive remodel executed under in-house construction management."),
           ("Market","2026","Listed on the open market into the Westchester comparable set."),
-          ("Exit","Q3 2026 target","Sale targeted; proceeds distributed per the operating agreement waterfall.")],
+          ("Exit","2026","Sold for $2,700,000; proceeds allocated per the operating agreement waterfall.")],
    lesson="Underwrite to today's comparables. The Westchester exit was supported by closed sales before the property was acquired."),
 
  dict(slug="berryman-residence", name="The Berryman Residence", addr="4432 Berryman Ave", sub="Culver City",
@@ -173,7 +173,7 @@ P = [
    stats=[("6 / 6","Bedrooms / bathrooms"),("3,140","Square feet"),
           ("Culver City","Submarket"),("Complete","Construction status")],
    lede="A completed Assemble Capital project &mdash; ground-up new construction in Culver City, on the market.",
-   bg=["4432 Berryman is held in AC&nbsp;II&nbsp;LLC and is one of the seven active Assemble Capital "
+   bg=["4432 Berryman is held in AC&nbsp;II&nbsp;LLC and is one of the six active Assemble Capital "
        "projects. It is a completed, ground-up new-construction home &mdash; delivered, not a "
        "rendering &mdash; now finished and listed on the open market.",
        "Culver City has become one of the most sought-after submarkets on the Westside: a walkable "
@@ -643,7 +643,14 @@ def build(p, prev, nxt):
 </section>'''.replace("<li>", '<li style="padding:1rem 0;border-bottom:1px solid var(--line);font-size:.94rem">')
 
     # disclosure
-    if p.get("ac"):
+    if p.get("ac") and p.get("sold"):
+        disc = ("This was an Assemble Capital project held in a project-specific LLC &mdash; a "
+                "private offering. The sale price shown is the gross recorded sale price, not an "
+                "investor return. Nothing here is an offer to sell or a solicitation to buy any "
+                "security. Any offering is made only through definitive offering documents to eligible "
+                "investors, and investor-level returns are governed by the applicable operating "
+                "agreement. Past performance is not indicative of future results.")
+    elif p.get("ac"):
         disc = ("This is an active Assemble Capital project held in a project-specific LLC &mdash; a "
                 "private offering. Nothing here is an offer to sell or a solicitation to buy any "
                 "security. Any offering is made only through definitive offering documents to eligible "
@@ -666,6 +673,15 @@ def build(p, prev, nxt):
     # Returns section. Active AC projects are private 506(b) offerings — no public deal
     # financials; show a "shared privately" callout instead of the economics table.
     if p.get("ac"):
+        if p.get("sold"):
+            priv1 = (f"{name} sold for {p['exit']}. It was a private offering held in a project-specific "
+                     "LLC, so we don't publish its capitalization or investor-level returns; those are "
+                     "reported privately to the project&rsquo;s investors under its operating agreement.")
+            priv2 = "Prospective investors who qualify can review how the deal was underwritten and executed privately, one-on-one."
+        else:
+            priv1 = ("This is an active Assemble Capital project, held in a project-specific LLC as a private "
+                     "offering. We don't publish projected returns, capitalization, or deal-level economics for active projects.")
+            priv2 = "Prospective investors who qualify can review the full underwriting, business plan, and offering documents privately, one-on-one."
         returns_section = f'''
 <!-- FINANCIALS — PRIVATE -->
 <section>
@@ -678,8 +694,8 @@ def build(p, prev, nxt):
       <span class="stamp">{p["status"]}</span>
     </div>
     <div class="reveal" style="border:1px solid var(--line);border-left:3px solid var(--bronze);padding:1.6rem 1.9rem;max-width:54rem">
-      <p style="margin:0 0 .8rem;font-size:.95rem">This is an active Assemble Capital project, held in a project-specific LLC as a private offering. We don't publish projected returns, capitalization, or deal-level economics for active projects.</p>
-      <p style="margin:0;font-size:.95rem">Prospective investors who qualify can review the full underwriting, business plan, and offering documents privately, one-on-one. <a href="../contact.html" style="border-bottom:1px solid var(--line-strong);text-decoration:none">Request the details &rarr;</a></p>
+      <p style="margin:0 0 .8rem;font-size:.95rem">{priv1}</p>
+      <p style="margin:0;font-size:.95rem">{priv2} <a href="../contact.html" style="border-bottom:1px solid var(--line-strong);text-decoration:none">Request the details &rarr;</a></p>
     </div>
     <p class="footnote reveal" style="margin-top:1.6rem">{disc}</p>
   </div>

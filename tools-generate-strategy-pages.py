@@ -143,7 +143,7 @@ dict(slug="luxury-redevelopment", eyebrow="Strategy 01 &middot; SFR&ndash;Redev"
   ent=[],
   con=[card("85th.jpg","&ldquo;The Kentwood Farmhouse&rdquo;","6450 W 85th St &middot; Westchester &middot; AC V LLC","In Construction", "../portfolio.html",
             [("Q1 2027","Target sale"),("Dual","Product")])],
-  done=[card("gonzaga.webp","&ldquo;The Gonzaga Residence&rdquo;","8404 Gonzaga Ave &middot; Assemble Capital LLC","Completed","../properties/gonzaga-residence.html"),
+  done=[card("gonzaga.webp","&ldquo;The Gonzaga Residence&rdquo;","8404 Gonzaga Ave &middot; Sold $2.70M","Completed","../properties/gonzaga-residence.html"),
         card("berryman-home.jpg","&ldquo;The Berryman Residence&rdquo;","4432 Berryman Ave &middot; AC II LLC","Completed","../properties/berryman-residence.html"),
         card("apex.webp","&ldquo;The Apex HH&rdquo;","7115 Macapa Dr &middot; Sold $8.65M &middot; 3.21x","Completed","../properties/apex-hh.html"),
         card("hideaway.webp","&ldquo;The Hideaway HH&rdquo;","7932 Woodrow Wilson Dr &middot; Sold $6.75M &middot; 2.54x","Completed","../properties/hideaway-hh.html"),

@@ -133,9 +133,9 @@ PROPS = {
    "City, with project details and gallery.",
    "The David III, a completed residential development at 5832 David Avenue"),
  "gonzaga-residence": ("8404 Gonzaga Ave Development | Assemble Capital",
-   "Explore The Gonzaga Residence, a completed residential redevelopment at 8404 Gonzaga Avenue "
-   "in Westchester, Los Angeles.",
-   "The Gonzaga Residence, a completed redevelopment at 8404 Gonzaga Avenue, Westchester"),
+   "The Gonzaga Residence, a completed and sold Assemble Capital redevelopment at 8404 Gonzaga Avenue "
+   "in Westchester, Los Angeles. Sold in 2026 for $2.7M.",
+   "The Gonzaga Residence, a completed and sold redevelopment at 8404 Gonzaga Avenue, Westchester"),
  "hideaway-hh": ("7932 Woodrow Wilson Dr Case Study | Assemble Capital",
    "Explore The Hideaway HH, a completed luxury residential development at 7932 Woodrow Wilson "
    "Drive in the Hollywood Hills.",
