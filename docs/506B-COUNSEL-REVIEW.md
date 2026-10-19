@@ -38,6 +38,10 @@ At the owner's direction, decisions **D1, D2 and D3 (Section 2) are reversed**, 
 
 ---
 
+**Update — 2026-10-18 (later the same day):** at the owner's direction, the homepage headline is back to "Generating Asymmetrical Returns Through Real Estate Syndication." Item 3.3 (the tagline as an outcome statement on an unrestricted page) is therefore open again for counsel. Return metrics and offering terms remain off the public site.
+
+---
+
 ## 1. Read this first — what is and is not changing
 
 Almost everything in Sections 3–5 below **already exists on the live site today**. This review is
