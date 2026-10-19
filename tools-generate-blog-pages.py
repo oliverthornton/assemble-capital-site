@@ -69,7 +69,7 @@ def header(base=".."):
       <a href="{base}/portfolio.html">Current Projects</a>
       <a href="{base}/track-record.html">Track Record</a>
       <a href="{base}/submit-a-deal.html">Submit a Deal</a>
-      <a href="{base}/contact.html">Contact</a>
+      <a class="nav-btn" href="{base}/contact.html">Contact</a>
       <a class="portal" href="https://assemblecapital.cashflowportal.com" target="_blank" rel="noopener">Investor Portal&nbsp;&#8599;</a>
     </nav>
   </div>
@@ -248,7 +248,7 @@ def build_post(p):
 <meta name="twitter:image" content="{abs_image_url}">
 <meta name="twitter:image:alt" content="Los Angeles residential development project photograph accompanying &ldquo;{title}&rdquo;">
 {FONTS}
-<link rel="stylesheet" href="../css/style.css?v=6">
+<link rel="stylesheet" href="../css/style.css?v=7">
 {FAVICON}
 <script type="application/ld+json">
 {jsonld_str}
@@ -337,7 +337,7 @@ def build_index(posts):
 <meta name="twitter:description" content="Notes on Los Angeles residential investment, development, and syndication from the Assemble Capital team.">
 <meta name="twitter:image" content="{BASE_URL}/{LOGO_PATH}">
 {FONTS}
-<link rel="stylesheet" href="../css/style.css?v=6">
+<link rel="stylesheet" href="../css/style.css?v=7">
 {FAVICON}
 {GA4}
 </head>

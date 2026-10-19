@@ -596,7 +596,7 @@ def header(base=".."):
       <a href="{base}/portfolio.html">Current Projects</a>
       <a href="{base}/track-record.html" class="active">Track Record</a>
       <a href="{base}/submit-a-deal.html">Submit a Deal</a>
-      <a href="{base}/contact.html">Contact</a>
+      <a class="nav-btn" href="{base}/contact.html">Contact</a>
       <a class="portal" href="https://assemblecapital.cashflowportal.com" target="_blank" rel="noopener">Investor Portal&nbsp;&#8599;</a>
     </nav>
   </div>
@@ -835,7 +835,7 @@ def build(p, prev, nxt):
 <meta name="twitter:description" content="{name} at {p['addr']}, {p['sub']} — investment background, gallery, returns, and investment cycle.">
 <meta name="twitter:image" content="https://assemble.capital/assets/img/{p['hero']}">
 {FONTS}
-<link rel="stylesheet" href="../css/style.css?v=6">
+<link rel="stylesheet" href="../css/style.css?v=7">
 {FAVICON}
 </head>
 <body>

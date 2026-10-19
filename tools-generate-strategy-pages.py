@@ -44,7 +44,7 @@ def header():
       <a href="../portfolio.html">Current Projects</a>
       <a href="../track-record.html">Track Record</a>
       <a href="../submit-a-deal.html">Submit a Deal</a>
-      <a href="../contact.html">Contact</a>
+      <a class="nav-btn" href="../contact.html">Contact</a>
       <a class="portal" href="https://assemblecapital.cashflowportal.com" target="_blank" rel="noopener">Investor Portal&nbsp;&#8599;</a>
     </nav>
   </div>
@@ -362,7 +362,7 @@ def build(s):
 <meta name="twitter:description" content="{s['sub']}">
 <meta name="twitter:image" content="https://assemble.capital/assets/img/{s['hero']}">
 {FONTS}
-<link rel="stylesheet" href="../css/style.css?v=6">
+<link rel="stylesheet" href="../css/style.css?v=7">
 {FAVICON}
 </head>
 <body>

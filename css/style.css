@@ -186,6 +186,7 @@ section.tight { padding: clamp(2.5rem, 5vw, 4rem) 0; }
 
 .site-nav { display: flex; align-items: center; gap: clamp(1rem, 2.2vw, 2rem); }
 .site-nav a {
+  white-space: nowrap;
   font-size: 0.72rem;
   font-weight: 500;
   letter-spacing: 0.16em;
@@ -204,6 +205,13 @@ section.tight { padding: clamp(2.5rem, 5vw, 4rem) 0; }
   transition: background 0.25s, color 0.25s, border-color 0.25s;
 }
 .site-nav .portal:hover { background: var(--paper); color: var(--ink); border-color: var(--paper); }
+.site-nav .nav-btn {
+  border: 1px solid rgba(248, 248, 248, 0.5);
+  padding: 0.55rem 1.1rem;
+  transition: background 0.25s, color 0.25s, border-color 0.25s;
+}
+.site-nav .nav-btn:hover { background: var(--paper); color: var(--ink); border-color: var(--paper); opacity: 1; }
+.site-nav .nav-btn.active { border-color: var(--bronze); }
 
 /* Strategies dropdown */
 .site-nav .nav-dd { position: relative; display: flex; align-items: center; }
@@ -249,7 +257,7 @@ section.tight { padding: clamp(2.5rem, 5vw, 4rem) 0; }
   cursor: pointer;
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1320px) {
   .site-nav {
     position: fixed;
     top: 0; right: 0; bottom: 0;
