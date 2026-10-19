@@ -12,11 +12,16 @@ if (head && !head.classList.contains('always-solid')) {
 const menuBtn = document.querySelector('.menu-btn');
 const nav = document.querySelector('.site-nav');
 if (menuBtn && nav) {
-  menuBtn.addEventListener('click', () => {
-    const open = nav.classList.toggle('open');
+  const setOpen = (open) => {
+    nav.classList.toggle('open', open);
+    document.body.classList.toggle('nav-locked', open);
     menuBtn.textContent = open ? 'Close' : 'Menu';
     menuBtn.setAttribute('aria-expanded', open);
-  });
+  };
+  menuBtn.addEventListener('click', () => setOpen(!nav.classList.contains('open')));
+  // Following a link (including in-page anchors) closes the drawer
+  nav.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setOpen(false)));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && nav.classList.contains('open')) setOpen(false); });
 }
 
 // Scroll reveals — with fallbacks so content can never stay hidden

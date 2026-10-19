@@ -362,7 +362,7 @@ def build(s):
 <meta name="twitter:description" content="{s['sub']}">
 <meta name="twitter:image" content="https://assemble.capital/assets/img/{s['hero']}">
 {FONTS}
-<link rel="stylesheet" href="../css/style.css?v=5">
+<link rel="stylesheet" href="../css/style.css?v=6">
 {FAVICON}
 </head>
 <body>
@@ -460,7 +460,7 @@ def build(s):
 
 {footer()}
 
-<script src="../js/main.js"></script>
+<script src="../js/main.js?v=2"></script>
 </body>
 </html>
 '''
