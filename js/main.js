@@ -138,14 +138,27 @@ if (form) {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     const d = new FormData(form);
-    const subject = encodeURIComponent('Investment network inquiry — ' + d.get('first') + ' ' + d.get('last'));
+    const subject = encodeURIComponent('Conversation request — ' + d.get('first') + ' ' + d.get('last'));
     const body = encodeURIComponent(
       'Name: ' + d.get('first') + ' ' + d.get('last') +
       '\nEmail: ' + d.get('email') +
       '\nPhone: ' + d.get('phone') +
       '\nAccredited investor: ' + d.get('accredited') +
+      '\nStrategies of interest: ' + (d.getAll('interest').join(', ') || 'Not specified') +
       '\n\n' + (d.get('message') || '')
     );
     window.location.href = 'mailto:info@assemble.capital?subject=' + subject + '&body=' + body;
   });
 }
+
+// FAQ topic nav — highlight the topic in view
+(function () {
+  var nav = document.querySelector('.faq2-nav'); if (!nav || !('IntersectionObserver' in window)) return;
+  var links = Array.prototype.slice.call(nav.querySelectorAll('a'));
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) links.forEach(function (l) { l.classList.toggle('on', l.getAttribute('href') === '#' + e.target.id); });
+    });
+  }, { rootMargin: '-30% 0px -60% 0px' });
+  document.querySelectorAll('.faq2-group').forEach(function (g) { io.observe(g); });
+})();

@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Special+Elite&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=9">
+<link rel="stylesheet" href="css/style.css?v=10">
 <link rel="icon" href="assets/img/logo/favicon-v2.png">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-676QQYXN22"></script>
@@ -91,11 +91,39 @@
   <div class="wrap">
     <p class="eyebrow">Contact</p>
     <h1 class="display" style="max-width:16ch">Start the <em>Conversation.</em></h1>
-    <p class="muted" style="max-width:40rem;margin-top:1.4rem">Introduce yourself and we'll be in touch — typically within one business day. Offerings are made only through definitive documents to eligible investors; joining the network simply means you'll see the next one.</p>
+    <p class="muted" style="max-width:40rem;margin-top:1.4rem">Whether you&rsquo;re exploring an investment, bringing us a property, or already investing with us, here&rsquo;s the fastest way to reach the right person.</p>
+    <div class="routes" style="margin-top:2.6rem">
+      <a class="route" href="#inquiry">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="11" r="5"/><path d="M6 27c1.5-5.5 5.5-8 10-8s8.5 2.5 10 8"/></svg>
+        <span class="k">Investors</span><b>Request a Conversation</b>
+        <small>Tell us about your goals. We&rsquo;ll set up a one-on-one call and walk you through our strategies and track record.</small>
+        <span class="go">Go to the form &darr;</span>
+      </a>
+      <a class="route" href="submit-a-deal.html">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 15 16 6l11 9v12H5z"/><path d="M13 27v-7h6v7"/></svg>
+        <span class="k">Agents, wholesalers &amp; owners</span><b>Submit a Deal</b>
+        <small>See our buy box and send us a property. Every submission gets an answer within two business days.</small>
+        <span class="go">Submit a property &rarr;</span>
+      </a>
+      <a class="route" href="https://assemblecapital.cashflowportal.com" target="_blank" rel="noopener">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="7" y="14" width="18" height="13" rx="1"/><path d="M11 14v-4a5 5 0 0 1 10 0v4"/></svg>
+        <span class="k">Current investors</span><b>Investor Portal</b>
+        <small>Project updates, reports, K-1s and documents in the secure portal.</small>
+        <span class="go">Open the portal &#8599;</span>
+      </a>
+    </div>
   </div>
 </section>
 
 <section>
+  <div class="wrap reveal" style="margin-bottom:clamp(3rem,6vw,4.5rem)">
+    <p class="ig-caption">For investors &mdash; what happens next</p>
+    <div class="flow" style="--n:3;margin-top:1.4rem">
+      <div class="flow-step"><h4>You reach out</h4><p>Share a little about your goals and experience with private real estate.</p></div>
+      <div class="flow-step"><h4>An introductory call</h4><p>Usually within one business day, with one of the principals.</p></div>
+      <div class="flow-step"><h4>A private review</h4><p>When a project is a fit, you review its business plan and offering documents privately.</p></div>
+    </div>
+  </div>
   <div class="wrap split cols-56">
     <div class="reveal">
       <p class="eyebrow">The Office</p>
@@ -129,8 +157,8 @@
       <p class="small" style="margin:0">Quarterly reports, K-1s, and source documents live in the secure portal.<br><a href="https://assemblecapital.cashflowportal.com" target="_blank" rel="noopener" style="font-weight:600;text-decoration:none;border-bottom:1px solid var(--line-strong)">Open the investor portal &#8599;</a></p>
     </div>
 
-    <div class="reveal" style="border:1px solid var(--line);padding:clamp(1.5rem,3vw,2.6rem);background:var(--paper-warm)">
-      <p class="eyebrow">Join the Investment Network</p>
+    <div class="reveal" id="inquiry" style="border:1px solid var(--line);padding:clamp(1.5rem,3vw,2.6rem);background:var(--paper-warm);scroll-margin-top:6.5rem">
+      <p class="eyebrow">Request a Conversation</p>
       <form class="inquiry" novalidate>
         <div class="row">
           <div><label for="first">First name</label><input type="text" id="first" name="first" autocomplete="given-name" required></div>
@@ -149,11 +177,20 @@
           </div>
         </div>
         <div>
-          <label for="message">Message</label>
-          <textarea id="message" name="message" placeholder="Tell us a little about your investment goals."></textarea>
+          <label id="int-label">Strategies of interest</label>
+          <div class="radio-row wrap-row" role="group" aria-labelledby="int-label">
+            <label class="check"><input type="checkbox" name="interest" value="SB 684 / SB 1123"> SB&nbsp;684 / SB&nbsp;1123</label>
+            <label class="check"><input type="checkbox" name="interest" value="Luxury residential"> Luxury residential</label>
+            <label class="check"><input type="checkbox" name="interest" value="Multifamily"> Multifamily</label>
+            <label class="check"><input type="checkbox" name="interest" value="TIC"> TIC</label>
+          </div>
         </div>
         <div>
-          <button class="btn" type="submit" style="border-color:var(--line-strong)">Send inquiry</button>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Your goals, timeline, and anything you&rsquo;d like to know about our projects."></textarea>
+        </div>
+        <div>
+          <button class="btn" type="submit" style="border-color:var(--line-strong)">Request a conversation</button>
           <p class="footnote" style="margin-top:1rem">Submitting opens a pre-filled email to info@assemble.capital from your mail app. Joining the network is not an offer, commitment, or investment — it adds you to our contact list for future opportunities.</p>
         </div>
       </form>
@@ -232,6 +269,6 @@
   </div>
 </footer>
 
-<script src="js/main.js?v=2"></script>
+<script src="js/main.js?v=3"></script>
 </body>
 </html>

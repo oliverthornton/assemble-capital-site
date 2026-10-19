@@ -1206,3 +1206,43 @@ section:not(.on-warm) .org-link span { background: var(--paper); }
 .tl-chart .tl-tip b { display: block; font-weight: 600; }
 .tl-legend { display: flex; gap: 1.4rem; flex-wrap: wrap; font-size: .76rem; color: var(--muted); margin-top: .8rem; }
 .tl-legend i { display: inline-block; width: .7rem; height: .7rem; border-radius: 50%; margin-right: .4rem; vertical-align: -1px; }
+
+/* --- grouped FAQ accordion --- */
+.faq2 { display: grid; grid-template-columns: minmax(12rem, 16rem) 1fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: start; }
+.faq2-nav { position: sticky; top: 6.5rem; display: grid; gap: .2rem; border-left: 1px solid var(--line); }
+.faq2-nav a { display: flex; justify-content: space-between; gap: 1rem; padding: .6rem 0 .6rem 1rem; margin-left: -1px; border-left: 2px solid transparent; text-decoration: none; font-size: .9rem; color: var(--muted); }
+.faq2-nav a:hover, .faq2-nav a.on { color: var(--ink); border-left-color: var(--bronze); }
+.faq2-nav a span { font-family: var(--type); font-size: .66rem; color: var(--bronze); }
+.faq2-group { margin-bottom: 2.6rem; scroll-margin-top: 6.5rem; }
+.faq2-group:last-child { margin-bottom: 0; }
+.faq2-group > p.eyebrow { margin-bottom: .6rem; }
+.faq2 details { border-top: 1px solid var(--line); }
+.faq2 details:last-child { border-bottom: 1px solid var(--line); }
+.faq2 summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 1fr 1.6rem; gap: 1rem; align-items: center; padding: 1.15rem 0; font-family: var(--serif); font-size: 1.28rem; line-height: 1.25; }
+.faq2 summary::-webkit-details-marker { display: none; }
+.faq2 summary::after { content: "+"; font-family: var(--sans); font-size: 1.3rem; font-weight: 300; color: var(--bronze); text-align: center; transition: transform .2s; }
+.faq2 details[open] summary::after { transform: rotate(45deg); }
+.faq2 summary:focus-visible { outline: 2px solid var(--bronze); outline-offset: 2px; }
+.faq2 .ans { padding: 0 2.6rem 1.3rem 0; font-size: .94rem; line-height: 1.7; color: var(--muted); }
+.faq2 .ans p { margin: 0 0 .7rem; }
+.faq2 .ans p:last-child { margin-bottom: 0; }
+.faq2 .ans a { color: var(--ink); }
+@media (max-width: 860px) {
+  .faq2 { grid-template-columns: 1fr; }
+  .faq2-nav { position: static; display: flex; flex-wrap: wrap; gap: .5rem; border-left: 0; }
+  .faq2-nav a { border: 1px solid var(--line); padding: .45rem .8rem; margin: 0; font-size: .8rem; }
+  .faq2-nav a span { display: none; }
+  .faq2 summary { font-size: 1.12rem; }
+  .faq2 .ans { padding-right: 0; }
+}
+
+/* --- route cards (contact) --- */
+.routes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.route { display: flex; flex-direction: column; gap: .5rem; border: 1px solid rgba(248,248,248,.22); padding: 1.6rem; text-decoration: none; color: var(--paper); transition: background .25s, border-color .25s; }
+.route:hover { background: rgba(248,248,248,.06); border-color: var(--bronze); }
+.route svg { width: 2rem; height: 2rem; stroke: var(--bronze); fill: none; stroke-width: 1.4; }
+.route .k { font-family: var(--type); font-size: .6rem; letter-spacing: .14em; text-transform: uppercase; color: rgba(248,248,248,.55); margin-top: .4rem; }
+.route b { font-family: var(--serif); font-weight: 500; font-size: 1.35rem; line-height: 1.2; }
+.route small { font-size: .84rem; color: rgba(248,248,248,.7); line-height: 1.5; }
+.route .go { margin-top: auto; padding-top: .8rem; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; font-weight: 600; }
+@media (max-width: 820px) { .routes { grid-template-columns: 1fr; } }
