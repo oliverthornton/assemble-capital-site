@@ -255,8 +255,9 @@ dict(slug="infill-subdivisions", eyebrow="Strategy 01 &middot; SB&ndash;684 / SB
   more=("The pathway was proven at 1949&nbsp;17th&nbsp;St, a principal-owned project: ministerial "
         "approval, fee-simple homes on individual APNs, conventional buyer financing, and a "
         "unit-release sellout. No Assemble Capital SB&nbsp;684 project has completed a sellout yet. "
-        "The first, in Culver City, has refinanced into its construction loan and is about three "
-        "months from ready-to-issue permits; Harter and Helms are in entitlement; and a fourth, The Sentney VI, is in acquisition. The Sentney "
+        "The first, in Culver City, has refinanced into its construction loan, is about three "
+        "months from ready-to-issue permits, and is expected to start construction in January "
+        "2027 (est.); Harter and Helms are in entitlement; and a fourth, The Sentney VI, is in acquisition. The Sentney "
         "VI image shows design direction from sister project The Helms VI."),
   pipeline_note=None,
   ),
