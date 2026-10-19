@@ -105,7 +105,7 @@ def stage(title, eyebrow, blurb, cards, warm=False, stamp=None):
 S = [
 dict(slug="luxury-redevelopment", eyebrow="Strategy 02 &middot; SFR&ndash;Redev &middot; Core Strategy",
   name="Luxury Residential<br>Development",
-  hero="villa-de-vistas.webp",
+  hero="hideaway.webp",
   sub="Studs-out rebuilds and heavy remodels of under-improved homes in prime Los Angeles submarkets.",
   specs=[("$2M &ndash; $6M","Acquisition basis"),("$3M &ndash; $9M","Exit range"),
          ("12 &ndash; 30 mo","Business plan"),("2+","Exit paths underwritten")],
