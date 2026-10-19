@@ -128,7 +128,7 @@ document.querySelectorAll('[data-carousel]').forEach((carousel) => {
 })();
 
 // Contact form → composes an email to the firm
-const form = document.querySelector('form.inquiry');
+const form = document.querySelector('form.inquiry:not(.deal-form)');
 if (form) {
   form.addEventListener('submit', (e) => {
     e.preventDefault();

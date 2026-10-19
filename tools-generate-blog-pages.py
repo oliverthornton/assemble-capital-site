@@ -60,14 +60,15 @@ def header(base=".."):
       <div class="nav-dd">
         <a href="{base}/strategies.html" class="nav-dd-toggle">Strategies</a>
         <div class="nav-dd-menu">
+          <a href="{base}/strategies/infill-subdivisions.html">SB 684/1123 Fee Simple Subdivisions</a>
           <a href="{base}/strategies/luxury-redevelopment.html">Luxury Residential Development</a>
           <a href="{base}/strategies/boutique-multifamily.html">Opportunistic &amp; Value Add Multifamily Development</a>
-          <a href="{base}/strategies/infill-subdivisions.html">SB 684/1123 Fee Simple Subdivisions</a>
           <a href="{base}/strategies/tic-housing.html">Tenancy-In-Common Housing</a>
         </div>
       </div>
       <a href="{base}/portfolio.html">Current Projects</a>
       <a href="{base}/track-record.html">Track Record</a>
+      <a href="{base}/submit-a-deal.html">Submit a Deal</a>
       <a href="{base}/contact.html">Contact</a>
       <a class="portal" href="https://assemblecapital.cashflowportal.com" target="_blank" rel="noopener">Investor Portal&nbsp;&#8599;</a>
     </nav>
@@ -99,7 +100,7 @@ def parse_date(date_str):
 # still name active deals or promise returns. Publishing is one status flip
 # away, so the screen runs at build time rather than relying on review.
 ACTIVE_DEALS = ["Gonzaga", "Berryman", "Culver VI", "3850 Westwood", "SAMO IV",
-                "1925 19th", "Kentwood", "6450 W 85th", "Harter", "Helms"]
+                "1925 19th", "Kentwood", "6450 W 85th", "Harter", "Helms", "Sentney"]
 
 SCREEN = [
     ("names an active 506(b) deal",
@@ -108,6 +109,8 @@ SCREEN = [
      lambda t: re.findall(r"seven active|all seven|seven of the platform|current offering|now raising", t, re.I)),
     ("performance promise",
      lambda t: re.findall(r"asymmetric\w*|upside far exceeds|amplif\w+ return|protect\w* investor capital|guaranteed return", t, re.I)),
+    ("publishes a return figure (keep performance in private channels)",
+     lambda t: re.findall(r"(?<![\d–-])\d\.\d{1,2}x\b|(?<![\d–-])\d{1,3}% ?X?IRR|equity multiple of|preferred return[^.]{0,30}\d+%", t, re.I)),
     ("unverifiable audit or verification claim",
      lambda t: re.findall(r"audited by|third[- ]party audit|independently verified|certified by", t, re.I)),
 ]
@@ -245,7 +248,7 @@ def build_post(p):
 <meta name="twitter:image" content="{abs_image_url}">
 <meta name="twitter:image:alt" content="Los Angeles residential development project photograph accompanying &ldquo;{title}&rdquo;">
 {FONTS}
-<link rel="stylesheet" href="../css/style.css?v=3">
+<link rel="stylesheet" href="../css/style.css?v=5">
 {FAVICON}
 <script type="application/ld+json">
 {jsonld_str}
@@ -334,7 +337,7 @@ def build_index(posts):
 <meta name="twitter:description" content="Notes on Los Angeles residential investment, development, and syndication from the Assemble Capital team.">
 <meta name="twitter:image" content="{BASE_URL}/{LOGO_PATH}">
 {FONTS}
-<link rel="stylesheet" href="../css/style.css?v=3">
+<link rel="stylesheet" href="../css/style.css?v=5">
 {FAVICON}
 {GA4}
 </head>

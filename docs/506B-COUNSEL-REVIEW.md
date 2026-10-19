@@ -14,6 +14,30 @@ rather than a website change. Securities counsel had not issued a written sign-o
 
 ---
 
+## 0. Update — 2026-10-18: performance and offering terms moved to private channels
+
+At the owner's direction, decisions **D1, D2 and D3 (Section 2) are reversed**, which resolves items **3.1, 3.2 and 3.3** in favor of the "move behind the investor portal" option.
+
+**Removed from the public site:**
+- **Performance:** homepage IRR / multiple / dispositions stats; the returns-vs-benchmarks chart; signature-exit multiples; the track-record performance summary, realized-exits table, refinance-and-hold equity marks, portfolio-economics margins and benchmark section; the cost / profit / equity tables on all 19 property pages; return figures in strategy pages and blog posts.
+- **Offering terms:** the 8% preferred return, Class A/B waterfall walkthrough, the "$100,000 investment" example, and the "~30–60%" target-margin figures.
+- **Wording:** the "asymmetrical returns" tagline. All 24 "Join the investment network" buttons now read "Request a conversation".
+
+**Stayed public:** project count, homes delivered, recorded sale prices and neighborhood-record claims (sourced to MLS / public records), project stories, timelines and strategies.
+
+**Also changed the same week:**
+- Co-investment claims were replaced with "the principals personally guarantee the loans on every deal; investors never sign personal guarantees". The disclosures now state the sponsor is not required to invest and that sponsor capital, including earnest money, may be returned.
+- The blog build screen now blocks any post containing a return figure; seven unpublished drafts are held by it.
+
+**Archive:** every removed figure and passage is preserved outside the site in `~/dev/claude-projects/Development Portfolio Project Summaries | TDG/AC/Website Performance Archive (Oct 2026)/`.
+
+**Still for counsel:**
+- The status of past public exposure during open 506(b) raises, including AC VIII (Sentney), which is currently raising.
+- The investor-portal gating (item 3.5).
+- The Facebook bio, which still says "asymmetrical returns".
+
+---
+
 ## 1. Read this first — what is and is not changing
 
 Almost everything in Sections 3–5 below **already exists on the live site today**. This review is

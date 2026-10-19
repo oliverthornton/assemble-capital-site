@@ -421,6 +421,21 @@
       "source": "/single-family-projects-in-development/:slug*",
       "destination": "/portfolio.html",
       "permanent": true
+    },
+    {
+      "source": "/submit-a-deal",
+      "destination": "/submit-a-deal.html",
+      "permanent": true
+    },
+    {
+      "source": "/sell",
+      "destination": "/submit-a-deal.html",
+      "permanent": true
+    },
+    {
+      "source": "/submit-deal",
+      "destination": "/submit-a-deal.html",
+      "permanent": true
     }
   ]
 }

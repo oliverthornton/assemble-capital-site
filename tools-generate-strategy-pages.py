@@ -35,14 +35,15 @@ def header():
       <div class="nav-dd">
         <a href="../strategies.html" class="nav-dd-toggle active">Strategies</a>
         <div class="nav-dd-menu">
+          <a href="infill-subdivisions.html">SB 684/1123 Fee Simple Subdivisions</a>
           <a href="luxury-redevelopment.html">Luxury Residential Development</a>
           <a href="boutique-multifamily.html">Opportunistic &amp; Value Add Multifamily Development</a>
-          <a href="infill-subdivisions.html">SB 684/1123 Fee Simple Subdivisions</a>
           <a href="tic-housing.html">Tenancy-In-Common Housing</a>
         </div>
       </div>
       <a href="../portfolio.html">Current Projects</a>
       <a href="../track-record.html">Track Record</a>
+      <a href="../submit-a-deal.html">Submit a Deal</a>
       <a href="../contact.html">Contact</a>
       <a class="portal" href="https://assemblecapital.cashflowportal.com" target="_blank" rel="noopener">Investor Portal&nbsp;&#8599;</a>
     </nav>
@@ -102,12 +103,12 @@ def stage(title, eyebrow, blurb, cards, warm=False, stamp=None):
 
 # ------------------------------------------------------------------ data
 S = [
-dict(slug="luxury-redevelopment", eyebrow="Strategy 01 &middot; SFR&ndash;Redev",
+dict(slug="luxury-redevelopment", eyebrow="Strategy 02 &middot; SFR&ndash;Redev &middot; Select Projects",
   name="Luxury Residential<br>Development",
   hero="villa-de-vistas.webp",
   sub="Studs-out rebuilds and heavy remodels of under-improved homes in prime Los Angeles submarkets.",
   specs=[("$2M &ndash; $6M","Acquisition basis"),("$3M &ndash; $9M","Exit range"),
-         ("12 &ndash; 30 mo","Business plan"),("~30 &ndash; 60%","Target gross margin on cost")],
+         ("12 &ndash; 30 mo","Business plan"),("2+","Exit paths underwritten")],
   lede="The largest pricing gap in Los Angeles residential is between a dated house in a great location and a finished one.",
   why=["A dated home in a prime submarket prices to a narrow buyer pool &mdash; the small "
        "fraction of purchasers willing and able to manage a construction project. A finished home "
@@ -118,22 +119,22 @@ dict(slug="luxury-redevelopment", eyebrow="Strategy 01 &middot; SFR&ndash;Redev"
        "that stays open because of who is structurally unable to compete for them.",
        "Our edge inside that gap is vertical integration. Construction management sits in-house, "
        "which means cost control and &mdash; more importantly &mdash; schedule control. Schedule "
-       "is the dominant variable in these returns: the same margin captured in sixteen months "
-       "rather than forty is a fundamentally different investment. 7212&nbsp;Mulholland produced "
-       "roughly 84% IRR on a 52% margin because it moved fast; 2731&nbsp;Hutton cleared a thinner "
-       "29% margin in nine months and still annualized near 39%.",
+       "is the dominant variable: the same project finished in sixteen months rather than forty "
+       "is a fundamentally different investment. 7212&nbsp;Mulholland went from acquisition to "
+       "sale in sixteen months; 2731&nbsp;Hutton did it in nine, selling into the 2008 downturn "
+       "before the market turned against it.",
        "The submarkets are chosen for exit depth rather than headline prestige. Hollywood Hills, "
        "Beverly Hills, the Sunset Strip, and the Westside carry buyer pools that are largely "
        "equity-driven and therefore less rate-sensitive than the entry-level market &mdash; when "
        "financing tightens, this segment slows but does not stop."],
   pillars=[("Basis","Buy the location, not the house","Acquisition is underwritten against the dated-condition comp set, with the finished value supported by closed sales before we commit."),
-           ("Speed","Schedule is the return driver","In-house construction management compresses the build, and every month removed from the hold compounds into IRR."),
+           ("Speed","Schedule is the key variable","In-house construction management compresses the build, and every month removed from the hold is a month of carry and market exposure avoided."),
            ("Scope","Match the work to the ceiling","Some houses justify an expansion and a four-year hold; most justify a fast, disciplined remodel. The site decides."),
            ("Exit","More than one way out","Sell finished, sell partially completed to a builder, or lease and hold &mdash; each underwritten before acquisition.")],
   risks=["Hillside and geotechnical conditions can carry new-construction scope under a remodel "
          "permit. 8070&nbsp;Laurelmont is the disclosed example: retaining walls and 30+ caissons "
-         "materially exceeded pricing, and forty-eight months of carry converted a project-level "
-         "profit into a 0.73x equity outcome. Pre-acquisition geotechnical investigation is now "
+         "materially exceeded pricing, and forty-eight months of carry meant the project did not "
+         "return its equity in full. Pre-acquisition geotechnical investigation is now "
          "required on every hillside deal.",
          "The upper-end buyer pool is deep but not infinite; in a sharp downturn, absorption at "
          "$5M+ slows before it slows at $1.5M.",
@@ -145,18 +146,18 @@ dict(slug="luxury-redevelopment", eyebrow="Strategy 01 &middot; SFR&ndash;Redev"
             [("Q1 2027","Target sale"),("Dual","Product")])],
   done=[card("gonzaga.webp","&ldquo;The Gonzaga Residence&rdquo;","8404 Gonzaga Ave &middot; Sold $2.70M","Completed","../properties/gonzaga-residence.html"),
         card("berryman-home.jpg","&ldquo;The Berryman Residence&rdquo;","4432 Berryman Ave &middot; AC II LLC","Completed","../properties/berryman-residence.html"),
-        card("apex.webp","&ldquo;The Apex HH&rdquo;","7115 Macapa Dr &middot; Sold $8.65M &middot; 3.21x","Completed","../properties/apex-hh.html"),
-        card("hideaway.webp","&ldquo;The Hideaway HH&rdquo;","7932 Woodrow Wilson Dr &middot; Sold $6.75M &middot; 2.54x","Completed","../properties/hideaway-hh.html"),
-        card("villa-de-vistas.webp","&ldquo;Villa De Vistas&rdquo;","7212 Mulholland Dr &middot; Sold $6.40M &middot; 2.68x","Completed","../properties/villa-de-vistas.html"),
+        card("apex.webp","&ldquo;The Apex HH&rdquo;","7115 Macapa Dr &middot; Sold $8.65M","Completed","../properties/apex-hh.html"),
+        card("hideaway.webp","&ldquo;The Hideaway HH&rdquo;","7932 Woodrow Wilson Dr &middot; Sold $6.75M","Completed","../properties/hideaway-hh.html"),
+        card("villa-de-vistas.webp","&ldquo;Villa De Vistas&rdquo;","7212 Mulholland Dr &middot; Sold $6.40M","Completed","../properties/villa-de-vistas.html"),
         card("macapa-oasis-hd.jpg","&ldquo;The Macapa Oasis&rdquo;","7123 Macapa Dr &middot; Sold $7.25M","Completed","../properties/macapa-oasis.html"),
-        card("treehouse.webp","&ldquo;The Treehouse HH&rdquo;","8070 Laurelmont Dr &middot; Sold $7.00M &middot; 0.73x","Completed","../properties/treehouse-hh.html"),
+        card("treehouse.webp","&ldquo;The Treehouse HH&rdquo;","8070 Laurelmont Dr &middot; Sold $7.00M","Completed","../properties/treehouse-hh.html"),
         card("hutton-marvel.webp","&ldquo;The Hutton Marvel&rdquo;","2731 Hutton Dr &middot; Sold $3.90M &middot; 9-month turn","Completed","../properties/hutton-marvel.html")],
   more=("Five additional completed single-family projects &mdash; Rising Glen MCM, The Hollywood Marvel, "
         "Villa De Edinburgh, The Modern Orange, The Martha MCM, and Paseo Moderna &mdash; are documented on the "
         '<a href="../track-record.html">track record</a>.'),
   ),
 
-dict(slug="boutique-multifamily", eyebrow="Strategy 02 &middot; MF&ndash;Dev",
+dict(slug="boutique-multifamily", eyebrow="Strategy 03 &middot; MF&ndash;Dev",
   name="Opportunistic &amp; Value Add<br>Multifamily Development",
   hero="calvert-home.jpg",
   sub="Ground-up four to fourteen unit buildings &mdash; sold stabilized, or refinanced into term debt and held.",
@@ -185,32 +186,31 @@ dict(slug="boutique-multifamily", eyebrow="Strategy 02 &middot; MF&ndash;Dev",
            ("Scale","Deliberately boutique","Large enough to carry development cost, small enough to stay below the thresholds that attract institutional competition."),
            ("Optionality","Decide the exit at the end","Sell stabilized or refinance and hold &mdash; the choice is made with market information, not assumed at acquisition."),
            ("Coverage","Underwrite to debt service","Refinance discipline targets DSCR at or above roughly 1.20&ndash;1.25x, with coverage disclosed per asset.")],
-  risks=["Debt service coverage is the live risk on held assets. 5651&nbsp;Case sits at 1.01x DSCR "
-         "&mdash; minimal cushion against vacancy or rate movement, and the reason that asset is "
-         "monitored most closely. Coverage is disclosed per building rather than blended away.",
+  risks=["Debt service coverage is the live risk on held assets. Coverage on each retained building is "
+         "monitored individually against vacancy and rate movement, and some carry thinner cushions "
+         "than others.",
          "Equity marks on retained buildings are unrealized and levered. A modest decline in "
          "appraised value produces a disproportionate decline in the equity mark.",
          "Construction cost, lease-up timing, and rent regulation each affect outcomes, and "
          "refinancing depends on credit markets that are outside our control."],
   ent=[],
   con=[],
-  done=[card("calvert-home.jpg","&ldquo;The Calvert XIV&rdquo;","10957 Calvert St &middot; 14 units &middot; Refinanced &amp; held","Held &middot; 2.9x to date","../properties/calvert-xiv.html"),
-        card("case.webp","&ldquo;The Case V&rdquo;","5651 Case Ave &middot; 5 units &middot; Refinanced &amp; held","Held &middot; 2.4x to date","../properties/case-v.html"),
-        card("june.webp","&ldquo;The June IV&rdquo;","1323 N June St &middot; 4 units &middot; Refinanced &amp; held","Held &middot; 3.7x to date","../properties/june-iv.html"),
-        card("hortense.webp","&ldquo;The Hortense VI&rdquo;","10742 Hortense St &middot; 6 units &middot; Sold $4.20M","Sold &middot; 1.85x","../properties/hortense-vi.html")],
-  more=("The three retained buildings carry $15.85M of combined stabilized value, roughly $938K of annual "
-        "net operating income, and a 1.33x blended DSCR at 100% occupancy. Those figures are unrealized "
-        "equity marks per the SREO dated 7/14/26, not proceeds."),
+  done=[card("calvert-home.jpg","&ldquo;The Calvert XIV&rdquo;","10957 Calvert St &middot; 14 units &middot; Refinanced &amp; held","Held &middot; 14 units","../properties/calvert-xiv.html"),
+        card("case.webp","&ldquo;The Case V&rdquo;","5651 Case Ave &middot; 5 units &middot; Refinanced &amp; held","Held &middot; 5 units","../properties/case-v.html"),
+        card("june.webp","&ldquo;The June IV&rdquo;","1323 N June St &middot; 4 units &middot; Refinanced &amp; held","Held &middot; 4 units","../properties/june-iv.html"),
+        card("hortense.webp","&ldquo;The Hortense VI&rdquo;","10742 Hortense St &middot; 6 units &middot; Sold $4.20M","Sold &middot; $4.20M","../properties/hortense-vi.html")],
+  more=("Three of these buildings were refinanced into term debt and retained as fully leased rentals; "
+        "any gain on them stays unrealized until they are sold."),
   pipeline_note=("No boutique multifamily project is currently in entitlement or construction. The "
         "platform's active development capacity is presently committed to fee-simple subdivisions and "
         "the tenancy-in-common project, and new multifamily acquisitions would be capitalized through "
         "future project-specific offerings."),
   ),
 
-dict(slug="infill-subdivisions", eyebrow="Strategy 03 &middot; SB&ndash;684",
+dict(slug="infill-subdivisions", eyebrow="Strategy 01 &middot; SB&ndash;684 / SB&ndash;1123 &middot; Core Strategy",
   name="SB 684/1123 Fee Simple<br>Subdivisions",
   hero="harter-render.jpg",
-  sub="Ministerial small-lot subdivisions under SB&nbsp;684 and SB&nbsp;1123 &mdash; fee-simple homes on individual APNs.",
+  sub="Our core strategy. Ministerial small-lot subdivisions under SB&nbsp;684 and SB&nbsp;1123 &mdash; new fee-simple homes on individual APNs, and the focus of the Assemble Capital pipeline.",
   specs=[("4 &ndash; 10","Homes per project"),("$1M &ndash; $1.5M","End-user pricing"),
          ("Months, not years","Entitlement timeline"),("Bulk sale","Fallback underwritten")],
   lede="A change in state law turned a multi-year political process into an administrative one. That is the whole opportunity.",
@@ -249,14 +249,16 @@ dict(slug="infill-subdivisions", eyebrow="Strategy 03 &middot; SB&ndash;684",
          "intentionally withheld until that capitalization is reconciled."],
   ent=[card("westwood.jpg","&ldquo;The Culver VI&rdquo;","3850 Westwood &middot; Culver City &middot; AC III LLC","In Entitlements","../portfolio.html",[("Q4 2027","Target sellout"),("Fee-simple","Exit")]),
        card("harter-render.jpg","&ldquo;The Harter V&rdquo;","4058 Harter &middot; Culver City &middot; AC VI LLC","In Entitlements","../portfolio.html",[("Q1 2028","Target sellout"),("Fee-simple","Exit")]),
-       card("helms-render.jpg","&ldquo;The Helms VI&rdquo;","3562 Helms &middot; Culver City &middot; AC VII LLC","In Entitlements","../portfolio.html",[("Q1 2028","Target sellout"),("Fee-simple","Exit")])],
+       card("helms-render.jpg","&ldquo;The Helms VI&rdquo;","3562 Helms &middot; Culver City &middot; AC VII LLC","In Entitlements","../portfolio.html",[("Q1 2028","Target sellout"),("Fee-simple","Exit")]),
+       card("helms-render.jpg","&ldquo;The Sentney VI&rdquo;","3011 Sentney Ave &middot; Culver City &middot; AC VIII LLC &middot; 6 homes, ~1,300 SF each","In Acquisition","../portfolio.html",[("2029","Target sellout"),("Fee-simple","Exit")])],
   con=[],
   done=[],
   more=("The pathway was proven at 1949&nbsp;17th&nbsp;St, a principal-owned project: ministerial "
         "approval, fee-simple homes on individual APNs, conventional buyer financing, and a "
         "unit-release sellout. No Assemble Capital SB&nbsp;684 project has completed a sellout yet "
-        "&mdash; all three active projects are in entitlement, with construction refinancings "
-        "planned from Q4&nbsp;2026."),
+        "&mdash; three active projects are in entitlement, with construction refinancings "
+        "planned from Q4&nbsp;2026, and a fourth, The Sentney VI, is in acquisition. The Sentney "
+        "VI image shows design direction from sister project The Helms VI."),
   pipeline_note=None,
   ),
 
@@ -281,9 +283,9 @@ dict(slug="tic-housing", eyebrow="Strategy 04 &middot; TIC",
        "now writing individual loans against individual interests, which is what makes the "
        "strategy executable at scale rather than a curiosity.",
        "The tradeoff is honest and it is absorption. Each unit waits on its own buyer securing "
-       "their own financing, and a sellout takes time. 5832&nbsp;David returned 1.41x and roughly "
-       "17% IRR over 26 months &mdash; the most modest of our realized exits. What that project "
-       "bought was a documented, executed template, which is now being applied at "
+       "their own financing, and a sellout takes time. 5832&nbsp;David took 26 months from acquisition "
+       "to its final unit closing. What that project "
+       "produced was a documented, executed template, which is now being applied at "
        "1925&nbsp;19th&nbsp;St."],
   pillars=[("Pricing","Sell to homeowners, not cap rates","Unit buyers pay for a home; the spread over bulk investor value is the return driver."),
            ("Structure","TIC where condo mapping is closed","The legal structure that reaches for-sale buyers in buildings that cannot be condo-mapped."),
@@ -299,7 +301,7 @@ dict(slug="tic-housing", eyebrow="Strategy 04 &middot; TIC",
          "units can close, and those terms materially affect the sellout schedule."],
   ent=[card("samo.webp","&ldquo;The SAMO IV&rdquo;","1925 19th St &middot; Santa Monica &middot; AC IV LLC","In Entitlements &middot; TIC","../portfolio.html",[("4 units","Program"),("Q4 2027","Target sellout")])],
   con=[],
-  done=[card("david.webp","&ldquo;The David III&rdquo;","5832 David Ave &middot; Ground-up triplex &middot; 3 fee-simple TIC units","Sold as TIC &middot; $2.91M","../properties/david-iii.html",[("1.41x","Multiple"),("~17%","IRR"),("26 mo","Hold")])],
+  done=[card("david.webp","&ldquo;The David III&rdquo;","5832 David Ave &middot; Ground-up triplex &middot; 3 fee-simple TIC units","Sold as TIC &middot; $2.91M","../properties/david-iii.html",[("3","Units sold"),("$2.91M","Combined sales"),("26 mo","Hold")])],
   more=("5832&nbsp;David was sold as three separate TIC units across closings from November&nbsp;2025 "
         "through February&nbsp;2026. It is the executed proof of the pathway now being applied at "
         "1925&nbsp;19th&nbsp;St in Santa Monica."),
@@ -361,7 +363,7 @@ def build(s):
 <meta name="twitter:description" content="{s['sub']}">
 <meta name="twitter:image" content="https://assemble.capital/assets/img/{s['hero']}">
 {FONTS}
-<link rel="stylesheet" href="../css/style.css?v=3">
+<link rel="stylesheet" href="../css/style.css?v=5">
 {FAVICON}
 </head>
 <body>
@@ -436,10 +438,10 @@ def build(s):
   <div class="wrap reveal">
     <p class="eyebrow">Future Opportunities</p>
     <h2 class="h-lg">Want to invest in the next one?</h2>
-    <p class="muted" style="max-width:42rem;margin:1.4rem auto 0">Future projects in this strategy are capitalized through new project-specific offerings &mdash; an 8% preferred return paid before the sponsor participates, Class&nbsp;A participation in the profits, and our own capital in every deal. Terms shown are typical of prior offerings and are not an offer; the final terms of any investment are governed solely by that project's private placement memorandum and operating agreement. Get in touch and we'll walk you through the model, the pipeline, and what a specific offering looks like.</p>
+    <p class="muted" style="max-width:42rem;margin:1.4rem auto 0">Future projects in this strategy are capitalized through project-specific LLCs, with the principals personally guaranteeing the project loans, never our investors. Get in touch for a one-on-one conversation about the strategy and the pipeline. Nothing here is an offer to sell or a solicitation to buy any security.</p>
     <div class="actions">
       <a class="btn" style="border-color:var(--line-strong)" href="../contact.html">Contact us about investing</a>
-      <a class="btn" style="border-color:var(--line-strong)" href="../strategies.html#model">See how the structure works</a>
+      <a class="btn" style="border-color:var(--line-strong)" href="../strategies.html#model">How we work with investors</a>
     </div>
     <p class="footnote" style="margin-top:1.8rem;max-width:44rem;margin-left:auto;margin-right:auto">Contacting us is not an offer, commitment, or investment. Any offering is made only through definitive offering documents to eligible investors.</p>
   </div>
@@ -464,9 +466,9 @@ def build(s):
 </html>
 '''
 
-NAMES = {"luxury-redevelopment": ("Luxury Residential Development", "Studs-out rebuilds and heavy remodels in prime submarkets."),
+NAMES = {"infill-subdivisions": ("SB 684/1123 Fee Simple Subdivisions", "Ministerial SB&nbsp;684/1123 small-lot subdivisions."),
+         "luxury-redevelopment": ("Luxury Residential Development", "Studs-out rebuilds and heavy remodels in prime submarkets."),
          "boutique-multifamily": ("Opportunistic &amp; Value Add Multifamily Development", "Ground-up 4&ndash;20-unit multifamily projects, sold or held."),
-         "infill-subdivisions": ("SB 684/1123 Fee Simple Subdivisions", "Ministerial SB&nbsp;684/1123 small-lot subdivisions."),
          "tic-housing": ("Tenancy-In-Common Housing", "Small multifamily sold as individual TIC homes.")}
 
 def other_links(slug):

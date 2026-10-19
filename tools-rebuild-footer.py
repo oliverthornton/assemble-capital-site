@@ -124,6 +124,7 @@ def build(base):
           <a href="{b}portfolio.html">Current Projects</a>
           <a href="{b}track-record.html">Track Record</a>
           <a href="{b}{BLOG_BASE}/index.html">Blogs</a>
+          <a href="{b}submit-a-deal.html">Submit a Deal</a>
           <a href="{b}contact.html">Contact</a>
           <a href="https://assemblecapital.cashflowportal.com" target="_blank" rel="noopener">Investor Portal &#8599;</a>
         </div>
@@ -131,9 +132,9 @@ def build(base):
       <div>
         <h4>Strategies</h4>
         <div class="foot-nav">
+          <a href="{b}strategies/infill-subdivisions.html">SB 684/1123 Fee Simple Subdivisions</a>
           <a href="{b}strategies/luxury-redevelopment.html">Luxury Residential Development</a>
           <a href="{b}strategies/boutique-multifamily.html">Opportunistic &amp; Value Add Multifamily Development</a>
-          <a href="{b}strategies/infill-subdivisions.html">SB 684/1123 Fee Simple Subdivisions</a>
           <a href="{b}strategies/tic-housing.html">Tenancy-In-Common Housing</a>
         </div>
       </div>
