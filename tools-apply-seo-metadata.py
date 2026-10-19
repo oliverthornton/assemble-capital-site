@@ -32,7 +32,7 @@ CORE = {
    "Meet the Assemble Capital principals and the vertically integrated team behind residential "
    "development projects across Los Angeles.",
    "assets/img/social/about-1200x630.jpg",
-   "The Berryman Residence, a completed Assemble Capital ground-up home near Culver City"),
+   "The Berryman Residence, a completed Assemble Capital extensive remodel near Culver City"),
 
  "strategies.html": (
    "Los Angeles Development Strategies | Assemble Capital",
@@ -117,9 +117,9 @@ PROPS = {
    "Outpost Estates, Los Angeles.",
    "The Apex HH, a completed luxury residence at 7115 Macapa Drive, Los Angeles"),
  "berryman-residence": ("4432 Berryman Ave Development | Assemble Capital",
-   "Explore The Berryman Residence, a completed ground-up home at 4432 Berryman Avenue near "
+   "Explore The Berryman Residence, a completed extensive remodel at 4432 Berryman Avenue near "
    "Culver City, with project details and gallery.",
-   "The Berryman Residence, a completed ground-up home at 4432 Berryman Avenue"),
+   "The Berryman Residence, a completed extensive remodel at 4432 Berryman Avenue"),
  "calvert-xiv": ("10957 Calvert St Multifamily Development | Assemble Capital",
    "Explore The Calvert XIV, a 14-unit multifamily development at 10957 Calvert Street in North "
    "Hollywood, Los Angeles.",
