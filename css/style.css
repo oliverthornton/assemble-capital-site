@@ -362,6 +362,7 @@ section.tight { padding: clamp(2.5rem, 5vw, 4rem) 0; }
   grid-template-columns: repeat(4, 1fr);
 }
 .ledger.cols-5 { grid-template-columns: repeat(5, 1fr); }
+.ledger.cols-5 .num { font-size: clamp(1.7rem, 2.3vw, 2.3rem); white-space: nowrap; }
 .ledger .cell {
   padding: 1.6rem 1.5rem 1.6rem 0;
   border-bottom: 1px solid var(--line);
