@@ -351,7 +351,7 @@ def build_index(posts):
 <section class="hero short" style="padding:0">
   <div class="wrap">
     <p class="eyebrow">Insights</p>
-    <h1 class="display">Notes from the field.</h1>
+    <h1 class="display">Notes From the Field.</h1>
     <p class="sub">Perspective on Los Angeles residential investment, development, and syndication from the Assemble Capital team.</p>
   </div>
 </section>

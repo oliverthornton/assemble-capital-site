@@ -127,10 +127,10 @@ dict(slug="luxury-redevelopment", eyebrow="Strategy 02 &middot; SFR&ndash;Redev 
        "Beverly Hills, the Sunset Strip, and the Westside carry buyer pools that are largely "
        "equity-driven and therefore less rate-sensitive than the entry-level market &mdash; when "
        "financing tightens, this segment slows but does not stop."],
-  pillars=[("Basis","Buy the location, not the house","Acquisition is underwritten against the dated-condition comp set, with the finished value supported by closed sales before we commit."),
-           ("Speed","Schedule is the key variable","In-house construction management compresses the build, and every month removed from the hold is a month of carry and market exposure avoided."),
-           ("Scope","Match the work to the ceiling","Some houses justify an expansion and a four-year hold; most justify a fast, disciplined remodel. The site decides."),
-           ("Exit","More than one way out","Sell finished, sell partially completed to a builder, or lease and hold &mdash; each underwritten before acquisition.")],
+  pillars=[("Basis","Buy the Location, Not the House","Acquisition is underwritten against the dated-condition comp set, with the finished value supported by closed sales before we commit."),
+           ("Speed","Schedule Is the Key Variable","In-house construction management compresses the build, and every month removed from the hold is a month of carry and market exposure avoided."),
+           ("Scope","Match the Work to the Ceiling","Some houses justify an expansion and a four-year hold; most justify a fast, disciplined remodel. The site decides."),
+           ("Exit","More Than One Way Out","Sell finished, sell partially completed to a builder, or lease and hold &mdash; each underwritten before acquisition.")],
   risks=["Hillside and geotechnical conditions can carry new-construction scope under a remodel "
          "permit. 8070&nbsp;Laurelmont is the disclosed example: retaining walls and 30+ caissons "
          "materially exceeded pricing, and forty-eight months of carry meant the project did not "
@@ -144,14 +144,14 @@ dict(slug="luxury-redevelopment", eyebrow="Strategy 02 &middot; SFR&ndash;Redev 
   ent=[],
   con=[card("85th.jpg","&ldquo;The Kentwood Farmhouse&rdquo;","6450 W 85th St &middot; Westchester &middot; AC V LLC","In Construction", "../portfolio.html",
             [("Q1 2027","Target sale"),("Dual","Product")])],
-  done=[card("gonzaga.webp","&ldquo;The Gonzaga Residence&rdquo;","8404 Gonzaga Ave &middot; Sold $2.70M","Completed","../properties/gonzaga-residence.html"),
+  done=[card("gonzaga.webp","&ldquo;The Gonzaga Residence&rdquo;","8404 Gonzaga Ave &middot; Sold $2,700,000","Completed","../properties/gonzaga-residence.html"),
         card("berryman-home.jpg","&ldquo;The Berryman Residence&rdquo;","4432 Berryman Ave &middot; AC II LLC","Completed","../properties/berryman-residence.html"),
-        card("apex.webp","&ldquo;The Apex HH&rdquo;","7115 Macapa Dr &middot; Sold $8.65M","Completed","../properties/apex-hh.html"),
-        card("hideaway.webp","&ldquo;The Hideaway HH&rdquo;","7932 Woodrow Wilson Dr &middot; Sold $6.75M","Completed","../properties/hideaway-hh.html"),
-        card("villa-de-vistas.webp","&ldquo;Villa De Vistas&rdquo;","7212 Mulholland Dr &middot; Sold $6.40M","Completed","../properties/villa-de-vistas.html"),
-        card("macapa-oasis-hd.jpg","&ldquo;The Macapa Oasis&rdquo;","7123 Macapa Dr &middot; Sold $7.25M","Completed","../properties/macapa-oasis.html"),
-        card("treehouse.webp","&ldquo;The Treehouse HH&rdquo;","8070 Laurelmont Dr &middot; Sold $7.00M","Completed","../properties/treehouse-hh.html"),
-        card("hutton-marvel.webp","&ldquo;The Hutton Marvel&rdquo;","2731 Hutton Dr &middot; Sold $3.90M &middot; 9-month turn","Completed","../properties/hutton-marvel.html")],
+        card("apex.webp","&ldquo;The Apex HH&rdquo;","7115 Macapa Dr &middot; Sold $8,650,000","Completed","../properties/apex-hh.html"),
+        card("hideaway.webp","&ldquo;The Hideaway HH&rdquo;","7932 Woodrow Wilson Dr &middot; Sold $6,750,000","Completed","../properties/hideaway-hh.html"),
+        card("villa-de-vistas.webp","&ldquo;Villa De Vistas&rdquo;","7212 Mulholland Dr &middot; Sold $6,400,000","Completed","../properties/villa-de-vistas.html"),
+        card("macapa-oasis-hd.jpg","&ldquo;The Macapa Oasis&rdquo;","7123 Macapa Dr &middot; Sold $7,250,000","Completed","../properties/macapa-oasis.html"),
+        card("treehouse.webp","&ldquo;The Treehouse HH&rdquo;","8070 Laurelmont Dr &middot; Sold $7,000,000","Completed","../properties/treehouse-hh.html"),
+        card("hutton-marvel.webp","&ldquo;The Hutton Marvel&rdquo;","2731 Hutton Dr &middot; Sold $3,900,000 &middot; 9-month turn","Completed","../properties/hutton-marvel.html")],
   more=("Five additional completed single-family projects &mdash; Rising Glen MCM, The Hollywood Marvel, "
         "Villa De Edinburgh, The Modern Orange, The Martha MCM, and Paseo Moderna &mdash; are documented on the "
         '<a href="../track-record.html">track record</a>.'),
@@ -178,14 +178,13 @@ dict(slug="boutique-multifamily", eyebrow="Strategy 03 &middot; MF&ndash;Dev",
        "choice is made at completion, with real market information, rather than committed to at "
        "acquisition. It means we are never forced to sell into a bad cap-rate environment to "
        "return capital.",
-       "Three of our four delivered buildings were refinanced and retained. 10957&nbsp;Calvert "
-       "&mdash; fourteen units &mdash; carries an equity mark of roughly $3.30M against $1.15M "
-       "invested. Those marks are unrealized: they are appraised value less first trust deed debt, "
-       "not proceeds, and they will not become proceeds until the buildings trade."],
-  pillars=[("Supply","Build where the shortage is","Concentrated in North Hollywood and Hollywood-adjacent submarkets with deep, consistent rental demand."),
-           ("Scale","Deliberately boutique","Large enough to carry development cost, small enough to stay below the thresholds that attract institutional competition."),
-           ("Optionality","Decide the exit at the end","Sell stabilized or refinance and hold &mdash; the choice is made with market information, not assumed at acquisition."),
-           ("Coverage","Underwrite to debt service","Refinance discipline targets DSCR at or above roughly 1.20&ndash;1.25x, with coverage disclosed per asset.")],
+       "Three of our four delivered buildings were refinanced and retained. The largest, "
+       "10957&nbsp;Calvert, has fourteen units. Any gain on a retained building is unrealized "
+       "until it is sold or refinanced again."],
+  pillars=[("Supply","Build Where the Shortage Is","Concentrated in North Hollywood and Hollywood-adjacent submarkets with deep, consistent rental demand."),
+           ("Scale","Deliberately Boutique","Large enough to carry development cost, small enough to stay below the thresholds that attract institutional competition."),
+           ("Optionality","Decide the Exit at the End","Sell stabilized or refinance and hold &mdash; the choice is made with market information, not assumed at acquisition."),
+           ("Coverage","Underwrite to Debt Service","Refinance discipline targets DSCR at or above roughly 1.20&ndash;1.25x, with coverage disclosed per asset.")],
   risks=["Debt service coverage is the live risk on held assets. Coverage on each retained building is "
          "monitored individually against vacancy and rate movement, and some carry thinner cushions "
          "than others.",
@@ -198,7 +197,7 @@ dict(slug="boutique-multifamily", eyebrow="Strategy 03 &middot; MF&ndash;Dev",
   done=[card("calvert-home.jpg","&ldquo;The Calvert XIV&rdquo;","10957 Calvert St &middot; 14 units &middot; Refinanced &amp; held","Held &middot; 14 units","../properties/calvert-xiv.html"),
         card("case.webp","&ldquo;The Case V&rdquo;","5651 Case Ave &middot; 5 units &middot; Refinanced &amp; held","Held &middot; 5 units","../properties/case-v.html"),
         card("june.webp","&ldquo;The June IV&rdquo;","1323 N June St &middot; 4 units &middot; Refinanced &amp; held","Held &middot; 4 units","../properties/june-iv.html"),
-        card("hortense.webp","&ldquo;The Hortense VI&rdquo;","10742 Hortense St &middot; 6 units &middot; Sold $4.20M","Sold &middot; $4.20M","../properties/hortense-vi.html")],
+        card("hortense.webp","&ldquo;The Hortense VI&rdquo;","10742 Hortense St &middot; 6 units &middot; Sold $4,200,000","Sold &middot; $4,200,000","../properties/hortense-vi.html")],
   more=("Three of these buildings were refinanced into term debt and retained as fully leased rentals; "
         "any gain on them stays unrealized until they are sold."),
   pipeline_note=("No boutique multifamily project is currently in entitlement or construction. The "
@@ -233,10 +232,10 @@ dict(slug="infill-subdivisions", eyebrow="Strategy 01 &middot; SB&ndash;684 / SB
        "pathway; The Culver&nbsp;VI at 3850&nbsp;Westwood was the first ministerial approval in Culver City. While the field is "
        "thin, sites can still be acquired at bases set by the old rental-value assumption. That "
        "window narrows as the statute becomes better understood."],
-  pillars=[("Regulatory","Ministerial, not discretionary","No hearing, no discretionary review, no appeal &mdash; entitlement becomes a timeline rather than a political outcome."),
-           ("Arbitrage","Buy on income value, sell on for-sale value","Land priced as rental product, exited as individual homes at for-sale pricing."),
-           ("Financing","Fee-simple widens the buyer pool","Individual APNs mean conventional mortgages, not specialized fractional lending."),
-           ("Absorption","Release units, don't dump them","Homes are sold on a unit-release schedule as the market absorbs, with a bulk-sale fallback underwritten from acquisition.")],
+  pillars=[("Regulatory","Ministerial, Not Discretionary","No hearing, no discretionary review, no appeal &mdash; entitlement becomes a timeline rather than a political outcome."),
+           ("Arbitrage","Buy on Income Value, Sell on For-Sale Value","Land priced as rental product, exited as individual homes at for-sale pricing."),
+           ("Financing","Fee-Simple Widens the Buyer Pool","Individual APNs mean conventional mortgages, not specialized fractional lending."),
+           ("Absorption","Release Units, Don't Dump Them","Homes are sold on a unit-release schedule as the market absorbs, with a bulk-sale fallback underwritten from acquisition.")],
   risks=["SB&nbsp;684 is a recent statute and jurisdictions interpret and administer it "
          "differently. Processing timelines, plan-check standards, and local implementation vary, "
          "and the law itself could be amended.",
@@ -287,10 +286,10 @@ dict(slug="tic-housing", eyebrow="Strategy 04 &middot; TIC",
        "to its final unit closing. What that project "
        "produced was a documented, executed template, which is now being applied at "
        "1925&nbsp;19th&nbsp;St."],
-  pillars=[("Pricing","Sell to homeowners, not cap rates","Unit buyers pay for a home; the spread over bulk investor value is the return driver."),
-           ("Structure","TIC where condo mapping is closed","The legal structure that reaches for-sale buyers in buildings that cannot be condo-mapped."),
-           ("Financing","Fractional lending has matured","Individual TIC loans are now available from multiple lenders &mdash; the constraint that historically limited this strategy."),
-           ("Discipline","Underwrite the fallback first","Bulk-sale value, partial-release terms, and absorption assumptions are set before acquisition, not after.")],
+  pillars=[("Pricing","Sell to Homeowners, Not Cap Rates","Unit buyers pay for a home; the spread over bulk investor value is the return driver."),
+           ("Structure","TIC Where Condo Mapping Is Closed","The legal structure that reaches for-sale buyers in buildings that cannot be condo-mapped."),
+           ("Financing","Fractional Lending Has Matured","Individual TIC loans are now available from multiple lenders &mdash; the constraint that historically limited this strategy."),
+           ("Discipline","Underwrite the Fallback First","Bulk-sale value, partial-release terms, and absorption assumptions are set before acquisition, not after.")],
   risks=["Absorption is the dominant risk. Three or four units each require their own buyer and "
          "their own loan, and a slow sellout extends carry against the whole project.",
          "TIC buyer financing depends on a small set of lenders. If fractional lending tightens, "
@@ -301,7 +300,7 @@ dict(slug="tic-housing", eyebrow="Strategy 04 &middot; TIC",
          "units can close, and those terms materially affect the sellout schedule."],
   ent=[card("samo.webp","&ldquo;The SAMO IV&rdquo;","1925 19th St &middot; Santa Monica &middot; AC IV LLC","In Entitlements &middot; TIC","../portfolio.html",[("4 units","Program"),("Q4 2027","Target sellout")])],
   con=[],
-  done=[card("david.webp","&ldquo;The David III&rdquo;","5832 David Ave &middot; Ground-up triplex &middot; 3 fee-simple TIC units","Sold as TIC &middot; $2.91M","../properties/david-iii.html",[("3","Units sold"),("$2.91M","Combined sales"),("26 mo","Hold")])],
+  done=[card("david.webp","&ldquo;The David III&rdquo;","5832 David Ave &middot; Ground-up triplex &middot; 3 fee-simple TIC units","Sold as TIC &middot; $2,910,000","../properties/david-iii.html",[("3","Units sold"),("$2,910,000","Combined sales"),("26 mo","Hold")])],
   more=("5832&nbsp;David was sold as three separate TIC units across closings from November&nbsp;2025 "
         "through February&nbsp;2026. It is the executed proof of the pathway now being applied at "
         "1925&nbsp;19th&nbsp;St in Santa Monica."),
@@ -321,9 +320,9 @@ def build(s):
                       for r in s["risks"])
 
     sections = ""
-    sections += stage("In entitlements.", "Current Projects",
+    sections += stage("In Entitlements.", "Current Projects",
                       None, s["ent"], warm=True, stamp="Approval pipeline")
-    sections += stage("In construction.", "Current Projects",
+    sections += stage("In Construction.", "Current Projects",
                       None, s["con"], warm=not s["ent"], stamp="Underway")
     warm_done = not (bool(s["ent"]) ^ bool(s["con"]))
     sections += stage("Completed." if s["done"] else "", "Track Record",
@@ -409,7 +408,7 @@ def build(s):
   <div class="wrap">
     <div class="reveal" style="max-width:46rem;margin-bottom:2.6rem">
       <p class="eyebrow">How It Works</p>
-      <h2 class="h-lg">Four things this strategy depends on.</h2>
+      <h2 class="h-lg">Four Things This Strategy Depends On.</h2>
     </div>
     <div class="pillars reveal">
 {pillars}
@@ -422,7 +421,7 @@ def build(s):
   <div class="wrap split reveal" style="align-items:start">
     <div>
       <p class="eyebrow">What Can Go Wrong</p>
-      <h2 class="h-lg">The risks we underwrite against.</h2>
+      <h2 class="h-lg">The Risks We Underwrite Against.</h2>
       <p class="muted" style="max-width:30rem">Every strategy has a failure mode. These are the ones specific to this one &mdash; the complete risk disclosure for any investment lives in its offering documents.</p>
     </div>
     <div>
