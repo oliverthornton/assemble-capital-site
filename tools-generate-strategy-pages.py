@@ -103,7 +103,7 @@ def stage(title, eyebrow, blurb, cards, warm=False, stamp=None):
 
 # ------------------------------------------------------------------ data
 S = [
-dict(slug="luxury-redevelopment", eyebrow="Strategy 02 &middot; SFR&ndash;Redev &middot; Select Projects",
+dict(slug="luxury-redevelopment", eyebrow="Strategy 02 &middot; SFR&ndash;Redev &middot; Core Strategy",
   name="Luxury Residential<br>Development",
   hero="villa-de-vistas.webp",
   sub="Studs-out rebuilds and heavy remodels of under-improved homes in prime Los Angeles submarkets.",
@@ -210,7 +210,7 @@ dict(slug="boutique-multifamily", eyebrow="Strategy 03 &middot; MF&ndash;Dev",
 dict(slug="infill-subdivisions", eyebrow="Strategy 01 &middot; SB&ndash;684 / SB&ndash;1123 &middot; Core Strategy",
   name="SB 684/1123 Fee Simple<br>Subdivisions",
   hero="harter-render.jpg",
-  sub="Our core strategy. Ministerial small-lot subdivisions under SB&nbsp;684 and SB&nbsp;1123 &mdash; new fee-simple homes on individual APNs, and the focus of the Assemble Capital pipeline.",
+  sub="One of our two core strategies. Ministerial small-lot subdivisions under SB&nbsp;684 and SB&nbsp;1123 &mdash; new fee-simple homes on individual APNs, and the focus of the Assemble Capital pipeline.",
   specs=[("4 &ndash; 10","Homes per project"),("$1M &ndash; $1.5M","End-user pricing"),
          ("Months, not years","Entitlement timeline"),("Bulk sale","Fallback underwritten")],
   lede="A change in state law turned a multi-year political process into an administrative one. That is the whole opportunity.",
