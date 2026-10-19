@@ -211,7 +211,7 @@ dict(slug="infill-subdivisions", eyebrow="Strategy 01 &middot; SB&ndash;684 / SB
   hero="harter-render.jpg",
   sub="One of our two core strategies, and an opportunistic one. Ministerial small-lot subdivisions under SB&nbsp;684 and SB&nbsp;1123 &mdash; new fee-simple homes on individual APNs, and the focus of the Assemble Capital pipeline.",
   specs=[("4 &ndash; 10","Homes per project"),("$1M &ndash; $1.5M","End-user pricing"),
-         ("~12 months","Entitlement start to ready-to-issue (RTI) permits, trending toward 9&ndash;10"),("Bulk sale","Fallback underwritten")],
+         ("~12 months","Entitlement start to ready-to-issue (RTI) permits, trending toward 9&ndash;10"),("~12 months","Ready-to-issue permits to completed homes"),("Fee-simple","Each home sold individually on its own parcel &mdash; no condo map or DRE public report")],
   lede="A change in state law turned a multi-year political process into an administrative one. That is the whole opportunity.",
   why=["SB&nbsp;684, expanded by SB&nbsp;1123, created a ministerial approval pathway for small-lot subdivisions on "
        "multifamily-zoned land. Ministerial matters enormously: it means approval is administrative "
@@ -235,14 +235,14 @@ dict(slug="infill-subdivisions", eyebrow="Strategy 01 &middot; SB&ndash;684 / SB
   pillars=[("Regulatory","Ministerial, Not Discretionary","No hearing, no discretionary review, no appeal &mdash; entitlement becomes a timeline rather than a political outcome."),
            ("Arbitrage","Buy on Income Value, Sell on For-Sale Value","Land priced as rental product, exited as individual homes at for-sale pricing."),
            ("Financing","Fee-Simple Widens the Buyer Pool","Individual APNs mean conventional mortgages, not specialized fractional lending."),
-           ("Absorption","Release Units, Don't Dump Them","Homes are sold on a unit-release schedule as the market absorbs, with a bulk-sale fallback underwritten from acquisition.")],
+           ("Absorption","Sell Home by Home","Each fee-simple home is sold individually to an owner-occupant, released as the market absorbs. With no condo map, HOA or DRE public report, homes can be listed as soon as they&rsquo;re complete.")],
   risks=["SB&nbsp;684 is a recent statute and jurisdictions interpret and administer it "
          "differently. Processing timelines, plan-check standards, and local implementation vary, "
          "and the law itself could be amended.",
          "Affordable-housing obligations apply on these projects and are disclosed per deal.",
-         "Sellout is absorption-dependent: each home waits on its own buyer and financing. The "
-         "bulk-sale fallback value is underwritten before acquisition precisely because the "
-         "unit-by-unit path may take longer than modeled.",
+         "Sellout is absorption-dependent: each home waits on its own buyer and financing, so "
+         "selling every home individually may take longer than modeled. Pricing at the entry "
+         "level of the fee-simple market, where the buyer pool is deepest, is how we manage that risk.",
          "Three of the active projects carry construction cost above current loan commitments; "
          "each requires a construction refinancing, and investor-level return projections are "
          "intentionally withheld until that capitalization is reconciled."],
