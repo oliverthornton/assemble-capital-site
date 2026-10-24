@@ -1247,3 +1247,31 @@ section:not(.on-warm) .org-link span { background: var(--paper); }
 .route small { font-size: .84rem; color: rgba(248,248,248,.7); line-height: 1.5; }
 .route .go { margin-top: auto; padding-top: .8rem; font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; font-weight: 600; }
 @media (max-width: 820px) { .routes { grid-template-columns: 1fr; } }
+
+/* About — partner profiles */
+.partner { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: start; padding: clamp(3rem, 6vw, 5rem) 0; border-top: 1px solid var(--line); scroll-margin-top: 5rem; }
+.partner:first-of-type { border-top: 0; padding-top: 0; }
+.partner.flip .partner-photo { order: 2; }
+.partner-photo { position: sticky; top: 6.5rem; }
+.partner-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; }
+.partner-photo .reach { margin-top: 1rem; font-size: .86rem; line-height: 1.7; }
+.partner-photo .reach a { text-decoration: none; border-bottom: 1px solid var(--line-strong); }
+.partner .role { font-family: var(--type); font-size: .66rem; letter-spacing: .16em; text-transform: uppercase; color: var(--bronze); margin: .4rem 0 1.4rem; }
+.partner h3 { font-family: var(--serif); font-weight: 500; font-size: clamp(2rem, 3.6vw, 2.8rem); line-height: 1.05; margin: 0; }
+.partner .lede-s { font-family: var(--serif); font-size: 1.3rem; line-height: 1.45; margin: 0 0 1.2rem; }
+.partner-facts { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin: 1.8rem 0; }
+.partner-facts div { padding: 1.1rem 1rem 1.1rem 0; }
+.partner-facts div + div { padding-left: 1rem; border-left: 1px solid var(--line); }
+.partner-facts b { display: block; font-family: var(--serif); font-weight: 500; font-size: 1.55rem; line-height: 1.1; white-space: nowrap; }
+.partner-facts span { display: block; font-size: .74rem; color: var(--muted); margin-top: .35rem; line-height: 1.4; }
+.partner-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1.6rem 2.2rem; margin-top: 1.6rem; }
+.partner-cols h4 { font-family: var(--type); font-size: .64rem; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); font-weight: 400; margin: 0 0 .7rem; }
+.partner-cols ul { list-style: none; margin: 0; padding: 0; }
+.partner-cols li { font-size: .88rem; line-height: 1.5; padding: .45rem 0; border-top: 1px solid var(--line); }
+@media (max-width: 860px) {
+  .partner { grid-template-columns: 1fr; }
+  .partner.flip .partner-photo { order: 0; }
+  .partner-photo { position: static; max-width: 26rem; }
+  .partner-cols { grid-template-columns: 1fr; }
+}
+@media (max-width: 520px) { .partner-facts { grid-template-columns: 1fr; } .partner-facts div + div { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); } }
