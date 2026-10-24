@@ -184,7 +184,7 @@ section.tight { padding: clamp(2.5rem, 5vw, 4rem) 0; }
   text-transform: uppercase;
 }
 
-.site-nav { display: flex; align-items: center; gap: clamp(1rem, 2.2vw, 2rem); }
+.site-nav { display: flex; align-items: center; gap: clamp(.85rem, 1.5vw, 1.6rem); }
 .site-nav a {
   white-space: nowrap;
   font-size: 0.72rem;
@@ -1105,6 +1105,7 @@ section:not(.on-warm) .org-link span { background: var(--paper); }
 .compare li { display: grid; grid-template-columns: 1.4rem 1fr; gap: .5rem; padding: .62rem 0; border-top: 1px solid var(--line); font-size: .9rem; line-height: 1.5; }
 .compare li::before { content: "\2715"; color: var(--muted); font-size: .8rem; padding-top: .1rem; }
 .compare > div + div li::before { content: "\2713"; color: var(--bronze); font-weight: 600; }
+.compare.roles li::before { content: "\2192"; color: var(--bronze); font-weight: 400; }
 @media (max-width: 700px) { .compare { grid-template-columns: 1fr; } .compare > div + div { border-left: 0; border-top: 1px solid var(--line); } }
 
 /* --- gantt timeline --- */

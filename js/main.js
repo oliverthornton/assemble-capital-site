@@ -132,24 +132,63 @@ document.querySelectorAll('[data-carousel]').forEach((carousel) => {
   });
 })();
 
-// Contact form → composes an email to the firm
-const form = document.querySelector('form.inquiry:not(.deal-form)');
-if (form) {
+// Investor intake: scheduling link + Cash Flow Portal form.
+// Fill these in once the scheduler and the CFP lead-capture form exist; until then
+// "Schedule an intro call" links fall back to the contact form and the email form stays.
+const INTAKE = {
+  SCHEDULER_URL: '',   // e.g. a Calendly or Cash Flow Portal booking link
+  CFP_FORM_URL: '',    // Cash Flow Portal lead-capture form (embedded in an iframe)
+  CFP_FORM_HEIGHT: 980,
+};
+
+(function () {
+  const track = (name, params) => { if (window.gtag) window.gtag('event', name, params || {}); };
+
+  document.querySelectorAll('[data-schedule]').forEach((a) => {
+    if (INTAKE.SCHEDULER_URL) {
+      a.href = INTAKE.SCHEDULER_URL;
+      a.target = '_blank';
+      a.rel = 'noopener';
+    }
+    a.addEventListener('click', () => track('schedule_call_click', { page: location.pathname }));
+  });
+  if (INTAKE.SCHEDULER_URL) document.querySelectorAll('[data-schedule-only]').forEach((el) => { el.style.display = ''; });
+
+  if (INTAKE.CFP_FORM_URL) {
+    document.querySelectorAll('[data-cfp-embed]').forEach((box) => {
+      const f = document.createElement('iframe');
+      f.src = INTAKE.CFP_FORM_URL;
+      f.title = 'Join the Assemble Capital investor network';
+      f.loading = 'lazy';
+      f.style.cssText = 'width:100%;border:0;min-height:' + INTAKE.CFP_FORM_HEIGHT + 'px;background:transparent';
+      box.replaceChildren(f);
+    });
+  }
+
+  // Fallback: the inquiry form composes an email to the firm
+  const form = document.querySelector('form.inquiry:not(.deal-form)');
+  if (!form) return;
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     const d = new FormData(form);
-    const subject = encodeURIComponent('Conversation request — ' + d.get('first') + ' ' + d.get('last'));
+    const v = (k) => d.get(k) || 'Not specified';
+    const subject = encodeURIComponent('Investor network — ' + d.get('first') + ' ' + d.get('last'));
     const body = encodeURIComponent(
       'Name: ' + d.get('first') + ' ' + d.get('last') +
       '\nEmail: ' + d.get('email') +
       '\nPhone: ' + d.get('phone') +
-      '\nAccredited investor: ' + d.get('accredited') +
+      '\nAccredited investor: ' + v('accredited') +
       '\nStrategies of interest: ' + (d.getAll('interest').join(', ') || 'Not specified') +
+      '\nTypical investment size: ' + v('range') +
+      '\nPrivate real estate experience: ' + v('experience') +
+      '\nHow they heard about us: ' + v('heard') +
+      (d.get('referred') ? '\nReferred by: ' + d.get('referred') : '') +
       '\n\n' + (d.get('message') || '')
     );
+    track('generate_lead', { form: 'investor_network' });
     window.location.href = 'mailto:info@assemble.capital?subject=' + subject + '&body=' + body;
   });
-}
+})();
 
 // FAQ topic nav — highlight the topic in view
 (function () {

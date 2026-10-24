@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Special+Elite&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=10">
+<link rel="stylesheet" href="css/style.css?v=11">
 <link rel="icon" href="assets/img/logo/favicon-v2.png">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-676QQYXN22"></script>
@@ -78,6 +78,7 @@
       </div>
       <a href="portfolio.html">Current Projects</a>
       <a href="track-record.html">Track Record</a>
+      <a href="investors.html">Investors</a>
       <a href="submit-a-deal.html">Submit a Deal</a>
       <a class="nav-btn active" href="contact.html">Contact</a>
       <a class="portal" href="https://assemblecapital.cashflowportal.com" target="_blank" rel="noopener">Investor Portal&nbsp;&#8599;</a>
@@ -95,9 +96,9 @@
     <div class="routes" style="margin-top:2.6rem">
       <a class="route" href="#inquiry">
         <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="11" r="5"/><path d="M6 27c1.5-5.5 5.5-8 10-8s8.5 2.5 10 8"/></svg>
-        <span class="k">Investors</span><b>Request a Conversation</b>
-        <small>Tell us about your goals. We&rsquo;ll set up a one-on-one call and walk you through our strategies and track record.</small>
-        <span class="go">Go to the form &darr;</span>
+        <span class="k">Investors</span><b>Get to Know Us</b>
+        <small>Schedule an intro call with a principal or join our investor network. Every relationship starts with a conversation, not an offering.</small>
+        <span class="go">Get started &darr;</span>
       </a>
       <a class="route" href="submit-a-deal.html">
         <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 15 16 6l11 9v12H5z"/><path d="M13 27v-7h6v7"/></svg>
@@ -118,11 +119,13 @@
 <section>
   <div class="wrap reveal" style="margin-bottom:clamp(3rem,6vw,4.5rem)">
     <p class="ig-caption">For investors &mdash; what happens next</p>
-    <div class="flow" style="--n:3;margin-top:1.4rem">
-      <div class="flow-step"><h4>You reach out</h4><p>Share a little about your goals and experience with private real estate.</p></div>
-      <div class="flow-step"><h4>An introductory call</h4><p>Usually within one business day, with one of the principals.</p></div>
-      <div class="flow-step"><h4>A private review</h4><p>When a project is a fit, you review its business plan and offering documents privately.</p></div>
+    <div class="flow" style="--n:4;margin-top:1.4rem">
+      <div class="flow-step"><h4>Introduce yourself</h4><p>Schedule a call or tell us about your goals and experience with private real estate.</p></div>
+      <div class="flow-step"><h4>An intro call</h4><p>Usually within one business day, with one of the principals. No obligation.</p></div>
+      <div class="flow-step"><h4>Get to know us</h4><p>Review the track record, ask questions, visit a site. There&rsquo;s no rush.</p></div>
+      <div class="flow-step"><h4>A private review</h4><p>When a project fits, you review its business plan and offering documents privately.</p></div>
     </div>
+    <p class="small" style="margin-top:1.4rem"><a href="investors.html" style="font-weight:600;text-decoration:none;border-bottom:1px solid var(--line-strong)">How we work with investors &rarr;</a></p>
   </div>
   <div class="wrap split cols-56">
     <div class="reveal">
@@ -153,12 +156,20 @@
 
       <hr class="rule" style="margin:2.2rem 0">
 
+      <p class="eyebrow">New to Syndication?</p>
+      <p class="small" style="margin:0 0 1.6rem">See how a relationship with us works, how projects are structured and what investors can expect.<br><a href="investors.html" style="font-weight:600;text-decoration:none;border-bottom:1px solid var(--line-strong)">How we work with investors &rarr;</a></p>
+
       <p class="eyebrow">Current Investors</p>
       <p class="small" style="margin:0">Quarterly reports, K-1s, and source documents live in the secure portal.<br><a href="https://assemblecapital.cashflowportal.com" target="_blank" rel="noopener" style="font-weight:600;text-decoration:none;border-bottom:1px solid var(--line-strong)">Open the investor portal &#8599;</a></p>
     </div>
 
     <div class="reveal" id="inquiry" style="border:1px solid var(--line);padding:clamp(1.5rem,3vw,2.6rem);background:var(--paper-warm);scroll-margin-top:6.5rem">
-      <p class="eyebrow">Request a Conversation</p>
+      <p class="eyebrow">Join Our Investor Network</p>
+      <div class="sched-cta" data-schedule-only style="display:none;margin:0 0 1.6rem">
+        <a class="btn solid" href="#inquiry" data-schedule>Schedule an intro call</a>
+        <p class="small muted" style="margin:.8rem 0 0">Or tell us about yourself below and we&rsquo;ll reach out personally.</p>
+      </div>
+      <div data-cfp-embed>
       <form class="inquiry" novalidate>
         <div class="row">
           <div><label for="first">First name</label><input type="text" id="first" name="first" autocomplete="given-name" required></div>
@@ -175,25 +186,46 @@
             <label><input type="radio" name="accredited" value="No"> No</label>
             <label><input type="radio" name="accredited" value="Not sure"> Not sure</label>
           </div>
+          <p class="footnote" style="margin:.5rem 0 0">Not sure or not accredited? Still reach out. Some offerings allow a limited number of sophisticated investors; we&rsquo;ll talk it through.</p>
         </div>
         <div>
           <label id="int-label">Strategies of interest</label>
           <div class="radio-row wrap-row" role="group" aria-labelledby="int-label">
             <label class="check"><input type="checkbox" name="interest" value="SB 684 / SB 1123"> SB&nbsp;684 / SB&nbsp;1123</label>
             <label class="check"><input type="checkbox" name="interest" value="Luxury residential"> Luxury residential</label>
-            <label class="check"><input type="checkbox" name="interest" value="Multifamily"> Multifamily</label>
-            <label class="check"><input type="checkbox" name="interest" value="TIC"> TIC</label>
+            <label class="check"><input type="checkbox" name="interest" value="Open to both"> Open to both</label>
           </div>
+        </div>
+        <div class="row">
+          <div><label for="range">Typical investment size</label>
+            <select id="range" name="range">
+              <option value="">Select&hellip;</option>
+              <option>$50,000 &ndash; $100,000</option><option>$100,000 &ndash; $250,000</option><option>$250,000 &ndash; $500,000</option><option>$500,000 or more</option><option>Prefer to discuss</option>
+            </select></div>
+          <div><label for="experience">Private real estate experience</label>
+            <select id="experience" name="experience">
+              <option value="">Select&hellip;</option>
+              <option>This would be my first</option><option>1&ndash;3 private investments</option><option>4 or more</option>
+            </select></div>
+        </div>
+        <div class="row">
+          <div><label for="heard">How did you hear about us?</label>
+            <select id="heard" name="heard">
+              <option value="">Select&hellip;</option>
+              <option>Referred by a current investor</option><option>I know one of the principals</option><option>Event or speaking engagement</option><option>Podcast, YouTube or social media</option><option>Search or this website</option><option>Other</option>
+            </select></div>
+          <div><label for="referred">Referred by (optional)</label><input type="text" id="referred" name="referred" placeholder="Name of the person who referred you"></div>
         </div>
         <div>
           <label for="message">Message</label>
           <textarea id="message" name="message" placeholder="Your goals, timeline, and anything you&rsquo;d like to know about our projects."></textarea>
         </div>
         <div>
-          <button class="btn" type="submit" style="border-color:var(--line-strong)">Request a conversation</button>
-          <p class="footnote" style="margin-top:1rem">Submitting opens a pre-filled email to info@assemble.capital from your mail app. Joining the network is not an offer, commitment, or investment — it adds you to our contact list for future opportunities.</p>
+          <button class="btn" type="submit" style="border-color:var(--line-strong)">Join the investor network</button>
+          <p class="footnote" style="margin-top:1rem">Submitting opens a pre-filled email to info@assemble.capital from your mail app. Joining the network is not an offer, commitment, or investment. It adds you to our contact list so a principal can follow up personally.</p>
         </div>
       </form>
+      </div>
     </div>
   </div>
 </section>
@@ -229,6 +261,7 @@
           <a href="strategies.html">Strategies</a>
           <a href="portfolio.html">Current Projects</a>
           <a href="track-record.html">Track Record</a>
+          <a href="investors.html">For Investors</a>
           <a href="blog/index.html">Blogs</a><a href="glossary.html">Glossary</a>
           <a href="submit-a-deal.html">Submit a Deal</a>
           <a href="contact.html">Contact</a>
@@ -269,6 +302,6 @@
   </div>
 </footer>
 
-<script src="js/main.js?v=3"></script>
+<script src="js/main.js?v=4"></script>
 </body>
 </html>
