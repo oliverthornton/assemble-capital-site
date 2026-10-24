@@ -8,20 +8,41 @@ if (head && !head.classList.contains('always-solid')) {
   window.addEventListener('scroll', onScroll, { passive: true });
 }
 
-// Mobile menu
+// Primary navigation: full-screen menu on small screens, grouped dropdowns everywhere
 const menuBtn = document.querySelector('.menu-btn');
 const nav = document.querySelector('.site-nav');
 if (menuBtn && nav) {
+  const groups = Array.from(nav.querySelectorAll('.nav-dd'));
+  const closeGroups = (except) => groups.forEach((g) => {
+    if (g === except) return;
+    g.classList.remove('open');
+    const t = g.querySelector('.nav-dd-toggle'); if (t) t.setAttribute('aria-expanded', 'false');
+  });
   const setOpen = (open) => {
     nav.classList.toggle('open', open);
     document.body.classList.toggle('nav-locked', open);
     menuBtn.textContent = open ? 'Close' : 'Menu';
     menuBtn.setAttribute('aria-expanded', open);
+    if (!open) closeGroups();
   };
   menuBtn.addEventListener('click', () => setOpen(!nav.classList.contains('open')));
-  // Following a link (including in-page anchors) closes the drawer
+  groups.forEach((g) => {
+    const t = g.querySelector('.nav-dd-toggle');
+    if (!t) return;
+    t.addEventListener('click', () => {
+      const open = !g.classList.contains('open');
+      closeGroups(g);
+      g.classList.toggle('open', open);
+      t.setAttribute('aria-expanded', open);
+    });
+  });
+  // Following a link (including in-page anchors) closes the menu
   nav.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setOpen(false)));
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && nav.classList.contains('open')) setOpen(false); });
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    if (nav.classList.contains('open')) setOpen(false); else closeGroups();
+  });
+  document.addEventListener('click', (e) => { if (!nav.contains(e.target) && !nav.classList.contains('open')) closeGroups(); });
 }
 
 // Scroll reveals — with fallbacks so content can never stay hidden

@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Special+Elite&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../css/style.css?v=17">
+<link rel="stylesheet" href="../css/style.css?v=19">
 <link rel="icon" href="../assets/img/logo/favicon-v2.png">
 <script type="application/ld+json">
 {
@@ -106,22 +106,62 @@
     </a>
     <button class="menu-btn" aria-expanded="false" aria-controls="site-nav">Menu</button>
     <nav class="site-nav" id="site-nav" aria-label="Primary">
-      <a href="../about.html">About</a>
-      <div class="nav-dd">
-        <a href="../strategies.html" class="nav-dd-toggle">Strategies</a>
-        <div class="nav-dd-menu">
-          <a href="../strategies/infill-subdivisions.html">SB 684/1123 Fee Simple Subdivisions</a>
-          <a href="../strategies/luxury-redevelopment.html">Luxury Residential Development</a>
-          <a href="../strategies/boutique-multifamily.html">Opportunistic &amp; Value Add Multifamily Development</a>
-          <a href="../strategies/tic-housing.html">Tenancy-In-Common Housing</a>
+      <div class="nav-groups">
+        <div class="nav-dd">
+          <button class="nav-dd-toggle" type="button" aria-expanded="false" aria-controls="nav-strategies">Strategies</button>
+          <div class="nav-dd-menu" id="nav-strategies">
+            <a href="../strategies/infill-subdivisions.html"><b>SB 684 / SB 1123 Homes</b><span>Fee-simple small-lot homes on infill lots</span></a>
+            <a href="../strategies/luxury-redevelopment.html"><b>Luxury Residential</b><span>Remodels and expansions in prime neighborhoods</span></a>
+            <p class="nav-sub">Also on a select basis</p>
+            <a href="../strategies/boutique-multifamily.html"><b>Value-Add Multifamily</b><span>Small multifamily development</span></a>
+            <a href="../strategies/tic-housing.html"><b>Tenancy-in-Common Housing</b><span>Shared-ownership homes</span></a>
+            <a href="../strategies.html"><b>Compare All Strategies</b><span>How the strategies fit together</span></a>
+          </div>
+        </div>
+        <div class="nav-dd">
+          <button class="nav-dd-toggle" type="button" aria-expanded="false" aria-controls="nav-portfolio">Portfolio</button>
+          <div class="nav-dd-menu" id="nav-portfolio">
+            <a href="../portfolio.html"><b>Current Projects</b><span>What we&rsquo;re building now</span></a>
+            <a href="../track-record.html"><b>Track Record</b><span>Completed projects by the principals</span></a>
+            <a href="../submit-a-deal.html#acquisitions"><b>Recent Acquisitions</b><span>Sites we&rsquo;ve recently bought, and why</span></a>
+          </div>
+        </div>
+        <div class="nav-dd">
+          <button class="nav-dd-toggle active" type="button" aria-expanded="false" aria-controls="nav-investors">Investors</button>
+          <div class="nav-dd-menu" id="nav-investors">
+            <a href="../investors.html"><b>How We Work With Investors</b><span>Relationship first, passive ownership</span></a>
+            <a href="../investors.html#faq"><b>Investor FAQ</b><span>Getting started, structure, reporting and risk</span></a>
+            <a href="../blog/index.html"><b>Insights</b><span>Guides on SB 684, syndication and development</span></a>
+            <a href="../glossary.html"><b>Glossary</b><span>Plain definitions of investment terms</span></a>
+            <a href="https://assemblecapital.cashflowportal.com" target="_blank" rel="noopener"><b>Investor Portal &#8599;</b><span>Documents, updates and K-1s for current investors</span></a>
+          </div>
+        </div>
+        <div class="nav-dd">
+          <button class="nav-dd-toggle" type="button" aria-expanded="false" aria-controls="nav-sell">Sell to Us</button>
+          <div class="nav-dd-menu" id="nav-sell">
+            <a href="../submit-a-deal.html"><b>Submit a Deal</b><span>For owners, agents and wholesalers</span></a>
+            <a href="../submit-a-deal.html#sb684-criteria"><b>SB 684 Buy Box</b><span>Lot size, zoning and site criteria</span></a>
+            <a href="../submit-a-deal.html#sfr-criteria"><b>Luxury Buy Box</b><span>Remodel, teardown and hillside criteria</span></a>
+            <a href="../blog/selling-your-lot-to-an-sb-684-developer.html"><b>Selling Your Lot</b><span>A guide for owners and agents</span></a>
+          </div>
+        </div>
+        <div class="nav-dd">
+          <button class="nav-dd-toggle" type="button" aria-expanded="false" aria-controls="nav-about">About</button>
+          <div class="nav-dd-menu" id="nav-about">
+            <a href="../about.html"><b>The Firm</b><span>Who we are and how we work</span></a>
+            <a href="../about.html#partners"><b>Meet the Partners</b><span>RC Thornton, Oliver Thornton and Erik Lim</span></a>
+            <a href="../about.html#governance"><b>How We&rsquo;re Structured</b><span>Alignment, governance and reporting</span></a>
+          </div>
         </div>
       </div>
-      <a href="../portfolio.html">Current Projects</a>
-      <a href="../track-record.html">Track Record</a>
-      <a href="../investors.html">Investors</a>
-      <a href="../submit-a-deal.html">Submit a Deal</a>
-      <a class="nav-btn" href="../contact.html">Contact</a>
-      <a class="portal" href="https://assemblecapital.cashflowportal.com" target="_blank" rel="noopener">Investor Portal&nbsp;&#8599;</a>
+      <div class="nav-actions">
+        <a class="nav-btn" href="../contact.html">Contact</a>
+        <a class="portal" href="https://assemblecapital.cashflowportal.com" target="_blank" rel="noopener">Investor Portal&nbsp;&#8599;</a>
+      </div>
+      <div class="nav-mobile-ctas">
+        <a class="solid" href="../contact.html#inquiry" data-schedule>Schedule an Intro Call</a>
+        <a href="../submit-a-deal.html#submit">Submit a Property</a>
+      </div>
     </nav>
   </div>
 </header>
@@ -271,6 +311,6 @@
   </div>
 </footer>
 
-<script src="../js/main.js?v=4"></script>
+<script src="../js/main.js?v=5"></script>
 </body>
 </html>
