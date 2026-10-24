@@ -7,7 +7,7 @@ with the pages themselves.
 
     python3 tools-generate-sitemap.py
 """
-import os, re
+import datetime, os, re, subprocess
 
 SITE = os.path.dirname(os.path.abspath(__file__))
 BASE = "https://assemble.capital"
@@ -21,7 +21,18 @@ PRIORITY = {
     "about.html": "0.8",
     "portfolio.html": "0.8",
     "contact.html": "0.6",
+    "investors.html": "0.9",
+    "submit-a-deal.html": "0.8",
 }
+
+
+def lastmod(rel):
+    """Today for files with uncommitted changes, else the last commit date."""
+    dirty = subprocess.run(["git", "status", "--porcelain", "--", rel], cwd=SITE, capture_output=True, text=True).stdout.strip()
+    if dirty:
+        return datetime.date.today().isoformat()
+    out = subprocess.run(["git", "log", "-1", "--format=%cs", "--", rel], cwd=SITE, capture_output=True, text=True).stdout.strip()
+    return out or datetime.date.today().isoformat()
 
 def head_of(path):
     src = open(path, encoding="utf-8", errors="ignore").read()
@@ -58,12 +69,12 @@ for root, dirs, files in os.walk(SITE):
             p = "0.6"
         else:
             p = "0.5"
-        urls.append((loc, p))
+        urls.append((loc, p, lastmod(rel)))
 
 urls.sort()
 body = ['<?xml version="1.0" encoding="UTF-8"?>',
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
-body += [f"  <url><loc>{loc}</loc><priority>{p}</priority></url>" for loc, p in urls]
+body += [f"  <url><loc>{loc}</loc><lastmod>{m}</lastmod><priority>{p}</priority></url>" for loc, p, m in urls]
 body.append("</urlset>")
 open(os.path.join(SITE, "sitemap.xml"), "w").write("\n".join(body) + "\n")
 

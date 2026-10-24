@@ -1277,3 +1277,11 @@ section:not(.on-warm) .org-link span { background: var(--paper); }
   .partner-cols { grid-template-columns: 1fr; }
 }
 @media (max-width: 520px) { .partner-facts { grid-template-columns: 1fr; } .partner-facts div + div { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); } }
+
+/* Blog article section headings (promoted from h4 for SEO) */
+.post-h { font-family: var(--serif); font-weight: 500; font-size: clamp(1.55rem, 2.4vw, 1.95rem); line-height: 1.18; letter-spacing: -.005em; margin: 2.8rem 0 1rem; color: var(--ink); }
+.post-h3 { font-family: var(--sans); font-weight: 700; font-size: 1rem; line-height: 1.6; margin: 1.6rem 0 .6rem; }
+p.h-lg { margin: 0; }
+
+/* Blog article tables fit the 46rem column instead of forcing a scrollbar */
+.wrap[style*="max-width:46rem"] table.data { min-width: 0; width: 100%; }
