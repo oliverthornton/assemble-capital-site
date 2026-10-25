@@ -1511,9 +1511,24 @@ html:not(.js-faq) .ins-panels [data-panel] + [data-panel] { margin-top: 2rem; }
 @media (max-width: 520px) { .finish-grid { grid-template-columns: 1fr; } .concept-gallery figure { flex-basis: 40% !important; } }
 .concept-gallery::after { content: ""; flex: 999 1 0; }
 
-/* Portfolio: Culver VI floor plans */
-.plan-panel { margin: 0; background: #fff; border: 1px solid var(--line); padding: clamp(.6rem, 2vw, 1.4rem); }
-.plan-panel img { width: 100%; height: auto; display: block; }
-.plan-panel figcaption { font-size: .82rem; color: var(--muted); margin-top: .8rem; }
-.plan-panel figcaption span { color: var(--bronze); }
-.js-faq .plans [data-panel][hidden] { display: none; }
+
+/* SB 684 project pages */
+.stage-track { list-style: none; margin: 2rem 0 0; padding: 0; display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; }
+.stage-track li { position: relative; padding-top: .9rem; font-size: .66rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.stage-track li::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--line); }
+.stage-track li.done::before { background: var(--ink); }
+.stage-track li.now { color: var(--ink); }
+.stage-track li.now::before { background: var(--bronze); }
+.hl-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+.hl-grid .hl { background: var(--paper); padding: 1.5rem 1.4rem; }
+.hl-grid h3 { font-family: var(--serif); font-weight: 400; font-size: 1.3rem; margin: 0 0 .5rem; }
+.hl-grid p { font-size: .88rem; line-height: 1.6; color: var(--muted); margin: 0; }
+.spec-list { margin: 0; border-top: 1px solid var(--line); }
+.spec-list div { display: grid; grid-template-columns: 11rem 1fr; gap: 1rem; padding: .85rem 0; border-bottom: 1px solid var(--line); }
+.spec-list dt { font-size: .66rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--bronze); padding-top: .2rem; }
+.spec-list dd { margin: 0; font-size: .95rem; }
+.on-dark .city-grid { background: rgba(248,248,248,.14); border-color: rgba(248,248,248,.14); }
+.on-dark .city-grid div { background: var(--ink); }
+.on-dark .city-grid span { color: rgba(248,248,248,.7); }
+@media (max-width: 960px) { .hl-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .hl-grid { grid-template-columns: 1fr; } .spec-list div { grid-template-columns: 1fr; gap: .2rem; } .stage-track li { font-size: .52rem; letter-spacing: .06em; } }
