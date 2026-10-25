@@ -238,3 +238,17 @@ const INTAKE = {
     });
   });
 })();
+
+// Homepage FAQ topic tabs
+(function () {
+  const tabs = document.querySelectorAll('.faq-tabs [data-tab]');
+  if (!tabs.length) return;
+  document.documentElement.classList.add('js-faq');
+  const panels = document.querySelectorAll('.faq-tabbed [data-panel]');
+  const show = (key) => {
+    tabs.forEach((t) => t.setAttribute('aria-selected', String(t.dataset.tab === key)));
+    panels.forEach((p) => { p.hidden = p.dataset.panel !== key; });
+  };
+  tabs.forEach((t) => t.addEventListener('click', () => show(t.dataset.tab)));
+  show(tabs[0].dataset.tab);
+})();
