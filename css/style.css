@@ -1454,3 +1454,9 @@ html:not(.js-topics) .topic-more { display: none; }
 html:not(.js-faq) .faq-tabs { display: none; }
 .js-faq .faq-panel[hidden] { display: none; }
 @media (max-width: 520px) { .faq-tabs { display: grid; grid-template-columns: 1fr 1fr; } .faq-tabs button { padding: .75rem .5rem; font-size: .64rem; letter-spacing: .1em; } }
+
+/* Footer partner headshots */
+footer .foot-principals .fp { display: flex; gap: 1rem; align-items: flex-start; }
+footer .foot-principals .fp img { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; flex: none; border: 1px solid rgba(248, 248, 248, 0.25); }
+footer .foot-principals .fp-c { margin-top: .35rem; }
+footer .foot-principals .fp-c a { display: block; width: fit-content; }
