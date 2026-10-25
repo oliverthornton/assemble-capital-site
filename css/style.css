@@ -1493,3 +1493,20 @@ html:not(.js-faq) .ins-panels [data-panel] + [data-panel] { margin-top: 2rem; }
 .sentney-pair .frame:first-child { aspect-ratio: 3 / 2; }
 .sentney-pair .frame:last-child { aspect-ratio: 749 / 1220; }
 .sentney-pair img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* Portfolio: SB 684 design concepts */
+.finish-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); margin-bottom: 1.4rem; }
+.finish-grid div { background: var(--paper); padding: 1.1rem 1.2rem; }
+.finish-grid b { display: block; font-family: var(--serif); font-weight: 400; font-size: 1.15rem; margin-bottom: .3rem; }
+.finish-grid span { font-size: .84rem; line-height: 1.5; color: var(--muted); }
+.floor-plan { display: flex; flex-wrap: wrap; gap: .5rem 1.6rem; font-size: .84rem; color: var(--ink-soft); margin: 0 0 1.6rem; }
+.floor-plan b { font-size: .64rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--bronze); margin-right: .5rem; }
+.concept-gallery { display: flex; flex-wrap: wrap; gap: .5rem; }
+.concept-gallery figure { margin: 0; position: relative; overflow: hidden; background: var(--ink-soft); max-height: 300px; }
+.concept-gallery img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.concept-gallery figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 1.4rem .7rem .55rem; font-size: .74rem; font-weight: 600; color: #fff; background: linear-gradient(transparent, rgba(0,0,0,.6)); }
+.concept-gallery figcaption span { display: block; font-size: .6rem; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; opacity: .8; }
+.concept-link { display: inline-block; margin-top: .9rem; font-size: .8rem; text-decoration: none; border-bottom: 1px solid var(--line-strong); }
+@media (max-width: 860px) { .finish-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) { .finish-grid { grid-template-columns: 1fr; } .concept-gallery figure { flex-basis: 40% !important; } }
+.concept-gallery::after { content: ""; flex: 999 1 0; }
