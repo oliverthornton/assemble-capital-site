@@ -1486,3 +1486,10 @@ html:not(.js-faq) .ins-panels [data-panel] + [data-panel] { margin-top: 2rem; }
 .region li span { display: block; font-size: .72rem; color: var(--muted, #6b6b6b); font-style: italic; margin-top: .1rem; }
 .region-note { font-size: .82rem; line-height: 1.65; color: var(--muted, #6b6b6b); max-width: 52rem; margin: 1.4rem 0 0; }
 .region-note a { color: inherit; }
+
+/* Portfolio: Sentney renderings pair (landscape rooftop + portrait aerial, equal height) */
+.sentney-pair { display: grid; grid-template-columns: 1.5fr .614fr; gap: .6rem; }
+.sentney-pair .frame { position: relative; display: block; overflow: hidden; aspect-ratio: auto; }
+.sentney-pair .frame:first-child { aspect-ratio: 3 / 2; }
+.sentney-pair .frame:last-child { aspect-ratio: 749 / 1220; }
+.sentney-pair img { width: 100%; height: 100%; object-fit: cover; display: block; }

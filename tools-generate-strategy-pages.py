@@ -249,7 +249,7 @@ dict(slug="infill-subdivisions", eyebrow="Strategy 01 &middot; SB&ndash;684 / SB
   ent=[card("westwood.jpg","&ldquo;The Culver VI&rdquo;","3850 Westwood &middot; Culver City &middot; AC III LLC","In Entitlements","../portfolio.html",[("Q4 2027","Target sellout"),("Fee-simple","Exit")]),
        card("harter-render.jpg","&ldquo;The Harter V&rdquo;","4058 Harter &middot; Culver City &middot; AC VI LLC","In Entitlements","../portfolio.html",[("Q1 2028","Target sellout"),("Fee-simple","Exit")]),
        card("helms-render.jpg","&ldquo;The Helms VI&rdquo;","3562 Helms &middot; Culver City &middot; AC VII LLC","In Entitlements","../portfolio.html",[("Q1 2028","Target sellout"),("Fee-simple","Exit")]),
-       card("helms-render.jpg","&ldquo;The Sentney VI&rdquo;","3011 Sentney Ave &middot; Culver City &middot; AC VIII LLC &middot; 6 homes, ~1,300 SF each","In Acquisition","../portfolio.html",[("2029","Target sellout"),("Fee-simple","Exit")])],
+       card("sentney-rooftop.jpg","&ldquo;The Sentney VI&rdquo;","3011 Sentney Ave &middot; Culver City &middot; AC VIII LLC &middot; 6 homes, ~1,300 SF each","In Acquisition","../portfolio.html",[("2029","Target sellout"),("Fee-simple","Exit")])],
   con=[],
   done=[],
   more=("The pathway was proven at 1949&nbsp;17th&nbsp;St, a principal-owned project: ministerial "
@@ -258,7 +258,7 @@ dict(slug="infill-subdivisions", eyebrow="Strategy 01 &middot; SB&ndash;684 / SB
         "The first, in Culver City, has refinanced into its construction loan, is about three "
         "months from ready-to-issue permits, and is expected to start construction in January "
         "2027 (est.); Harter and Helms are in entitlement; and a fourth, The Sentney VI, is in acquisition. The Sentney "
-        "VI image shows design direction from sister project The Helms VI."),
+        "VI images are conceptual renderings."),
   pipeline_note=None,
   ),
 
@@ -363,7 +363,7 @@ def build(s):
 <meta name="twitter:description" content="{s['sub']}">
 <meta name="twitter:image" content="https://assemble.capital/assets/img/{s['hero']}">
 {FONTS}
-<link rel="stylesheet" href="../css/style.css?v=38">
+<link rel="stylesheet" href="../css/style.css?v=39">
 {FAVICON}
 </head>
 <body>
