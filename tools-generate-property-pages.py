@@ -835,7 +835,7 @@ def build(p, prev, nxt):
 <meta name="twitter:description" content="{name} at {p['addr']}, {p['sub']} — investment background, gallery, returns, and investment cycle.">
 <meta name="twitter:image" content="https://assemble.capital/assets/img/{p['hero']}">
 {FONTS}
-<link rel="stylesheet" href="../css/style.css?v=30">
+<link rel="stylesheet" href="../css/style.css?v=31">
 {FAVICON}
 </head>
 <body>
@@ -920,7 +920,7 @@ def build(p, prev, nxt):
 
 {footer()}
 
-<script src="../js/main.js?v=5"></script>
+<script src="../js/main.js?v=6"></script>
 </body>
 </html>
 '''

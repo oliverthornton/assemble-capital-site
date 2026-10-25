@@ -222,3 +222,19 @@ const INTAKE = {
   }, { rootMargin: '-30% 0px -60% 0px' });
   document.querySelectorAll('.faq2-group').forEach(function (g) { io.observe(g); });
 })();
+
+// Blog index: collapse long topic sections behind "Show all"
+(function () {
+  const btns = document.querySelectorAll('[data-more]');
+  if (!btns.length) return;
+  document.documentElement.classList.add('js-topics');
+  btns.forEach((b) => {
+    const grid = b.previousElementSibling;
+    const label = b.textContent;
+    b.addEventListener('click', () => {
+      const open = grid.classList.toggle('expanded');
+      b.textContent = open ? 'Show fewer' : label;
+      if (!open) grid.closest('section').scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+})();
