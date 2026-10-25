@@ -1466,3 +1466,6 @@ footer .foot-principals .fp-c a { display: block; width: fit-content; }
 .legal-doc .legal-toc span { width: 100%; font-size: .66rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--bronze); }
 .legal-doc .legal-toc a { text-decoration: none; border-bottom: 1px solid var(--line-strong); }
 .legal-doc h2[id] { scroll-margin-top: 6rem; }
+
+/* Hero CTAs: equal-width stack on phones */
+@media (max-width: 600px) { .hero .actions .btn { width: 100%; justify-content: center; text-align: center; } }
