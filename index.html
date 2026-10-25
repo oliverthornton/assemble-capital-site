@@ -25,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Special+Elite&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="assets/img/sb684-hero.jpg" fetchpriority="high" data-seo="auto">
-<link rel="stylesheet" href="css/style.css?v=36">
+<link rel="stylesheet" href="css/style.css?v=37">
 <link rel="icon" href="assets/img/logo/favicon-v2.png">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-676QQYXN22"></script>
@@ -601,35 +601,80 @@
 
 <!-- INSIGHTS -->
 <section class="on-warm">
-  <div class="wrap">
-    <div class="split reveal" style="align-items:end;margin-bottom:2.4rem">
+  <div class="wrap" data-tabgroup>
+    <div class="split reveal" style="align-items:end;margin-bottom:2.2rem">
       <div>
         <p class="eyebrow">Insights</p>
         <h2 class="h-lg">From the Field.</h2>
       </div>
-      <p class="muted" style="max-width:34rem;margin:0">Plain-English guides on SB&nbsp;684, financing and development from the team doing the work. <a href="blog/index.html" class="text-link-inline">All insights &rarr;</a></p>
+      <p class="muted" style="max-width:34rem;margin:0">Plain-English guides from the team doing the work. Pick a topic.</p>
     </div>
-    <div class="grid-3 reveal">
-      <a class="photo-card" href="blog/sb-684-sb-1123-california-lot-split-guide.html">
-        <div class="frame"><span class="tag">Insights</span><img src="assets/img/sb684-hero.jpg" alt="SB 684 &amp; SB 1123 Explained" loading="lazy"></div>
-        <div class="meta"><div class="name">SB 684 &amp; SB 1123 Explained</div><div class="sub">The complete guide to California&rsquo;s small-lot laws</div></div>
-      </a>
-      <a class="photo-card" href="blog/how-sb-684-construction-financing-works.html">
-        <div class="frame"><span class="tag">Insights</span><img src="assets/img/helms-render.jpg" alt="How SB 684 Construction Financing Works" loading="lazy"></div>
-        <div class="meta"><div class="name">How SB 684 Construction Financing Works</div><div class="sub">Appraisals, loan sizing and the refinance</div></div>
-      </a>
-      <a class="photo-card" href="blog/selling-your-lot-to-an-sb-684-developer.html">
-        <div class="frame"><span class="tag">Insights</span><img src="assets/img/westwood.jpg" alt="Selling Your Lot to an SB 684 Developer" loading="lazy"></div>
-        <div class="meta"><div class="name">Selling Your Lot to an SB 684 Developer</div><div class="sub">For owners, agents and wholesalers</div></div>
-      </a>
+    <div class="faq-tabs reveal" role="tablist" aria-label="Insight topics"><button type="button" role="tab" id="ins-tab-sb684" aria-controls="ins-panel-sb684" aria-selected="true" data-tab="sb684" data-more-href="blog/index.html#topic-sb684" data-more-label="View all SB 684 insights">SB 684 / SB 1123</button><button type="button" role="tab" id="ins-tab-luxury" aria-controls="ins-panel-luxury" aria-selected="false" data-tab="luxury" data-more-href="blog/index.html#topic-luxury" data-more-label="View all luxury residential insights">Luxury Residential</button><button type="button" role="tab" id="ins-tab-tic" aria-controls="ins-panel-tic" aria-selected="false" data-tab="tic" data-more-href="blog/index.html#topic-tic" data-more-label="View all TIC &amp; multifamily insights">TIC &amp; Multifamily</button><button type="button" role="tab" id="ins-tab-investing" aria-controls="ins-panel-investing" aria-selected="false" data-tab="investing" data-more-href="blog/index.html#topic-investing" data-more-label="View all investing insights">Investing</button></div>
+    <div class="ins-panels reveal">
+      <div class="grid-3" id="ins-panel-sb684" role="tabpanel" aria-labelledby="ins-tab-sb684" data-panel="sb684">
+        <a class="photo-card" href="blog/sb-684-sb-1123-california-lot-split-guide.html">
+          <div class="frame"><span class="tag">SB 684 / SB 1123</span><img src="assets/img/sb684-hero.jpg" alt="SB 684 &amp; SB 1123 Explained" loading="lazy"></div>
+          <div class="meta"><div class="name">SB 684 &amp; SB 1123 Explained</div><div class="sub">The complete guide to California&rsquo;s small-lot laws</div></div>
+        </a>
+        <a class="photo-card" href="blog/how-sb-684-construction-financing-works.html">
+          <div class="frame"><span class="tag">SB 684 / SB 1123</span><img src="assets/img/helms-render.jpg" alt="How SB 684 Construction Financing Works" loading="lazy"></div>
+          <div class="meta"><div class="name">How SB 684 Construction Financing Works</div><div class="sub">Appraisals, loan sizing and the refinance</div></div>
+        </a>
+        <a class="photo-card" href="blog/selling-your-lot-to-an-sb-684-developer.html">
+          <div class="frame"><span class="tag">SB 684 / SB 1123</span><img src="assets/img/westwood.jpg" alt="Selling Your Lot to an SB 684 Developer" loading="lazy"></div>
+          <div class="meta"><div class="name">Selling Your Lot to an SB 684 Developer</div><div class="sub">For owners, agents and wholesalers</div></div>
+        </a>
+      </div>
+      <div class="grid-3" id="ins-panel-luxury" role="tabpanel" aria-labelledby="ins-tab-luxury" data-panel="luxury">
+        <a class="photo-card" href="blog/how-we-underwrite-a-luxury-remodel.html">
+          <div class="frame"><span class="tag">Luxury Residential</span><img src="assets/img/properties/gonzaga-residence/01.jpg" alt="How a Luxury Fix-and-Flip Is Underwritten" loading="lazy"></div>
+          <div class="meta"><div class="name">How a Luxury Fix-and-Flip Is Underwritten</div><div class="sub">ARV, budget, timeline and margin</div></div>
+        </a>
+        <a class="photo-card" href="blog/remodel-vs-new-construction-los-angeles.html">
+          <div class="frame"><span class="tag">Luxury Residential</span><img src="assets/img/berryman-home.jpg" alt="Remodel vs. New Construction" loading="lazy"></div>
+          <div class="meta"><div class="name">Remodel vs. New Construction</div><div class="sub">Why keeping the walls matters</div></div>
+        </a>
+        <a class="photo-card" href="blog/measure-ula-explained.html">
+          <div class="frame"><span class="tag">Luxury Residential</span><img src="assets/img/properties/apex-hh/01.jpg" alt="Measure ULA Explained" loading="lazy"></div>
+          <div class="meta"><div class="name">Measure ULA Explained</div><div class="sub">What LA&rsquo;s &ldquo;mansion tax&rdquo; means for sellers</div></div>
+        </a>
+      </div>
+      <div class="grid-3" id="ins-panel-tic" role="tabpanel" aria-labelledby="ins-tab-tic" data-panel="tic">
+        <a class="photo-card" href="blog/tenancy-in-common-los-angeles-explained.html">
+          <div class="frame"><span class="tag">TIC &amp; Multifamily</span><img src="assets/img/david.webp" alt="Tenancy in Common, Explained" loading="lazy"></div>
+          <div class="meta"><div class="name">Tenancy in Common, Explained</div><div class="sub">How TIC ownership works in Los&nbsp;Angeles</div></div>
+        </a>
+        <a class="photo-card" href="blog/tic-vs-condo-california.html">
+          <div class="frame"><span class="tag">TIC &amp; Multifamily</span><img src="assets/img/properties/david-iii/02.jpg" alt="TIC vs. Condo in California" loading="lazy"></div>
+          <div class="meta"><div class="name">TIC vs. Condo in California</div><div class="sub">How the two ownership types compare</div></div>
+        </a>
+        <a class="photo-card" href="blog/multifamily-vs-single-family-which-offers-better-returns.html">
+          <div class="frame"><span class="tag">TIC &amp; Multifamily</span><img src="assets/img/properties/rising-glen-mcm/01.jpg" alt="Multifamily vs. Single-Family" loading="lazy"></div>
+          <div class="meta"><div class="name">Multifamily vs. Single-Family</div><div class="sub">Weighing the trade-offs for LA investors</div></div>
+        </a>
+      </div>
+      <div class="grid-3" id="ins-panel-investing" role="tabpanel" aria-labelledby="ins-tab-investing" data-panel="investing">
+        <a class="photo-card" href="blog/accredited-investor-requirements.html">
+          <div class="frame"><span class="tag">Investing</span><img src="assets/img/properties/hortense-vi/01.jpg" alt="Accredited Investor Requirements" loading="lazy"></div>
+          <div class="meta"><div class="name">Accredited Investor Requirements</div><div class="sub">What the SEC actually requires</div></div>
+        </a>
+        <a class="photo-card" href="blog/how-to-read-a-real-estate-offering-memorandum.html">
+          <div class="frame"><span class="tag">Investing</span><img src="assets/img/properties/hutton-marvel/01.jpg" alt="How to Read an Offering Memorandum" loading="lazy"></div>
+          <div class="meta"><div class="name">How to Read an Offering Memorandum</div><div class="sub">What to look for, section by section</div></div>
+        </a>
+        <a class="photo-card" href="blog/general-partner-vs-limited-partner-in-a-syndication.html">
+          <div class="frame"><span class="tag">Investing</span><img src="assets/img/properties/modern-orange/01.jpg" alt="General Partner vs. Limited Partner" loading="lazy"></div>
+          <div class="meta"><div class="name">General Partner vs. Limited Partner</div><div class="sub">Who does what in a syndication</div></div>
+        </a>
+      </div>
     </div>
-    <div class="actions reveal" style="margin-top:2rem"><a class="btn" style="border-color:var(--line-strong)" href="blog/index.html">View all insights &rarr;</a></div>
+    <div class="actions reveal" style="margin-top:2rem"><a class="btn" style="border-color:var(--line-strong)" href="blog/index.html#topic-sb684" data-tab-more>View all SB 684 insights &rarr;</a></div>
   </div>
 </section>
 
 <!-- FAQ -->
 <section>
-  <div class="wrap">
+  <div class="wrap" data-tabgroup>
     <div class="split reveal" style="align-items:end;margin-bottom:2.2rem">
       <div>
         <p class="eyebrow">Questions</p>
@@ -779,6 +824,6 @@
   </div>
 </footer>
 
-<script src="js/main.js?v=7"></script>
+<script src="js/main.js?v=8"></script>
 </body>
 </html>

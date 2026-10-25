@@ -239,16 +239,21 @@ const INTAKE = {
   });
 })();
 
-// Homepage FAQ topic tabs
+// Homepage topic tabs (FAQ, Insights): one tab bar + panels per [data-tabgroup]
 (function () {
-  const tabs = document.querySelectorAll('.faq-tabs [data-tab]');
-  if (!tabs.length) return;
+  const groups = document.querySelectorAll('[data-tabgroup]');
+  if (!groups.length) return;
   document.documentElement.classList.add('js-faq');
-  const panels = document.querySelectorAll('.faq-tabbed [data-panel]');
-  const show = (key) => {
-    tabs.forEach((t) => t.setAttribute('aria-selected', String(t.dataset.tab === key)));
-    panels.forEach((p) => { p.hidden = p.dataset.panel !== key; });
-  };
-  tabs.forEach((t) => t.addEventListener('click', () => show(t.dataset.tab)));
-  show(tabs[0].dataset.tab);
+  groups.forEach((g) => {
+    const tabs = g.querySelectorAll('.faq-tabs [data-tab]');
+    const panels = g.querySelectorAll('[data-panel]');
+    const more = g.querySelector('[data-tab-more]');
+    const show = (t) => {
+      tabs.forEach((x) => x.setAttribute('aria-selected', String(x === t)));
+      panels.forEach((p) => { p.hidden = p.dataset.panel !== t.dataset.tab; });
+      if (more && t.dataset.moreHref) { more.href = t.dataset.moreHref; more.innerHTML = t.dataset.moreLabel + ' &rarr;'; }
+    };
+    tabs.forEach((t) => t.addEventListener('click', () => show(t)));
+    if (tabs.length) show(tabs[0]);
+  });
 })();
