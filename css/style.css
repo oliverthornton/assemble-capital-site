@@ -1475,3 +1475,14 @@ footer .foot-principals .fp-c a { display: block; width: fit-content; }
 .hero .actions .btn:not(.solid):hover { background: rgba(20, 17, 17, 0.82); border-color: var(--bronze); }
 .js-faq .ins-panels [data-panel][hidden] { display: none; }
 html:not(.js-faq) .ins-panels [data-panel] + [data-panel] { margin-top: 2rem; }
+
+/* Submit a Deal: SB 684 target regions */
+.region-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: 1rem; }
+.region { border: 1px solid var(--line); background: var(--paper); padding: 1.5rem 1.6rem 1.3rem; }
+.region .eyebrow { margin-bottom: .5rem; font-size: .62rem; }
+.region h3 { font-family: var(--serif); font-weight: 400; font-size: 1.35rem; margin: 0 0 .9rem; }
+.region ul { list-style: none; margin: 0; padding: 0; }
+.region li { font-size: .9rem; line-height: 1.4; padding: .45rem 0; border-top: 1px solid var(--line); }
+.region li span { display: block; font-size: .72rem; color: var(--muted, #6b6b6b); font-style: italic; margin-top: .1rem; }
+.region-note { font-size: .82rem; line-height: 1.65; color: var(--muted, #6b6b6b); max-width: 52rem; margin: 1.4rem 0 0; }
+.region-note a { color: inherit; }
