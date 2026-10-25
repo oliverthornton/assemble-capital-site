@@ -1363,3 +1363,11 @@ div.route { cursor: default; }
 .strat-card .specs a { border-bottom: 1px solid var(--line-strong); text-decoration: none; }
 .strat-card .actions { margin-top: auto; padding-top: 1.3rem; align-items: center; gap: 1.2rem; }
 .strat-card .tag { z-index: 1; }
+
+/* Homepage partner headshots */
+.partner-faces { display: flex; align-items: center; gap: 1.2rem; margin: .4rem 0 1.1rem; text-decoration: none; color: inherit; }
+.partner-faces .faces { display: flex; }
+.partner-faces img { width: 3.4rem; height: 3.4rem; border-radius: 50%; object-fit: cover; border: 2px solid var(--paper-warm); box-shadow: 0 0 0 1px var(--line); background: var(--ink); }
+.partner-faces img + img { margin-left: -.7rem; }
+.partner-faces .names { font-size: .8rem; color: var(--muted); line-height: 1.4; }
+.partner-faces:hover .names { color: var(--ink); }
