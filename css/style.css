@@ -1510,3 +1510,10 @@ html:not(.js-faq) .ins-panels [data-panel] + [data-panel] { margin-top: 2rem; }
 @media (max-width: 860px) { .finish-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 520px) { .finish-grid { grid-template-columns: 1fr; } .concept-gallery figure { flex-basis: 40% !important; } }
 .concept-gallery::after { content: ""; flex: 999 1 0; }
+
+/* Portfolio: Culver VI floor plans */
+.plan-panel { margin: 0; background: #fff; border: 1px solid var(--line); padding: clamp(.6rem, 2vw, 1.4rem); }
+.plan-panel img { width: 100%; height: auto; display: block; }
+.plan-panel figcaption { font-size: .82rem; color: var(--muted); margin-top: .8rem; }
+.plan-panel figcaption span { color: var(--bronze); }
+.js-faq .plans [data-panel][hidden] { display: none; }

@@ -25,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Special+Elite&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="assets/img/samo.webp" fetchpriority="high" data-seo="auto">
-<link rel="stylesheet" href="css/style.css?v=42">
+<link rel="stylesheet" href="css/style.css?v=43">
 <link rel="icon" href="assets/img/logo/favicon-v2.png">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-676QQYXN22"></script>
@@ -269,7 +269,7 @@
           <div class="name">&ldquo;The Culver VI&rdquo;</div>
           <div class="sub">3850 Westwood &middot; Culver City &middot; AC III LLC</div>
           <div class="figures"><div><b>SB 684</b><span>Program</span></div><div><b>Fee-simple</b><span>Exit path</span></div><div><b>Q4 2027</b><span>Target sellout</span></div></div>
-          <a class="concept-link" href="#design">Interior &amp; rooftop concepts &rarr;</a>
+          <a class="concept-link" href="#floor-plans">Floor plans &amp; interior concepts &rarr;</a>
         </div>
       </div>
       <div class="photo-card">
@@ -338,7 +338,7 @@
         <div><b>Layered light</b><span>Backlit mirrors, under-cabinet and recessed lighting.</span></div>
         <div><b>Indoor&ndash;outdoor</b><span>A private rooftop deck with pergola shade, outdoor kitchen and fire table.</span></div>
     </div>
-    <div class="floor-plan reveal"><span><b>Ground</b>Open kitchen, living, powder room</span><span><b>Second</b>Two bedrooms, each with its own bath</span><span><b>Third</b>Primary suite with walk-in closet</span><span><b>Roof</b>Private rooftop deck</span></div>
+    <div class="floor-plan reveal"><span><b>First</b>Kitchen, living, dining, powder room</span><span><b>Second</b>Two bedrooms, each with its own bath</span><span><b>Third</b>Primary suite, walk-in closet, balcony</span><span><b>Roof</b>Private rooftop deck</span></div>
     <div class="concept-gallery reveal">
       <figure style="flex:1.729 1 294px;aspect-ratio:631/365"><img src="assets/img/concepts/sb684-kitchen.jpg" alt="Conceptual interior rendering: kitchen, ground floor of an SB 684 home" loading="lazy"><figcaption>Kitchen<span>Ground floor</span></figcaption></figure>
       <figure style="flex:1.145 1 195px;aspect-ratio:418/365"><img src="assets/img/concepts/sb684-living.jpg" alt="Conceptual interior rendering: living, ground floor of an SB 684 home" loading="lazy"><figcaption>Living<span>Ground floor</span></figcaption></figure>
@@ -353,6 +353,23 @@
       <figure style="flex:1.458 1 248px;aspect-ratio:420/288"><img src="assets/img/concepts/sb684-rooftop-deck.jpg" alt="Conceptual interior rendering: rooftop deck, roof of an SB 684 home" loading="lazy"><figcaption>Rooftop deck<span>Roof</span></figcaption></figure>
     </div>
 
+    <div class="plans reveal" id="floor-plans" data-tabgroup>
+      <div class="split" style="align-items:end;margin:4rem 0 1.6rem">
+        <div>
+          <p class="eyebrow">Floor Plans &middot; The Culver VI</p>
+          <h3 class="h-md">3850 Westwood Blvd, Floor by Floor.</h3>
+        </div>
+        <p class="muted" style="max-width:34rem;margin:0">Six three-story homes in two mirrored rows of three, each on its own parcel with a private roof deck. Pick a level.</p>
+      </div>
+      <div class="faq-tabs" role="tablist" aria-label="Floor plan levels"><button type="button" role="tab" id="plan-tab-first" aria-controls="plan-panel-first" aria-selected="true" data-tab="first">First Floor</button><button type="button" role="tab" id="plan-tab-second" aria-controls="plan-panel-second" aria-selected="false" data-tab="second">Second Floor</button><button type="button" role="tab" id="plan-tab-third" aria-controls="plan-panel-third" aria-selected="false" data-tab="third">Third Floor</button><button type="button" role="tab" id="plan-tab-roof" aria-controls="plan-panel-roof" aria-selected="false" data-tab="roof">Roof Deck</button></div>
+      <div class="ins-panels">
+        <figure class="plan-panel" id="plan-panel-first" role="tabpanel" aria-labelledby="plan-tab-first" data-panel="first"><a href="assets/img/concepts/culver-vi-plan-first.png" target="_blank" rel="noopener"><img src="assets/img/concepts/culver-vi-plan-first.png" alt="First Floor plan, The Culver VI, 3850 Westwood Blvd, Culver City: kitchen, living, dining, powder room, coat closet, stacked washer/dryer" loading="lazy"></a><figcaption>First Floor: Kitchen, living, dining, powder room, coat closet, stacked washer/dryer. <span>Tap to enlarge.</span></figcaption></figure>
+        <figure class="plan-panel" id="plan-panel-second" role="tabpanel" aria-labelledby="plan-tab-second" data-panel="second"><a href="assets/img/concepts/culver-vi-plan-second.png" target="_blank" rel="noopener"><img src="assets/img/concepts/culver-vi-plan-second.png" alt="Second Floor plan, The Culver VI, 3850 Westwood Blvd, Culver City: two bedrooms and two baths off a central walkway" loading="lazy"></a><figcaption>Second Floor: Two bedrooms and two baths off a central walkway. <span>Tap to enlarge.</span></figcaption></figure>
+        <figure class="plan-panel" id="plan-panel-third" role="tabpanel" aria-labelledby="plan-tab-third" data-panel="third"><a href="assets/img/concepts/culver-vi-plan-third.png" target="_blank" rel="noopener"><img src="assets/img/concepts/culver-vi-plan-third.png" alt="Third Floor plan, The Culver VI, 3850 Westwood Blvd, Culver City: primary bedroom, primary bath, walk-in closet and private balcony" loading="lazy"></a><figcaption>Third Floor: Primary bedroom, primary bath, walk-in closet and private balcony. <span>Tap to enlarge.</span></figcaption></figure>
+        <figure class="plan-panel" id="plan-panel-roof" role="tabpanel" aria-labelledby="plan-tab-roof" data-panel="roof"><a href="assets/img/concepts/culver-vi-plan-roof.png" target="_blank" rel="noopener"><img src="assets/img/concepts/culver-vi-plan-roof.png" alt="Roof Deck plan, The Culver VI, 3850 Westwood Blvd, Culver City: private rooftop deck reached by its own stair" loading="lazy"></a><figcaption>Roof Deck: Private rooftop deck reached by its own stair. <span>Tap to enlarge.</span></figcaption></figure>
+      </div>
+    </div>
+
     <div class="split reveal" style="align-items:end;margin:4rem 0 1.6rem">
       <div>
         <p class="eyebrow">Rooftop Concepts</p>
@@ -364,7 +381,7 @@
       <div class="photo-card"><div class="frame"><span class="tag">Rooftop Concept</span><img src="assets/img/concepts/sb684-rooftop-sunset.jpg" alt="Conceptual rendering of an SB 684 rooftop deck with pergola, lounge, fire table, plunge pool and sauna" loading="lazy"></div></div>
       <div class="photo-card"><div class="frame"><span class="tag">Rooftop Concept</span><img src="assets/img/sentney-rooftop.jpg" alt="Conceptual rendering of an SB 684 rooftop deck with pergola, lounge seating and dining" loading="lazy"></div></div>
     </div>
-    <p class="footnote reveal" style="margin-top:1.6rem">Conceptual renderings for illustration only. The interiors shown are a shared design concept prepared for The Culver VI and used as design direction across our Culver City SB&nbsp;684 projects. Final plans, layouts, square footage, finishes, fixtures, landscaping and amenities will vary by project and home and are subject to change. Furniture and d&eacute;cor are shown for staging only and are not included.</p>
+    <p class="footnote reveal" style="margin-top:1.6rem">Conceptual renderings for illustration only. The interiors shown are a shared design concept prepared for The Culver VI and used as design direction across our Culver City SB&nbsp;684 projects. Final plans, layouts, square footage, finishes, fixtures, landscaping and amenities will vary by project and home and are subject to change. Furniture and d&eacute;cor are shown for staging only and are not included. Floor plans are excerpts of The Culver VI architectural drawings, shown for illustration only; they are not to scale, and the other projects&rsquo; plans differ.</p>
   </div>
 </section>
 
