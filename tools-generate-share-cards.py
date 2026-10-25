@@ -64,9 +64,9 @@ PAGES = {
     "submit-a-deal.html": ("submit-a-deal", "helms-render.jpg", "For Agents &amp; Wholesalers",
                            "Submit a <em>Deal</em>",
                            "SB&nbsp;684 infill lots &nbsp;&middot;&nbsp; Single-family remodels &nbsp;&middot;&nbsp; Reply within 48 hours"),
-    "blog/index.html": ("insights", "social/insights-1200x630.jpg", "Insights",
-                        "Notes on Syndication &amp; <em>Development</em>",
-                        "Guides for investors from the Assemble Capital principals"),
+    "blog/index.html": ("insights", "social/insights-1200x630.jpg", "Learning Center",
+                        "Real Estate <em>Guides</em>",
+                        "SB&nbsp;684 &nbsp;&middot;&nbsp; Luxury remodels &nbsp;&middot;&nbsp; TIC &nbsp;&middot;&nbsp; Investing"),
     "glossary.html": ("glossary", "social/strategies-1200x630.jpg", "Investor Resources",
                       "Real Estate Investment <em>Glossary</em>",
                       "Plain definitions of syndication and development terms"),
@@ -166,7 +166,7 @@ def blog_card(path, s):
     slug = os.path.basename(path)[:-5]
     title = re.sub(r"\s*&mdash;\s*Assemble Capital$", "", attr(s, "og:title"))
     bg = BLOG_BG.get(slug, DEFAULT_BLOG_BG)
-    return (f"blog/{slug}", bg, "Insights", title, "Oliver Thornton &nbsp;&middot;&nbsp; Assemble Capital")
+    return (f"blog/{slug}", bg, "Learning Center", title, "Oliver Thornton &nbsp;&middot;&nbsp; Assemble Capital")
 
 
 def cards():

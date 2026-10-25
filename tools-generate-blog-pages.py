@@ -221,7 +221,7 @@ def build_post(p):
     attribution_str = attribution_for(p)
 
     category = p.get("category")
-    eyebrow = category if category else "Insights"
+    eyebrow = category if category else "Learning Center"
     author = p.get("author", "Assemble Capital")
 
     return f'''<!DOCTYPE html>
@@ -286,7 +286,7 @@ def build_post(p):
     <p class="muted" style="max-width:42rem;margin:1.4rem auto 0">Get in touch and we'll walk you through the model, the pipeline, and what a specific offering looks like.</p>
     <div class="actions">
       <a class="btn" style="border-color:var(--line-strong)" href="../contact.html">Contact us about investing</a>
-      <a class="btn" style="border-color:var(--line-strong)" href="../blog/index.html">More insights</a>
+      <a class="btn" style="border-color:var(--line-strong)" href="../blog/index.html">More guides</a>
     </div>
     <p class="footnote" style="margin-top:1.8rem;max-width:44rem;margin-left:auto;margin-right:auto">Contacting us is not an offer, commitment, or investment. Any offering is made only through definitive offering documents to eligible investors.</p>
   </div>
@@ -324,16 +324,16 @@ def build_index(posts):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Insights &mdash; Assemble Capital</title>
+<title>Learning Center | Assemble Capital</title>
 <meta name="description" content="Notes on Los Angeles residential investment, development, and syndication from the Assemble Capital team.">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Assemble Capital">
 <meta property="og:url" content="{BASE_URL}/blog/index.html">
-<meta property="og:title" content="Insights &mdash; Assemble Capital">
+<meta property="og:title" content="Learning Center | Assemble Capital">
 <meta property="og:description" content="Notes on Los Angeles residential investment, development, and syndication from the Assemble Capital team.">
 <meta property="og:image" content="{BASE_URL}/{LOGO_PATH}">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Insights &mdash; Assemble Capital">
+<meta name="twitter:title" content="Learning Center | Assemble Capital">
 <meta name="twitter:description" content="Notes on Los Angeles residential investment, development, and syndication from the Assemble Capital team.">
 <meta name="twitter:image" content="{BASE_URL}/{LOGO_PATH}">
 {FONTS}
@@ -350,7 +350,7 @@ def build_index(posts):
 
 <section class="hero short" style="padding:0">
   <div class="wrap">
-    <p class="eyebrow">Insights</p>
+    <p class="eyebrow">Learning Center</p>
     <h1 class="display">Notes From the Field.</h1>
     <p class="sub">Perspective on Los Angeles residential investment, development, and syndication from the Assemble Capital team.</p>
   </div>

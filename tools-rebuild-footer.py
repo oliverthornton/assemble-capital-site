@@ -139,11 +139,11 @@ def build(base):
         </div>
       </div>
       <div>
-        <h4>Insights</h4>
+        <h4>Learning Center</h4>
         <div class="foot-posts">
 {posts}
         </div>
-        <p class="foot-more"><a href="{b}{BLOG_BASE}/index.html">All insights</a></p>
+        <p class="foot-more"><a href="{b}{BLOG_BASE}/index.html">All guides</a></p>
       </div>
     </div>
     <div class="foot-principals">
