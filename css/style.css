@@ -1469,3 +1469,7 @@ footer .foot-principals .fp-c a { display: block; width: fit-content; }
 
 /* Hero CTAs: equal-width stack on phones */
 @media (max-width: 600px) { .hero .actions .btn { width: 100%; justify-content: center; text-align: center; } }
+
+/* Hero outline buttons: tinted fill so they read as buttons over the photo */
+.hero .actions .btn:not(.solid) { background: rgba(20, 17, 17, 0.62); border-color: rgba(248, 248, 248, 0.5); color: var(--paper); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+.hero .actions .btn:not(.solid):hover { background: rgba(20, 17, 17, 0.82); border-color: var(--bronze); }
