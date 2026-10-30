@@ -248,7 +248,7 @@ def build_post(p):
 <meta name="twitter:image" content="{abs_image_url}">
 <meta name="twitter:image:alt" content="Los Angeles residential development project photograph accompanying &ldquo;{title}&rdquo;">
 {FONTS}
-<link rel="stylesheet" href="../css/style.css?v=44">
+<link rel="stylesheet" href="../css/style.css?v=45">
 {FAVICON}
 <script type="application/ld+json">
 {jsonld_str}
@@ -337,7 +337,7 @@ def build_index(posts):
 <meta name="twitter:description" content="Notes on Los Angeles residential investment, development, and syndication from the Assemble Capital team.">
 <meta name="twitter:image" content="{BASE_URL}/{LOGO_PATH}">
 {FONTS}
-<link rel="stylesheet" href="../css/style.css?v=44">
+<link rel="stylesheet" href="../css/style.css?v=45">
 {FAVICON}
 {GA4}
 </head>

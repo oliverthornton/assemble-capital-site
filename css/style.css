@@ -1532,3 +1532,13 @@ html:not(.js-faq) .ins-panels [data-panel] + [data-panel] { margin-top: 2rem; }
 .on-dark .city-grid span { color: rgba(248,248,248,.7); }
 @media (max-width: 960px) { .hl-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px) { .hl-grid { grid-template-columns: 1fr; } .spec-list div { grid-template-columns: 1fr; gap: .2rem; } .stage-track li { font-size: .52rem; letter-spacing: .06em; } }
+
+/* Lender marquee */
+.lender-band { overflow: hidden; }
+.lender-marquee { overflow: hidden; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+.lm-track { display: flex; width: max-content; list-style: none; margin: 0; padding: 1.4rem 0; animation: lm-scroll 38s linear infinite; }
+.lender-marquee:hover .lm-track { animation-play-state: paused; }
+.lm-track li { flex: none; padding: 0 2.6rem; font-family: var(--serif); font-size: clamp(1.25rem, 2.4vw, 1.7rem); letter-spacing: .02em; white-space: nowrap; color: var(--ink-soft); position: relative; }
+.lm-track li::after { content: ""; position: absolute; right: 0; top: 50%; width: 5px; height: 5px; margin-top: -2px; border-radius: 50%; background: var(--bronze); }
+@keyframes lm-scroll { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .lm-track { animation: none; flex-wrap: wrap; width: auto; justify-content: center; } .lm-track li[aria-hidden] { display: none; } }
