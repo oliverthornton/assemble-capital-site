@@ -139,6 +139,9 @@ BLOG_BG = {
     "why-vertical-integration-matters-in-development": "properties/june-iv/01.jpg",
 }
 DEFAULT_BLOG_BG = "social/insights-1200x630.jpg"
+# Posts added with tools-new-blog-post.py record their card photo as "card_bg" in blog/posts.json.
+import json as _json
+POST_CARD_BG = {x["slug"]: x["card_bg"] for x in _json.load(open(os.path.join(ROOT, "blog/posts.json"))) if x.get("card_bg")}
 
 # Photos with a listing watermark in the bottom-right corner: zoom from the top-left to crop it out.
 ZOOM = ("properties/hideaway-hh/",)
@@ -167,7 +170,7 @@ def property_card(path, s):
 def blog_card(path, s):
     slug = os.path.basename(path)[:-5]
     title = re.sub(r"\s*&mdash;\s*Assemble Capital$", "", attr(s, "og:title"))
-    bg = BLOG_BG.get(slug, DEFAULT_BLOG_BG)
+    bg = BLOG_BG.get(slug) or POST_CARD_BG.get(slug) or DEFAULT_BLOG_BG
     return (f"blog/{slug}", bg, "Learning Center", title, "Oliver Thornton &nbsp;&middot;&nbsp; Assemble Capital")
 
 

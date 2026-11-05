@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
 """Generate individual property pages for the Assemble Capital site."""
+
+# --- OUT OF DATE (Nov 2026): do not run --------------------------------------
+# The live pages were improved after this script was written, so rerunning it
+# overwrites them with older versions. See "Site scripts" in README.md.
+import sys as _sys
+if "--overwrite-live-pages" not in _sys.argv:
+    _sys.exit("STOPPED: tools-generate-property-pages.py is out of date and would overwrite live pages: the property pages have been edited by hand since, and it also runs tools-apply-seo-metadata.py.\n"
+              "Nothing was changed. See 'Site scripts' in README.md.")
+# ------------------------------------------------------------------------------
 import os, json
 
 SITE = os.path.dirname(os.path.abspath(__file__))

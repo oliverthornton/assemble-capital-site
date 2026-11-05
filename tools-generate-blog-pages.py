@@ -14,6 +14,15 @@ tools-add-analytics.py's one-directory-deep glob still reaches them.
 
 Output: blog/index.html, blog/<slug>.html for each published post.
 """
+
+# --- OUT OF DATE (Nov 2026): do not run --------------------------------------
+# The live pages were improved after this script was written, so rerunning it
+# overwrites them with older versions. See "Site scripts" in README.md.
+import sys as _sys
+if "--overwrite-live-pages" not in _sys.argv:
+    _sys.exit("STOPPED: tools-generate-blog-pages.py is out of date and would overwrite live pages: it rebuilds every article from old copies in blog/posts.json and would undo later edits, disclaimers, nav and SEO work. Add new articles with tools-new-blog-post.py; edit existing ones directly in blog/<slug>.html.\n"
+              "Nothing was changed. See 'Site scripts' in README.md.")
+# ------------------------------------------------------------------------------
 import os, re, json
 from datetime import datetime
 

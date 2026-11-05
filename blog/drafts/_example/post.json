@@ -1,0 +1,20 @@
+{
+  "slug": "example-article-slug",
+  "title": "Example Article Title: Shown as the Page Headline",
+  "page_title": "Example Article Title (Under 60 Characters)",
+  "description": "One or two sentences, about 120 to 160 characters, used for search results, the Learning Center card and social shares.",
+  "date": "2026-11-20",
+  "topic": "sb684",
+  "hero": "sb684-hero.jpg",
+  "card_bg": "sb684-hero.jpg",
+  "related": [
+    "sb-684-sb-1123-california-lot-split-guide",
+    "ab-1751-missing-middle-townhome-ownership-act",
+    "sb-1116-starter-home-revitalization-act-changes"
+  ],
+  "faq": [
+    ["A question readers search for?", "A short, plain answer in one to three sentences."],
+    ["A second question?", "Another short answer."]
+  ],
+  "keyword": "the search phrase this article targets"
+}

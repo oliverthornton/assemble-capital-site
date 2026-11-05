@@ -4,6 +4,15 @@
 Footer columns: brand + social · Navigate (mirrors header) · Strategies · Insights,
 followed by a principals strip, legal text, and legal links.
 """
+
+# --- OUT OF DATE (Nov 2026): do not run --------------------------------------
+# The live pages were improved after this script was written, so rerunning it
+# overwrites them with older versions. See "Site scripts" in README.md.
+import sys as _sys
+if "--overwrite-live-pages" not in _sys.argv:
+    _sys.exit("STOPPED: tools-rebuild-footer.py is out of date and would overwrite live pages: its footer is an older design than the live one and it rewrites the footer on every page.\n"
+              "Nothing was changed. See 'Site scripts' in README.md.")
+# ------------------------------------------------------------------------------
 import os, re, glob, json
 from datetime import datetime
 

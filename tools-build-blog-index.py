@@ -4,7 +4,8 @@ from the post pages themselves.
 
     python3 tools-build-blog-index.py
 
-New posts are picked up automatically. Assign a post to a topic in LUXURY / TIC / SB684 below;
+New posts are picked up automatically. Posts made with tools-new-blog-post.py carry their topic in
+blog/posts.json; older posts are assigned in LUXURY / TIC / SB684 below;
 anything starting with sb-684 or sb-1123 is SB 684, and everything else falls under Investing.
 """
 import datetime, glob, html as H, json, os, re
@@ -34,7 +35,12 @@ CATS = [
 SHOW = 6
 
 
+# Posts added with tools-new-blog-post.py record their topic as "topic" in blog/posts.json.
+TOPIC = {x["slug"]: x["topic"] for x in json.load(open("blog/posts.json")) if x.get("topic")}
+
+
 def category(slug):
+    if slug in TOPIC: return TOPIC[slug]
     if slug in LUXURY: return "luxury"
     if slug in TIC: return "tic"
     if slug in SB684 or slug.startswith(("sb-684", "sb-1123")): return "sb684"

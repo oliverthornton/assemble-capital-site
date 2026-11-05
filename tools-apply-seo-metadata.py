@@ -11,6 +11,15 @@ Implements the ASSEMBLE_CAPITAL_SEO_METADATA_506B_IMPLEMENTATION_PLAN:
 
 Idempotent: safe to re-run.
 """
+
+# --- OUT OF DATE (Nov 2026): do not run --------------------------------------
+# The live pages were improved after this script was written, so rerunning it
+# overwrites them with older versions. See "Site scripts" in README.md.
+import sys as _sys
+if "--overwrite-live-pages" not in _sys.argv:
+    _sys.exit("STOPPED: tools-apply-seo-metadata.py is out of date and would overwrite live pages: it would replace the current titles, descriptions and share-card images on about 30 pages with older ones.\n"
+              "Nothing was changed. See 'Site scripts' in README.md.")
+# ------------------------------------------------------------------------------
 import os, re, json, html
 
 SITE = os.path.dirname(os.path.abspath(__file__))

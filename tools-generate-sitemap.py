@@ -7,6 +7,15 @@ with the pages themselves.
 
     python3 tools-generate-sitemap.py
 """
+
+# --- OUT OF DATE (Nov 2026): do not run --------------------------------------
+# The live pages were improved after this script was written, so rerunning it
+# overwrites them with older versions. See "Site scripts" in README.md.
+import sys as _sys
+if "--overwrite-live-pages" not in _sys.argv:
+    _sys.exit("STOPPED: tools-generate-sitemap.py is out of date and would overwrite live pages: it resets every lastmod date in sitemap.xml. tools-new-blog-post.py adds new articles to the sitemap.\n"
+              "Nothing was changed. See 'Site scripts' in README.md.")
+# ------------------------------------------------------------------------------
 import datetime, os, re, subprocess
 
 SITE = os.path.dirname(os.path.abspath(__file__))

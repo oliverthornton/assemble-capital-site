@@ -1,54 +1,69 @@
-# blog/posts.json — schema
+# Learning Center articles
 
-`posts.json` is a flat JSON array of post objects. It is the single source of
-truth for the blog: `tools-generate-blog-pages.py` reads it to generate
-`blog/<slug>.html` + `blog/index.html`, and `tools-rebuild-footer.py` reads it
-to populate the "Insights" column in the site-wide footer. A future
-content-writing agent should be able to add a post by appending an object to
-this array and re-running `tools-generate-blog-pages.py` — no Python editing
-required.
+The article pages in this folder (`blog/<slug>.html`) are the source of truth.
 
-## Fields
+- **To edit an existing article:** change its HTML file directly, then commit and push.
+  If you change its title, date or photo, also run `python3 tools-build-blog-index.py`
+  so the Learning Center index matches.
+- **To add a new article:** write a draft and run `tools-new-blog-post.py` (below).
 
-| Field              | Required | Notes |
-|--------------------|----------|-------|
-| `slug`             | yes      | URL slug. Post is generated at `blog/<slug>.html` (flat — not year-nested — so `tools-add-analytics.py`'s one-level-deep glob still reaches it). |
-| `title`            | yes      | Post headline. Used in `<title>`, OG/Twitter tags, JSON-LD `headline`, and footer/index listings. |
-| `meta_description` | yes      | Used as the meta description, OG/Twitter description, JSON-LD `description`, and the excerpt shown on the blog index. |
-| `author`           | yes      | Human byline shown on the post (JSON-LD `author` is always the "Assemble Capital" organization regardless of this field, per site convention). |
-| `date`             | yes      | Human-readable, e.g. `"November 28, 2025"` — matches the sibling TDG repo's convention. Parsed as `%B %d, %Y` to sort posts and to derive the ISO 8601 `datePublished`/`dateModified` for JSON-LD. |
-| `category`         | no       | Short label (e.g. `"Market Commentary"`). Shown as an eyebrow on the post and index card if present. |
-| `tags`             | no       | Array of strings. Not currently rendered anywhere; reserved for future filtering. |
-| `hero_image`       | yes      | Local path under `assets/img/blog/<slug>/`, relative to the site root (e.g. `"assets/img/blog/my-post/hero.jpg"`). Used as the post's hero image and as the OG/Twitter/JSON-LD image (resolved to an absolute `https://assemble.capital/...` URL). |
-| `body_html`        | yes      | Raw HTML string for the post body. Inserted as-is into the post template — write real HTML (`<p>`, `<h2>`, etc.), not Markdown. |
-| `status`           | yes      | `"draft"` or `"published"`. Only `"published"` posts get a generated page, appear on the blog index, and appear in the footer's latest-posts list. Drafts are skipped entirely (no output, not a 404 stub). |
-| `source_keyword`   | no       | Traceability only (e.g. the SEO keyword or content brief this post was written from). Never rendered on the site. |
-| `_migration_source`| no       | Traceability only — the original Squarespace URL this post was recovered from (e.g. `"https://assemblecapital.squarespace.com/assemble-capital-blogs/<old-slug>"`), present on posts recovered from the old blog. `null` for posts authored directly in this repo. Never rendered on the site, but this is the field the `/assemble-capital-blogs/:slug` → `/blog/:slug.html` redirect in `vercel.json` relies on for confidence that old slugs match new slugs 1:1 — don't remove it from a post without checking that redirect still makes sense. |
+Don't run `tools-generate-blog-pages.py`. It is out of date and locked: it would rebuild
+every article from the old copies in `posts.json` and undo later edits.
 
-## Example
+## Adding a new article
 
-```json
-[
-  {
-    "slug": "example-post",
-    "title": "An Example Post Title",
-    "meta_description": "One or two sentences describing the post for search and social.",
-    "author": "Assemble Capital",
-    "date": "November 28, 2025",
-    "category": "Market Commentary",
-    "tags": ["los-angeles", "multifamily"],
-    "hero_image": "assets/img/blog/example-post/hero.jpg",
-    "body_html": "<p>Post content goes here.</p>",
-    "status": "draft",
-    "source_keyword": "los angeles multifamily development"
-  }
-]
-```
+1. Copy `blog/drafts/_example/` to `blog/drafts/<your-slug>/`.
+2. Fill in `post.json` (fields below) and write the article in `body.html`.
+3. Check it without changing anything:
 
-## Regenerating the site after editing this file
+       python3 tools-new-blog-post.py blog/drafts/<your-slug> --dry-run
 
-```
-python3 tools-generate-blog-pages.py   # writes blog/<slug>.html + blog/index.html
-python3 tools-rebuild-footer.py        # refreshes the footer's latest-posts list sitewide
-python3 tools-generate-sitemap.py      # adds new post URLs to sitemap.xml
-```
+4. Publish it locally:
+
+       python3 tools-new-blog-post.py blog/drafts/<your-slug>
+
+5. Preview `/blog/<your-slug>.html`, then commit and push to make it live.
+
+The tool copies the page shell (header, menu, notice, full disclaimer, footer, structured
+data) from a current article, so new articles always match the live design. It changes
+only these files:
+
+- `blog/<slug>.html`, the new article
+- `blog/index.html`, the Learning Center index
+- `blog/posts.json`, the record of the post
+- `sitemap.xml`, one new entry plus the index date
+- `assets/img/social/cards/blog/<slug>.jpg`, the share card
+
+Everything is built in a temporary copy of the site first. The tool stops without changing
+anything if the slug already exists, a link or image points at a missing file, or any
+other file would change. Drafts in `blog/drafts/` are not deployed.
+
+## post.json fields
+
+| Field         | Required | Notes |
+|---------------|----------|-------|
+| `slug`        | yes      | URL name: lowercase words joined by hyphens. The page is `blog/<slug>.html`. |
+| `title`       | yes      | Headline shown on the page, index card and share card. HTML entities like `&rsquo;` are fine. |
+| `page_title`  | no       | Browser-tab and Google title, under about 60 characters. Defaults to `title`. |
+| `description` | yes      | 120 to 160 characters. Used in search results, the index card and social shares. |
+| `date`        | yes      | Publish date as `YYYY-MM-DD`. |
+| `topic`       | yes      | Learning Center section: `sb684`, `luxury`, `tic` or `investing`. Also sets the strategy link under Related Reading. |
+| `hero`        | yes      | Header photo, as a path under `assets/img/` (for example `sb684-hero.jpg` or `properties/june-iv/01.jpg`). |
+| `card_bg`     | no       | Photo for the share card. Defaults to `hero`. |
+| `related`     | yes      | Exactly three existing article slugs for Related Reading. |
+| `faq`         | no       | List of `[question, answer]` pairs for Google's FAQ data. Repeat them in `body.html` so readers see them too. |
+| `keyword`     | no       | The search phrase the article targets. Recorded only, never shown. |
+
+`body.html` holds only the article body: paragraphs, `<h2>` sections, tables and so on.
+Leave out the headline, byline, notice and disclaimer; the page shell supplies them.
+
+## posts.json
+
+A record of every article, used to file posts into Learning Center sections (`topic`) and
+to pick share-card photos (`card_bg`) for posts added with the new tool. The article text
+in it may be out of date for older posts; the HTML files are what's live.
+`tools-build-blog-index.py` adds any article missing from it.
+
+`_migration_source` on older posts records the original Squarespace URL. The
+`/assemble-capital-blogs/:slug` redirects in `vercel.json` rely on those slugs matching, so
+don't remove it without checking those redirects.

@@ -14,14 +14,14 @@ Static multi-page site for assemble.capital, rebuilt July 2026.
   targets, an extended investment-reasoning section, four dependency pillars, current
   projects split into In Entitlements / In Construction / Completed, strategy-specific
   risks, and a contact CTA. Linked from the strategy blocks on `strategies.html` and the
-  homepage strategy cards. Regenerate with `python3 tools-generate-strategy-pages.py`.
+  homepage strategy cards. Edit the HTML directly (the old generator is out of date; see Site scripts).
 - `properties/*.html` — 18 individual property pages (13 single family, 4 multifamily,
   1 tenancy-in-common). Each has a hero, headline stats, investment background, photo
   gallery with lightbox, project + equity return tables, an investment-cycle timeline,
   a takeaway, an invest-with-us CTA, and prev/next navigation. Linked from the track
   record cards and the homepage signature-exit cards.
   Gallery photos live in `assets/img/properties/<slug>/`.
-  To regenerate: edit the data block in the generator and re-run it (see Notes below).
+  Edit the HTML directly (the old generator is out of date; see Site scripts).
 - `terms.html`, `privacy.html`, `disclosures.html` — Legal pages (Terms of Service, Privacy
   Policy, Risks & Disclosures), linked from every footer. **DRAFTS — must be reviewed by
   qualified securities/privacy counsel before the site goes live.** Each file carries an
@@ -49,22 +49,33 @@ assemble.capital DNS at the host. The contact form is mailto-based; wire it to a
 service (Formspree, Basin, or the CRM) before launch if you want submissions captured
 server-side.
 
-## Notes
-- Property pages are generated from `tools-generate-property-pages.py` — all copy and
-  financials live in the `P` list at the top. Edit there, then run:
-  `python3 tools-generate-property-pages.py`. It rewrites every file in `properties/`.
-- Gallery images are built separately; drop new photos into
-  `assets/img/properties/<slug>/` named `01.jpg`, `02.jpg`, … and re-run the generator
-  (it reads whatever is in the folder).
-- The footer is generated for every page by `tools-rebuild-footer.py` — edit it there and
-  re-run to update all 31 pages at once. The property and strategy generators import from
-  it, so footers stay in sync.
+## Site scripts
 
-## Open items
-- **Facebook link**: no Facebook page was found on the current site. The footer button is
-  written but commented out — set `FACEBOOK` in `tools-rebuild-footer.py` and re-run to
-  enable it.
-- **Blog**: footer "Insights" links point at the live Squarespace blog
-  (assemble.capital/assemble-capital-blogs). If this site replaces that domain, the blog
-  needs to move too — either onto a subdomain or rebuilt into this site — and those links
-  updated in `tools-rebuild-footer.py`.
+The live HTML files are the source of truth. Many pages were improved by hand after the
+original generators were written, so those generators are now locked: they stop with a
+message instead of running. Edit those pages directly in their HTML.
+
+**Safe to run**
+- `tools-new-blog-post.py blog/drafts/<slug>` adds a new Learning Center article. It copies a
+  current live article's page shell, then updates only the new page, the Learning Center
+  index, `blog/posts.json`, `sitemap.xml` and the post's share card. It builds everything in
+  a temporary copy first and stops without changing anything if a check fails. Add
+  `--dry-run` to see what would change. How to write a draft: `blog/README.md`.
+- `tools-build-blog-index.py` rebuilds the Learning Center index from the article pages.
+- `tools-add-analytics.py`, `tools-build-project-pages.py`, `tools-build-lenders-page.py`
+  (no changes when run against the current site).
+- `tools-generate-share-cards.py` only through `tools-new-blog-post.py` (a full run
+  re-renders every share card).
+
+**Locked (out of date; would overwrite live pages)**
+- `tools-generate-blog-pages.py`: rebuilds every article from old copies in `posts.json`.
+- `tools-rebuild-footer.py`: older footer design, rewrites every page.
+- `tools-apply-seo-metadata.py`: older titles, descriptions and share images on ~30 pages.
+- `tools-generate-strategy-pages.py`, `tools-generate-property-pages.py`: hand edits since,
+  and both run `tools-apply-seo-metadata.py`.
+- `tools-generate-sitemap.py`: resets every lastmod date.
+
+They run only with `--overwrite-live-pages`. Don't use that unless the script has first
+been brought up to date with the live pages; check the result with `git diff`.
+
+- Gallery photos live in `assets/img/properties/<slug>/` named `01.jpg`, `02.jpg`, ….
