@@ -20,6 +20,7 @@ LUXURY = {
 }
 TIC = {"tenancy-in-common-los-angeles-explained", "tic-vs-condo-california", "multifamily-vs-single-family-which-offers-better-returns"}
 SB684 = {
+    "ab-1751-missing-middle-townhome-ownership-act", "sb-1116-starter-home-revitalization-act-changes",
     "what-is-the-starter-home-revitalization-act", "selling-your-lot-to-an-sb-684-developer", "how-to-spot-an-sb-684-lot",
     "what-happens-at-a-final-map", "how-fee-simple-small-lot-homes-are-priced", "ellis-act-tenant-history-sb-684",
     "sell-or-develop-sb-684-owners-guide", "how-sb-684-construction-financing-works", "los-angeles-residential-entitlement-process",

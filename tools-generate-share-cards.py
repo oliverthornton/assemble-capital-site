@@ -82,6 +82,8 @@ AC_PROJECTS = {"gonzaga-residence", "berryman-residence"}
 
 # Blog post -> background photo (the pages' og:image now points at the card itself).
 BLOG_BG = {
+    "ab-1751-missing-middle-townhome-ownership-act": "sentney-aerial.jpg",
+    "sb-1116-starter-home-revitalization-act-changes": "harter-render.jpg",
     "10-red-flags-in-real-estate-offering-documents": "properties/paseo-moderna/01.jpg",
     "accredited-investor-requirements": "properties/hortense-vi/01.jpg",
     "exit-strategies-sell-lease-or-reinvest": "properties/martha-mcm/01.jpg",
