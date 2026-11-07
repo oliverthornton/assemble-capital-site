@@ -1,0 +1,24 @@
+{
+  "slug": "ab-1751-affordability-requirement-explained",
+  "title": "The AB 1751 Affordability Requirement, Explained",
+  "page_title": "AB 1751 Affordability Requirement Explained",
+  "description": "AB 1751 townhome projects of 11 or more homes must sell 10% to lower-income buyers for 45 years. Who qualifies, how prices are set and how local rules apply.",
+  "date": "2026-11-07",
+  "topic": "sb684",
+  "strategy": "townhomes",
+  "hero": "concepts/sb684-bedroom-1.jpg",
+  "card_bg": "concepts/sb684-bedroom-1.jpg",
+  "related": [
+    "ab-1751-missing-middle-townhome-ownership-act",
+    "ab-1751-vs-sb-684-which-path-fits-your-site",
+    "prop-37-first-time-buyers-sb-684-ab-1751-homes"
+  ],
+  "faq": [
+    ["Does AB 1751 require affordable housing?", "Yes, on projects of 11 or more homes. At least 10% of the total units must be sold to lower-income households at an affordable housing cost, and the city must ensure they stay affordable for at least 45 years. Projects of 10 or fewer homes are exempt."],
+    ["Who counts as lower income under AB 1751?", "Lower-income households as defined in Health and Safety Code section 50079.5, generally households earning no more than 80% of area median income, adjusted for household size."],
+    ["How is the price of an AB 1751 affordable home set?", "By the affordable housing cost standard in Health and Safety Code section 50052.5, which caps the buyer's total monthly housing cost based on area median income and household size, rather than by the market."],
+    ["What if the city has its own inclusionary housing rule?", "If a local inclusionary requirement calls for a higher percentage of affordable homes than AB 1751's 10%, the local rule applies instead."],
+    ["How long do AB 1751 affordable homes stay affordable?", "At least 45 years. The law requires the local agency to ensure continued affordability for that period; the specific resale controls are set locally."]
+  ],
+  "keyword": "ab 1751 affordable housing requirement"
+}

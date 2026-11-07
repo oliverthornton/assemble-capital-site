@@ -27,7 +27,7 @@ SB684 = {
     "sell-or-develop-sb-684-owners-guide", "how-sb-684-construction-financing-works", "los-angeles-residential-entitlement-process",
 }
 CATS = [
-    ("sb684", "SB 684 &amp; SB 1123", "Small-Lot Homes", "How California&rsquo;s small-lot laws work, which sites qualify, and what owners, agents and investors should know.", "sb-684-sb-1123-california-lot-split-guide"),
+    ("sb684", "SB 684, SB 1123 &amp; AB 1751", "Small-Lot Homes &amp; Townhomes", "How California&rsquo;s small-lot and townhome laws work, which sites qualify, and what owners, agents and investors should know.", "sb-684-sb-1123-california-lot-split-guide"),
     ("luxury", "Luxury Residential", "Remodels &amp; Fix-and-Flips", "Underwriting, design, timelines, hidden costs and Measure ULA for luxury remodels in Los&nbsp;Angeles.", "how-we-underwrite-a-luxury-remodel"),
     ("tic", "TIC &amp; Multifamily", "Shared Ownership", "Tenancy in common, condos and small multifamily in California.", None),
     ("investing", "Investing &amp; Syndication", "For Investors", "How private real estate syndications work, what to ask, and how to evaluate a sponsor.", None),

@@ -35,7 +35,10 @@ TOPICS = {  # topic -> (label in posts.json, strategy link under Related Reading
     "sb684": ("SB 684 & SB 1123", '<a href="../strategies/infill-subdivisions.html">SB 684/1123 Fee Simple Subdivisions</a>'),
     "luxury": ("Luxury Residential", '<a href="../strategies/luxury-redevelopment.html">Luxury Residential Development</a>'),
     "tic": ("TIC & Multifamily", '<a href="../strategies/tic-housing.html">Tenancy-In-Common Housing</a>'),
-    "investing": ("Investing & Syndication", '<a href="../strategies.html">All four Assemble Capital strategies</a>'),
+    "investing": ("Investing & Syndication", '<a href="../strategies.html">All Assemble Capital strategies</a>'),
+}
+STRATEGY = {  # optional "strategy" in post.json: overrides the topic's strategy link
+    "townhomes": '<a href="../strategies/missing-middle-townhomes.html">AB 1751 Townhome Communities</a>',
 }
 REQUIRED = ["slug", "title", "description", "date", "topic", "hero", "related"]
 
@@ -63,6 +66,7 @@ def load_draft(path):
     if missing: die("post.json is missing: " + ", ".join(missing))
     if not re.fullmatch(r"[a-z0-9]+(-[a-z0-9]+)*", p["slug"]): die("slug must be lowercase words joined by hyphens")
     if p["topic"] not in TOPICS: die("topic must be one of: " + ", ".join(TOPICS))
+    if p.get("strategy") and p["strategy"] not in STRATEGY: die("strategy must be one of: " + ", ".join(STRATEGY))
     try:
         p["_d"] = datetime.date.fromisoformat(p["date"])
     except ValueError:
@@ -148,7 +152,7 @@ def build_page(site, p):
         </a>''')
     m = re.search(r'(<!-- related-reading -->.*?<div class="grid-3 reveal" style="margin-top:2.4rem">\n).*?(\n    </div>\n    <p class="muted" style="margin-top:2rem">Or see how this plays out in practice: )<a [^>]*>.*?</a>(\.</p>)', s, re.S)
     if not m: die(f"template layout changed; Related Reading not found in blog/{TEMPLATE}.html")
-    s = s[:m.start()] + m.group(1) + "\n".join(cards) + m.group(2) + TOPICS[p["topic"]][1] + m.group(3) + s[m.end():]
+    s = s[:m.start()] + m.group(1) + "\n".join(cards) + m.group(2) + (STRATEGY.get(p.get("strategy")) or TOPICS[p["topic"]][1]) + m.group(3) + s[m.end():]
 
     # leftovers from the copied article
     head = s.split("<!-- related-reading -->")[0]

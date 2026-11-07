@@ -1,0 +1,24 @@
+{
+  "slug": "ab-1751-vs-sb-684-which-path-fits-your-site",
+  "title": "AB 1751 or SB 684: Which Path Fits Your Site?",
+  "page_title": "AB 1751 vs SB 684: Which Path Fits Your Site?",
+  "description": "From 2027, California has two ministerial paths to fee-simple for-sale homes. How to tell whether a Los Angeles site belongs under SB 684 or AB 1751.",
+  "date": "2026-11-07",
+  "topic": "sb684",
+  "strategy": "townhomes",
+  "hero": "concepts/sb684-kitchen.jpg",
+  "card_bg": "concepts/sb684-kitchen.jpg",
+  "related": [
+    "ab-1751-missing-middle-townhome-ownership-act",
+    "sb-1116-starter-home-revitalization-act-changes",
+    "sb-684-sb-1123-california-lot-split-guide"
+  ],
+  "faq": [
+    ["What is the difference between AB 1751 and SB 684?", "SB 684 and SB 1123 allow up to ten homes of any type on a qualifying lot. AB 1751 allows up to 150 townhomes of three stories or fewer, requires at least 75% of the state default density, and requires 10% affordable homes on projects of 11 or more. Both are ministerial and exempt from CEQA."],
+    ["Can a site use both SB 684 and AB 1751?", "A project uses one path or the other. The choice depends mainly on how many homes the site can hold, its zoning, and which law's exclusions it clears."],
+    ["Which law applies to a large multifamily-zoned lot?", "From January 1, 2027, SB 684 is limited to sites whose base zoning allows no more than 15 units, or 26,250 square feet of residential floor area where zoning sets no unit maximum. Denser multifamily sites will generally look to AB 1751 instead, provided their minimum density is no more than 50 units per acre."],
+    ["Does AB 1751 allow detached homes?", "Only if they qualify as townhomes: homes that share a wall with a neighbor, or sit no farther apart than the Building Code's minimum fire separation distance. SB 684 allows any housing type."],
+    ["Do both laws allow fee-simple lots?", "Yes. Both allow each home on its own fee-simple lot with a minimum of 600 square feet on multifamily-zoned land, and neither requires a homeowners association."]
+  ],
+  "keyword": "ab 1751 vs sb 684"
+}

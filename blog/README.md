@@ -48,6 +48,7 @@ other file would change. Drafts in `blog/drafts/` are not deployed.
 | `description` | yes      | 120 to 160 characters. Used in search results, the index card and social shares. |
 | `date`        | yes      | Publish date as `YYYY-MM-DD`. |
 | `topic`       | yes      | Learning Center section: `sb684`, `luxury`, `tic` or `investing`. Also sets the strategy link under Related Reading. |
+| `strategy`    | no       | Set to `townhomes` to point the Related Reading strategy link at the AB 1751 townhome page instead of the topic's default. |
 | `hero`        | yes      | Header photo, as a path under `assets/img/` (for example `sb684-hero.jpg` or `properties/june-iv/01.jpg`). |
 | `card_bg`     | no       | Photo for the share card. Defaults to `hero`. |
 | `related`     | yes      | Exactly three existing article slugs for Related Reading. |
