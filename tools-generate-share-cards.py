@@ -218,7 +218,8 @@ while(h.offsetHeight>200&&s>40){s-=2;h.style.fontSize=s+'px';}h.style.visibility
 
 
 def nowrap(head):
-    # keep hyphenated words (Small-Lot, Time-in-Market) on one line
+    # keep bill numbers (SB 684, AB 1751, Prop 37) and hyphenated words (Small-Lot) on one line
+    head = re.sub(r"\b(SB|AB|Prop|Proposition) (\d+)", r"\1&nbsp;\2", head)
     return re.sub(r"(?<![<\w&])(\w+(?:-\w+)+)(?![^<]*>)", r'<span style="white-space:nowrap">\1</span>', head)
 
 
