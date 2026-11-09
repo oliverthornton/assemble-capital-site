@@ -56,6 +56,7 @@ PIPELINE = [
     ("The Harter V", "properties/the-harter-v.html", "4058 Harter Ave", 5, 1, "In entitlement"),
     ("The Helms VI", "properties/the-helms-vi.html", "3562 Helms Ave", 6, 1, "Tentative map filed"),
     ("The Sentney VI", "properties/the-sentney-vi.html", "3011 Sentney Ave", 6, 0, "In escrow"),
+    ("The Galvin VIII", "properties/the-galvin-viii.html", "Galvin Ave", 8, 0, "In escrow"),
 ]
 
 
@@ -218,14 +219,15 @@ def main_html():
         <p class="eyebrow">Current Pipeline</p>
         <h2 class="h-lg">Projects in Motion.</h2>
       </div>
-      <p class="muted" style="max-width:34rem;margin:0">Four Culver City SB&nbsp;684 projects on the same plans, architect and sequence, so each loan is easier to underwrite than the last. <a href="portfolio.html" class="text-link-inline">All current projects &rarr;</a></p>
+      <p class="muted" style="max-width:34rem;margin:0">Five Culver City SB&nbsp;684 projects on the same plans, architect and sequence, so each loan is easier to underwrite than the last. <a href="portfolio.html" class="text-link-inline">All current projects &rarr;</a></p>
     </div>
     {pipeline_tracker()}
-    <div class="grid-4 reveal" style="margin-top:2.4rem">
+    <div class="grid-3 reveal" style="margin-top:2.4rem">
       <a class="photo-card" href="properties/the-culver-vi.html"><div class="frame"><span class="tag">Map Approved</span><img src="assets/img/westwood-hd.jpg" alt="The Culver VI conceptual rendering" loading="lazy"></div><div class="meta"><div class="name">The Culver VI</div><div class="sub">3850 Westwood Blvd &middot; 6 homes</div></div></a>
       <a class="photo-card" href="properties/the-harter-v.html"><div class="frame"><span class="tag">In Entitlement</span><img src="assets/img/harter-hd.jpg" alt="The Harter V conceptual rendering" loading="lazy"></div><div class="meta"><div class="name">The Harter V</div><div class="sub">4058 Harter Ave &middot; 5 homes</div></div></a>
       <a class="photo-card" href="properties/the-helms-vi.html"><div class="frame"><span class="tag">Map Filed</span><img src="assets/img/helms-hd.jpg" alt="The Helms VI conceptual rendering" loading="lazy"></div><div class="meta"><div class="name">The Helms VI</div><div class="sub">3562 Helms Ave &middot; 6 homes</div></div></a>
       <a class="photo-card" href="properties/the-sentney-vi.html"><div class="frame"><span class="tag">In Escrow</span><img src="assets/img/sentney-wide.jpg" alt="The Sentney VI conceptual aerial rendering" loading="lazy"></div><div class="meta"><div class="name">The Sentney VI</div><div class="sub">3011 Sentney Ave &middot; 6 homes</div></div></a>
+      <a class="photo-card" href="properties/the-galvin-viii.html"><div class="frame"><span class="tag">In Escrow</span><img src="assets/img/galvin-wide.jpg" alt="The Galvin VIII conceptual aerial rendering" loading="lazy"></div><div class="meta"><div class="name">The Galvin VIII</div><div class="sub">Galvin Ave &middot; 8 homes</div></div></a>
     </div>
   </div>
 </section>

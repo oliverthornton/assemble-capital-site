@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the four active SB 684 project pages (properties/the-*.html).
+"""Build the active SB 684 project pages (properties/the-*.html).
 
     python3 tools-build-project-pages.py
 
@@ -119,6 +119,29 @@ PROJECTS = [
                ("Target sellout", "2029 (est.)")],
         stage=0, gallery_ext=[("sentney-aerial.jpg", "Aerial concept"), ("sentney-rooftop.jpg", "Rooftop concept")], interiors=True,
     ),
+    dict(
+        slug="the-galvin-viii", name="The Galvin VIII", addr="Galvin Ave", entity="",
+        hero="galvin-aerial.jpg", hero_alt="Conceptual aerial rendering of The Galvin VIII, eight fee-simple homes with rooftop decks on Galvin Ave, Culver City",
+        status="In escrow", homes="8",
+        ledger=[("8", "Fee-simple homes"), ("~1,350", "Square feet per home"), ("3 / 3.5", "Bedrooms / baths"), ("In escrow", "Current stage")],
+        lede="Eight three-bedroom homes on one Culver City lot, our largest SB&nbsp;684 plan to date and the fifth run of the playbook.",
+        body=[
+            "The Galvin VIII is planned as eight new fee-simple homes of about 1,350 square feet each, with three bedrooms, three and a half baths and a private rooftop deck. Each home will sit on its own parcel and sell individually, like a single-family home, with no HOA.",
+            "The property is in escrow and may not close. If it does, it will be the fifth time the team has run the ministerial SB&nbsp;684 playbook in Culver City, with the same architect and the same sequence as The Culver VI, The Harter V, The Helms VI and The Sentney VI.",
+        ],
+        highlights=[
+            ("Eight homes, eight parcels", "Fee-simple ownership with no HOA, priced for owner-occupant buyers."),
+            ("Three bedrooms, private roof decks", "About 1,350 square feet per home, with three bedrooms, three and a half baths and outdoor living on the roof."),
+            ("Fifth in the series", "Same ministerial pathway, architect and team as our four Culver City SB&nbsp;684 projects."),
+            ("Shared design concept", "Organic-modern interiors with warm wood, natural stone and soft light."),
+        ],
+        specs=[("Address", "Galvin Ave, Culver City, CA"),
+               ("Program", "8 fee-simple homes on individual parcels"),
+               ("Home concept", "3 bedrooms &middot; 3.5 baths &middot; about 1,350 square feet &middot; private roof deck"),
+               ("Pathway", "SB&nbsp;684 ministerial small-lot subdivision"),
+               ("Developer &amp; builder", "Thornton Development Group"), ("Status", "In escrow (may not close)")],
+        stage=0, gallery_ext=[("galvin-aerial.jpg", "Aerial concept"), ("galvin-front.jpg", "Street view concept"), ("galvin-aerial-2.jpg", "Aerial concept, second view")], interiors=True,
+    ),
 ]
 
 STAGES = ["Acquisition", "Entitlement", "Permits (RTI)", "Construction", "Sellout"]
@@ -206,7 +229,7 @@ def main_html(p, prev, nxt):
   <div class="wrap">
     <p class="eyebrow">SB&nbsp;684 Small-Lot Homes &middot; Culver City</p>
     <h1 class="display">{p['name']}</h1>
-    <p class="sub">{p['addr']} &middot; {p['entity']} &middot; {p['status']}</p>
+    <p class="sub">{' &middot; '.join(x for x in (p['addr'], p['entity'], p['status']) if x)}</p>
   </div>
 </section>
 
