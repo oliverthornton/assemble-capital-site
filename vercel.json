@@ -437,5 +437,19 @@
       "destination": "/submit-a-deal.html",
       "permanent": true
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/email-signatures/oliver",
+      "destination": "/email-signatures/oliver.html"
+    },
+    {
+      "source": "/email-signatures/erik",
+      "destination": "/email-signatures/erik.html"
+    },
+    {
+      "source": "/email-signatures/rc",
+      "destination": "/email-signatures/rc.html"
+    }
   ]
 }
