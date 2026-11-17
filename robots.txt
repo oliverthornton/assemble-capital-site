@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /email-signatures/
 
 Sitemap: https://assemble.capital/sitemap.xml
