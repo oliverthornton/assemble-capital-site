@@ -123,7 +123,7 @@ BLOG_BG = {
     "sb-684-santa-monica": "sb684-hero.jpg",
     "sb-684-culver-city": "westwood.jpg",
     "how-fee-simple-small-lot-homes-are-priced": "culver.webp",
-    "ellis-act-tenant-history-sb-684": "85th.jpg",
+    "ellis-act-tenant-history-sb-684": "85th-farmhouse.jpg",
     "what-happens-at-a-final-map": "harter-render.jpg",
     "hillside-development-costs-los-angeles": "hollywood-marvel.webp",
     "sb-684-vs-sb-1123-what-changed": "samo.webp",
