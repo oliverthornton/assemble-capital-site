@@ -14,7 +14,8 @@
   };
 
   const form = document.querySelector('form.deal-form');
-  if (!form) return;
+  if (!form || form.dataset.gaLeadBound) return;
+  form.dataset.gaLeadBound = '1';
   const status = form.querySelector('.form-status');
   const button = form.querySelector('button[type="submit"]');
   const startedAt = Date.now();
@@ -46,6 +47,11 @@
     return '';
   }
 
+  let dealMailtoCounted = false;
+  function trackDealLead() {
+    if (window.assembleTrack) window.assembleTrack('generate_lead', { form_name: 'submit_a_deal' });
+  }
+
   function mailtoFallback(row, files) {
     const lines = [
       'Role: ' + row.role, 'Name: ' + row.name, 'Company: ' + row.company,
@@ -57,6 +63,10 @@
     ];
     if (files.length) lines.push('', '(Please attach the ' + files.length + ' file(s) to this email before sending.)');
     const subject = encodeURIComponent('Deal submission — ' + row.address);
+    if (!dealMailtoCounted) {
+      dealMailtoCounted = true;
+      trackDealLead();
+    }
     window.location.href = 'mailto:' + CONFIG.FALLBACK_EMAIL + '?subject=' + subject + '&body=' + encodeURIComponent(lines.join('\n'));
     say('Your email app should open with the details filled in. Attach any photos, then send.');
   }
@@ -90,8 +100,10 @@
     if (!res.ok) throw new Error('insert');
   }
 
+  let inFlight = false;
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
+    if (inFlight) return;
     const row = collect();
     const files = Array.from(form.querySelector('input[type="file"]').files || []);
     const problem = validate(row, files);
@@ -103,16 +115,18 @@
 
     if (!live) { mailtoFallback(row, files); return; }
 
+    inFlight = true;
     button.disabled = true;
     say(files.length ? 'Uploading ' + files.length + ' file(s)…' : 'Sending…');
     try {
       await submitLive(row, files);
       form.reset();
       say('Thank you. We received your property and will reply within two business days.');
-      if (window.gtag) window.gtag('event', 'deal_submission', { role: row.role });
+      trackDealLead();
     } catch (err) {
       say('Something went wrong sending your submission. Please email it to ' + CONFIG.FALLBACK_EMAIL + ' or call (310) 704-1794.', true);
     } finally {
+      inFlight = false;
       button.disabled = false;
     }
   });

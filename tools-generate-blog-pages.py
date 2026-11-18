@@ -40,21 +40,11 @@ FAVICON = '<link rel="icon" href="../assets/img/logo/favicon-v2.png">'
 MONO = '<img class="emblem" src="../assets/img/logo/emblem-white-v2.png" alt="" aria-hidden="true">'
 LOGO_PATH = "assets/img/logo/lockup-codgray-v2.png"  # used as the JSON-LD publisher logo
 
-# GA4 tag — built via plain string concatenation, NOT as one f-string with the
-# literal `{dataLayer.push(arguments);}` inline. That exact mistake (a JS
-# snippet's literal braces breaking an f-string parser) already happened once
-# on a sibling repo. Keeping this as its own pre-rendered string means the
-# braces below are just characters in a value, not f-string template syntax,
-# so it's always safe to drop {GA4} into a later f-string.
-MEASUREMENT_ID = "G-676QQYXN22"
-GA4 = ('<!-- Google tag (gtag.js) -->\n'
- f'<script async src="https://www.googletagmanager.com/gtag/js?id={MEASUREMENT_ID}"></script>\n'
- '<script>\n'
- '  window.dataLayer = window.dataLayer || [];\n'
- '  function gtag(){dataLayer.push(arguments);}\n'
- "  gtag('js', new Date());\n"
- f"  gtag('config', '{MEASUREMENT_ID}');\n"
- '</script>')
+# GA4. Pages load /js/analytics.js, which fetches gtag.js only on the
+# production hosts. Do not inline the measurement ID or the gtag snippet here:
+# a generated page would then send preview and local hits to the production
+# property. The string is pre-rendered so it can be dropped into an f-string.
+GA4 = '<script src="/js/analytics.js"></script>'
 
 def header(base=".."):
     return f'''<header class="site-head">
