@@ -163,7 +163,7 @@ const INTAKE = {
 };
 
 (function () {
-  const track = (name, params) => { if (window.gtag) window.gtag('event', name, params || {}); };
+  const track = (name, params) => { if (window.assembleTrack) window.assembleTrack(name, params); };
 
   document.querySelectorAll('[data-schedule]').forEach((a) => {
     if (INTAKE.SCHEDULER_URL) {
@@ -186,9 +186,14 @@ const INTAKE = {
     });
   }
 
-  // Fallback: the inquiry form composes an email to the firm
+  // Fallback: the inquiry form composes an email to the firm.
+  // The form uses novalidate, so an empty or invalid submit still opens the
+  // mail draft. generate_lead waits until the required fields pass constraint
+  // validation, and a second submit on the same page view does not count again.
   const form = document.querySelector('form.inquiry:not(.deal-form)');
-  if (!form) return;
+  if (!form || form.dataset.gaLeadBound) return;
+  form.dataset.gaLeadBound = '1';
+  let leadCounted = false;
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     const d = new FormData(form);
@@ -206,7 +211,10 @@ const INTAKE = {
       (d.get('referred') ? '\nReferred by: ' + d.get('referred') : '') +
       '\n\n' + (d.get('message') || '')
     );
-    track('generate_lead', { form: 'investor_network' });
+    if (!leadCounted && typeof form.checkValidity === 'function' && form.checkValidity()) {
+      leadCounted = true;
+      track('generate_lead', { form_name: 'investor_network' });
+    }
     window.location.href = 'mailto:info@assemble.capital?subject=' + subject + '&body=' + body;
   });
 })();
